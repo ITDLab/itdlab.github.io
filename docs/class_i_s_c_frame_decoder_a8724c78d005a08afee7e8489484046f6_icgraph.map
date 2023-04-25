@@ -1,0 +1,4 @@
+<map id="ISCFrameDecoder::setUseOpenCLForAveragingDisparity" name="ISCFrameDecoder::setUseOpenCLForAveragingDisparity">
+<area shape="rect" id="node1" title="configure use of OpenCL for parallax averaging." alt="" coords="224,5,432,45"/>
+<area shape="rect" id="node2" href="$class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+</map>

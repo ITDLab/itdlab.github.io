@@ -1,0 +1,4 @@
+<map id="IscLog::Close" name="IscLog::Close">
+<area shape="rect" id="node1" title="close the file and exit." alt="" coords="5,5,107,31"/>
+<area shape="rect" id="node2" href="$class_isc_log.html#ac63e548de33a81065f678243e2378d96" title="flush te buffer." alt="" coords="155,5,255,31"/>
+</map>

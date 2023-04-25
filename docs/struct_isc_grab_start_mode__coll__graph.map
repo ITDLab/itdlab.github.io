@@ -1,0 +1,5 @@
+<map id="IscGrabStartMode" name="IscGrabStartMode">
+<area shape="rect" id="node1" title="This is the request to grab" alt="" coords="63,93,189,119"/>
+<area shape="rect" id="node2" href="$struct_isc_get_mode.html" title="This is the request to get image" alt="" coords="5,5,97,31"/>
+<area shape="rect" id="node3" href="$struct_isc_paly_mode_parameter.html" title="This is the parameter for play image" alt="" coords="122,5,279,31"/>
+</map>

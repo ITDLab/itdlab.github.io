@@ -1,0 +1,1061 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: ISCFrameDecoder クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_i_s_c_frame_decoder-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">ISCFrameDecoder クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>implementation class this class is an implementation of Frame Decoder processing  
+ <a href="class_i_s_c_frame_decoder.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_i_s_c_frame_decoder_8h_source.html">source/modules/IscFrameDecoder/include/ISCFrameDecoder.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a65b633c266447de1c0f993c65a75fc66"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a65b633c266447de1c0f993c65a75fc66">initialize</a> (int imghgt, int imgwdt)</td></tr>
+<tr class="memdesc:a65b633c266447de1c0f993c65a75fc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the frame decoder.  <br /></td></tr>
+<tr class="separator:a65b633c266447de1c0f993c65a75fc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c709980a469f47d2aeba37742582e26"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a7c709980a469f47d2aeba37742582e26">finalize</a> ()</td></tr>
+<tr class="memdesc:a7c709980a469f47d2aeba37742582e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">exit frame decoder.  <br /></td></tr>
+<tr class="separator:a7c709980a469f47d2aeba37742582e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8724c78d005a08afee7e8489484046f6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a8724c78d005a08afee7e8489484046f6">setUseOpenCLForAveragingDisparity</a> (int usecl)</td></tr>
+<tr class="memdesc:a8724c78d005a08afee7e8489484046f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">configure use of OpenCL for parallax averaging.  <br /></td></tr>
+<tr class="separator:a8724c78d005a08afee7e8489484046f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa119ee8367c6016780296ea09727d48b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#aa119ee8367c6016780296ea09727d48b">saveBlockDisparity</a> ()</td></tr>
+<tr class="memdesc:aa119ee8367c6016780296ea09727d48b"><td class="mdescLeft">&#160;</td><td class="mdescRight">store block parallax value.  <br /></td></tr>
+<tr class="separator:aa119ee8367c6016780296ea09727d48b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a763dc32cab4107dccbf8a9f6d6a2d818">setDisparityLimitation</a> (int limit, double lower, double upper)</td></tr>
+<tr class="memdesc:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the upper and lower limits of parallax.  <br /></td></tr>
+<tr class="separator:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29fd586c84ff3a5c589e36f5f25d8e2c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a29fd586c84ff3a5c589e36f5f25d8e2c">setAveragingParameter</a> (int enb, int blkshgt, int blkswdt, double intg, double range, int dsprt, int vldrt, int reprt)</td></tr>
+<tr class="memdesc:a29fd586c84ff3a5c589e36f5f25d8e2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">set parallax averaging parameters.  <br /></td></tr>
+<tr class="separator:a29fd586c84ff3a5c589e36f5f25d8e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16a4ed832ac2a8805c33533fad24a0fc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a16a4ed832ac2a8805c33533fad24a0fc">setAveragingBlockWeight</a> (int cntwgt, int nrwgt, int rndwgt)</td></tr>
+<tr class="memdesc:a16a4ed832ac2a8805c33533fad24a0fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the weight of the parallax averaging block.  <br /></td></tr>
+<tr class="separator:a16a4ed832ac2a8805c33533fad24a0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b1fa4be23a13e530ec7ddb8015739d7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a2b1fa4be23a13e530ec7ddb8015739d7">setComplementParameter</a> (int enb, double lowlmt, double slplmt, double insrt, double rndrt, double btmrt, int crstlmt, int hlfil, double hlsz)</td></tr>
+<tr class="memdesc:a2b1fa4be23a13e530ec7ddb8015739d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">set parallax interpolation parameters.  <br /></td></tr>
+<tr class="separator:a2b1fa4be23a13e530ec7ddb8015739d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55858af397df5bcc737859a173c1c87f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a55858af397df5bcc737859a173c1c87f">decodeFrameData</a> (int imghgt, int imgwdt, unsigned char *pfrmdat, unsigned char *prgtimg, unsigned char *plftimg, unsigned char *pdspenc)</td></tr>
+<tr class="memdesc:a55858af397df5bcc737859a173c1c87f"><td class="mdescLeft">&#160;</td><td class="mdescRight">split frame data into image data.  <br /></td></tr>
+<tr class="separator:a55858af397df5bcc737859a173c1c87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7202c89fe73b648ae0a00ec62e05c99"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99">decodeDisparityData</a> (int imghgt, int imgwdt, unsigned char *prgtimg, int crstthr, unsigned char *pdspenc, unsigned char *pdspimg, float *ppxldsp, float *pblkdsp)</td></tr>
+<tr class="memdesc:ab7202c89fe73b648ae0a00ec62e05c99"><td class="mdescLeft">&#160;</td><td class="mdescRight">decode the parallax data, return it to the parallax image and parallax information, and perform averaging and interpolation processing.  <br /></td></tr>
+<tr class="separator:ab7202c89fe73b648ae0a00ec62e05c99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2830e51236317f38c08450dec2c794df"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df">averageDisparityData</a> (int imghgt, int imgwdt, int blkhgt, int blkwdt, int mtchgt, int mtcwdt, int dspofsx, int dspofsy, int depth, int shdwdt, int *pblkval, int *pblkcrst, unsigned char *pdspimg, float *ppxldsp, float *pblkdsp)</td></tr>
+<tr class="memdesc:a2830e51236317f38c08450dec2c794df"><td class="mdescLeft">&#160;</td><td class="mdescRight">average the parallax.  <br /></td></tr>
+<tr class="separator:a2830e51236317f38c08450dec2c794df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acde15f5d1fc6fc66aabf7d28cd7d1ded"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#acde15f5d1fc6fc66aabf7d28cd7d1ded">createAveragingThread</a> ()</td></tr>
+<tr class="memdesc:acde15f5d1fc6fc66aabf7d28cd7d1ded"><td class="mdescLeft">&#160;</td><td class="mdescRight">spawn parallax averaging thread.  <br /></td></tr>
+<tr class="separator:acde15f5d1fc6fc66aabf7d28cd7d1ded"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87692aa0b1a5e55ec5b116e22fd88ab0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a87692aa0b1a5e55ec5b116e22fd88ab0">deleteAveragingThread</a> ()</td></tr>
+<tr class="memdesc:a87692aa0b1a5e55ec5b116e22fd88ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy parallax averaging thread.  <br /></td></tr>
+<tr class="separator:a87692aa0b1a5e55ec5b116e22fd88ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>implementation class this class is an implementation of Frame Decoder processing </p>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8h_source.html">ISCFrameDecoder.h</a> の <a class="el" href="_i_s_c_frame_decoder_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a2830e51236317f38c08450dec2c794df" name="a2830e51236317f38c08450dec2c794df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2830e51236317f38c08450dec2c794df">&#9670;&#160;</a></span>averageDisparityData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ISCFrameDecoder::averageDisparityData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkhgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtchgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtcwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shdwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pblkval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pblkcrst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pdspimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>ppxldsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>pblkdsp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>average the parallax. </p>
+<p>視差を平均化する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+    <tr><td class="paramname">blkhgt</td><td>視差ブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">blkwdt</td><td>視差ブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">mtchgt</td><td>マッチングブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">mtcwdt</td><td>マッチングブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">dspofsx</td><td>視差ブロック横オフセット(IN)</td></tr>
+    <tr><td class="paramname">dspofsy</td><td>視差ブロック縦オフセット(IN)</td></tr>
+    <tr><td class="paramname">depth</td><td>マッチング探索幅(IN)</td></tr>
+    <tr><td class="paramname">shdwdt</td><td>遮蔽領域幅(IN)</td></tr>
+    <tr><td class="paramname">pblkval</td><td>視差ブロック視差値(1000倍サブピクセル精度整数)(IN)</td></tr>
+    <tr><td class="paramname">pblkcrst</td><td>ブロックコントラスト(IN)</td></tr>
+    <tr><td class="paramname">pdspimg</td><td>視差画像 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">ppxldsp</td><td>視差データ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">pblkdsp</td><td>ブロック視差データ 右下原点(OUT)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>処理結果を返す</dd></dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00652">652</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_a2830e51236317f38c08450dec2c794df_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_a2830e51236317f38c08450dec2c794df_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_a2830e51236317f38c08450dec2c794df_icgraph" id="aclass_i_s_c_frame_decoder_a2830e51236317f38c08450dec2c794df_icgraph">
+<area shape="rect" title="average the parallax." alt="" coords="528,35,708,75"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a8ab044c7b75fbb9c46fdf870b9f6e1b0" title="average the parallax." alt="" coords="243,63,461,103"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="acde15f5d1fc6fc66aabf7d28cd7d1ded" name="acde15f5d1fc6fc66aabf7d28cd7d1ded"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde15f5d1fc6fc66aabf7d28cd7d1ded">&#9670;&#160;</a></span>createAveragingThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::createAveragingThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>spawn parallax averaging thread. </p>
+<p>視差平均化スレッドを生成する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l02171">2171</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_acde15f5d1fc6fc66aabf7d28cd7d1ded_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_acde15f5d1fc6fc66aabf7d28cd7d1ded_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_acde15f5d1fc6fc66aabf7d28cd7d1ded_icgraph" id="aclass_i_s_c_frame_decoder_acde15f5d1fc6fc66aabf7d28cd7d1ded_icgraph">
+<area shape="rect" title="spawn parallax averaging thread." alt="" coords="224,5,452,45"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab7202c89fe73b648ae0a00ec62e05c99" name="ab7202c89fe73b648ae0a00ec62e05c99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7202c89fe73b648ae0a00ec62e05c99">&#9670;&#160;</a></span>decodeDisparityData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::decodeDisparityData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>prgtimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>crstthr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pdspenc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pdspimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>ppxldsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>pblkdsp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>decode the parallax data, return it to the parallax image and parallax information, and perform averaging and interpolation processing. </p>
+<p>視差データをデコードして視差画像と視差情報に戻し、平均化、補完処理を行う</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(IN)</td></tr>
+    <tr><td class="paramname">crstthr</td><td>コントラスト閾値(IN)</td></tr>
+    <tr><td class="paramname">pdspenc</td><td>視差エンコードデータ(IN)</td></tr>
+    <tr><td class="paramname">pdspimg</td><td>視差画像 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">ppxldsp</td><td>視差データ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">pblkdsp</td><td>ブロック視差データ 右下基点(OUT)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00585">585</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_cgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_cgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_cgraph" id="aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_cgraph">
+<area shape="rect" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,13,261,38"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df" title="average the parallax." alt="" coords="309,5,489,45"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_icgraph" id="aclass_i_s_c_frame_decoder_ab7202c89fe73b648ae0a00ec62e05c99_icgraph">
+<area shape="rect" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a55858af397df5bcc737859a173c1c87f" name="a55858af397df5bcc737859a173c1c87f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55858af397df5bcc737859a173c1c87f">&#9670;&#160;</a></span>decodeFrameData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::decodeFrameData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pfrmdat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>prgtimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>plftimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pdspenc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>split frame data into image data. </p>
+<p>フレームデータを画像データに分割する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+    <tr><td class="paramname">pfrmdat</td><td>フレームデータ(IN)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">plftimg</td><td>左（比較）画像データ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">pdspenc</td><td>視差エンコードデータ(OUT)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00532">532</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_a55858af397df5bcc737859a173c1c87f_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_a55858af397df5bcc737859a173c1c87f_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_a55858af397df5bcc737859a173c1c87f_icgraph" id="aclass_i_s_c_frame_decoder_a55858af397df5bcc737859a173c1c87f_icgraph">
+<area shape="rect" title="split frame data into image data." alt="" coords="224,13,467,38"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a87692aa0b1a5e55ec5b116e22fd88ab0" name="a87692aa0b1a5e55ec5b116e22fd88ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87692aa0b1a5e55ec5b116e22fd88ab0">&#9670;&#160;</a></span>deleteAveragingThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::deleteAveragingThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destroy parallax averaging thread. </p>
+<p>視差平均化スレッドを破棄する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l02193">2193</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_a87692aa0b1a5e55ec5b116e22fd88ab0_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_a87692aa0b1a5e55ec5b116e22fd88ab0_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_a87692aa0b1a5e55ec5b116e22fd88ab0_icgraph" id="aclass_i_s_c_frame_decoder_a87692aa0b1a5e55ec5b116e22fd88ab0_icgraph">
+<area shape="rect" title="Destroy parallax averaging thread." alt="" coords="224,5,451,45"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a3dcc05f47587ee30f66d338f40b37be7" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7c709980a469f47d2aeba37742582e26" name="a7c709980a469f47d2aeba37742582e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c709980a469f47d2aeba37742582e26">&#9670;&#160;</a></span>finalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::finalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>exit frame decoder. </p>
+<p>フレームデコーダを終了する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00372">372</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a65b633c266447de1c0f993c65a75fc66" name="a65b633c266447de1c0f993c65a75fc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b633c266447de1c0f993c65a75fc66">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::initialize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialize the frame decoder. </p>
+<p>フレームデコーダを初期化する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00347">347</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_a65b633c266447de1c0f993c65a75fc66_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_a65b633c266447de1c0f993c65a75fc66_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_a65b633c266447de1c0f993c65a75fc66_icgraph" id="aclass_i_s_c_frame_decoder_a65b633c266447de1c0f993c65a75fc66_icgraph">
+<area shape="rect" title="initialize the frame decoder." alt="" coords="224,13,407,38"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa119ee8367c6016780296ea09727d48b" name="aa119ee8367c6016780296ea09727d48b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa119ee8367c6016780296ea09727d48b">&#9670;&#160;</a></span>saveBlockDisparity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::saveBlockDisparity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>store block parallax value. </p>
+<p>ブロックの視差値を保存する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00407">407</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a16a4ed832ac2a8805c33533fad24a0fc" name="a16a4ed832ac2a8805c33533fad24a0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16a4ed832ac2a8805c33533fad24a0fc">&#9670;&#160;</a></span>setAveragingBlockWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::setAveragingBlockWeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cntwgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nrwgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rndwgt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the weight of the parallax averaging block. </p>
+<p>視差平均化ブロックの重みを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cntwgt</td><td>ブロックの重み（中央）(IN)</td></tr>
+    <tr><td class="paramname">nrwgt</td><td>ブロックの重み（近傍）(IN)</td></tr>
+    <tr><td class="paramname">rndwgt</td><td>ブロックの重み（周辺）(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00471">471</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a29fd586c84ff3a5c589e36f5f25d8e2c" name="a29fd586c84ff3a5c589e36f5f25d8e2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29fd586c84ff3a5c589e36f5f25d8e2c">&#9670;&#160;</a></span>setAveragingParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::setAveragingParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>enb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkshgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkswdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>intg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dsprt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vldrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reprt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set parallax averaging parameters. </p>
+<p>視差平均化パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enb</td><td>平均化処理しない：0 する：1(IN)</td></tr>
+    <tr><td class="paramname">blkshgt</td><td>視差平均化ブロック高さ（片側）(IN)</td></tr>
+    <tr><td class="paramname">blkswdt</td><td>視差平均化ブロック幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">intg</td><td>視差平均化移動積分幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">range</td><td>視差平均化分布範囲最大幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">dsprt</td><td>視差平均化視差含有率(IN)</td></tr>
+    <tr><td class="paramname">vldrt</td><td>視差平均化有効比率(IN)</td></tr>
+    <tr><td class="paramname">reprt</td><td>視差平均化置換有効比率(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00441">441</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2b1fa4be23a13e530ec7ddb8015739d7" name="a2b1fa4be23a13e530ec7ddb8015739d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b1fa4be23a13e530ec7ddb8015739d7">&#9670;&#160;</a></span>setComplementParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::setComplementParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>enb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lowlmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>slplmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>insrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rndrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>btmrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>crstlmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hlfil</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hlsz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set parallax interpolation parameters. </p>
+<p>視差補完パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enb</td><td>補完処理しない：0 する：1(IN)</td></tr>
+    <tr><td class="paramname">lowlmt</td><td>補完最小視差値(IN)</td></tr>
+    <tr><td class="paramname">slplmt</td><td>補完幅の最大視差勾配(IN)</td></tr>
+    <tr><td class="paramname">insrt</td><td>補完画素幅の視差値倍率（内側）(IN)</td></tr>
+    <tr><td class="paramname">rndrt</td><td>補完画素幅の視差値倍率（周辺）(IN)</td></tr>
+    <tr><td class="paramname">btmrt</td><td>補完画素幅の視差値倍率（下端）(IN)</td></tr>
+    <tr><td class="paramname">crstlmt</td><td>補完ブロックのコントラスト上限値(IN)</td></tr>
+    <tr><td class="paramname">hlfil</td><td>穴埋め処理しない：0 する：1 (IN)</td></tr>
+    <tr><td class="paramname">hlsz</td><td>穴埋め幅 (IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00495">495</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a763dc32cab4107dccbf8a9f6d6a2d818" name="a763dc32cab4107dccbf8a9f6d6a2d818"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a763dc32cab4107dccbf8a9f6d6a2d818">&#9670;&#160;</a></span>setDisparityLimitation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::setDisparityLimitation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>set the upper and lower limits of parallax. </p>
+<p>視差の下限値、上限値を設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>視差値の制限　0:しない 1:する(IN)</td></tr>
+    <tr><td class="paramname">lower</td><td>視差値の下限(IN)</td></tr>
+    <tr><td class="paramname">upper</td><td>視差値の上限(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00421">421</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8724c78d005a08afee7e8489484046f6" name="a8724c78d005a08afee7e8489484046f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8724c78d005a08afee7e8489484046f6">&#9670;&#160;</a></span>setUseOpenCLForAveragingDisparity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ISCFrameDecoder::setUseOpenCLForAveragingDisparity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usecl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>configure use of OpenCL for parallax averaging. </p>
+<p>視差平均化処理にOpenCLの使用を設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usecl</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00398">398</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_s_c_frame_decoder_a8724c78d005a08afee7e8489484046f6_icgraph.png" border="0" usemap="#aclass_i_s_c_frame_decoder_a8724c78d005a08afee7e8489484046f6_icgraph" alt=""/></div>
+<map name="aclass_i_s_c_frame_decoder_a8724c78d005a08afee7e8489484046f6_icgraph" id="aclass_i_s_c_frame_decoder_a8724c78d005a08afee7e8489484046f6_icgraph">
+<area shape="rect" title="configure use of OpenCL for parallax averaging." alt="" coords="224,5,432,45"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>source/modules/IscFrameDecoder/include/<a class="el" href="_i_s_c_frame_decoder_8h_source.html">ISCFrameDecoder.h</a></li>
+<li>source/modules/IscFrameDecoder/src/<a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_s_c_frame_decoder.html">ISCFrameDecoder</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

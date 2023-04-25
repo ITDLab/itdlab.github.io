@@ -1,0 +1,542 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: IscLog クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_isc_log.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">クラス</a> &#124;
+<a href="#pub-types">公開型</a> &#124;
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="class_isc_log-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">IscLog クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>logging class this class provides logging function.  
+ <a href="class_isc_log.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="isc__log_8h_source.html">source/shared/isc_log.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
+公開型</h2></td></tr>
+<tr class="memitem:a4bec068a34587face328b9dfd3ed70f7"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7">Level</a> { <a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Information</a> = 1
+, <a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Warning</a> = 2
+, <a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Error</a> = 3
+, <a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">Debug</a> = 4
+ }</td></tr>
+<tr class="memdesc:a4bec068a34587face328b9dfd3ed70f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Specifies the log retention level  <a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7">[詳解]</a><br /></td></tr>
+<tr class="separator:a4bec068a34587face328b9dfd3ed70f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:a4b4690afd14c65dae4a92e4436fbe207"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">IscLog</a> ()</td></tr>
+<tr class="separator:a4b4690afd14c65dae4a92e4436fbe207"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a945a3014ed62d24197152f2968627316"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a945a3014ed62d24197152f2968627316">~IscLog</a> ()</td></tr>
+<tr class="separator:a945a3014ed62d24197152f2968627316"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaffb52c3739fc10df8afa71759453bd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#aaffb52c3739fc10df8afa71759453bd4">Open</a> (wchar_t *save_path, wchar_t *save_file_name, int log_level, bool is_immediate_mode=false)</td></tr>
+<tr class="memdesc:aaffb52c3739fc10df8afa71759453bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the class.  <br /></td></tr>
+<tr class="separator:aaffb52c3739fc10df8afa71759453bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf575d9062b2c4fba00dc80f64be0f1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a">Close</a> ()</td></tr>
+<tr class="memdesc:abf575d9062b2c4fba00dc80f64be0f1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">close the file and exit.  <br /></td></tr>
+<tr class="separator:abf575d9062b2c4fba00dc80f64be0f1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63e548de33a81065f678243e2378d96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">Flush</a> ()</td></tr>
+<tr class="memdesc:ac63e548de33a81065f678243e2378d96"><td class="mdescLeft">&#160;</td><td class="mdescRight">flush te buffer.  <br /></td></tr>
+<tr class="separator:ac63e548de33a81065f678243e2378d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a876337e8da5f688984a1cbf100637d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a2a876337e8da5f688984a1cbf100637d">LogDebug</a> (const wchar_t *head, const wchar_t *str)</td></tr>
+<tr class="memdesc:a2a876337e8da5f688984a1cbf100637d"><td class="mdescLeft">&#160;</td><td class="mdescRight">log for debug level.  <br /></td></tr>
+<tr class="separator:a2a876337e8da5f688984a1cbf100637d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61da4c3f5a842157f998139a72176849"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a61da4c3f5a842157f998139a72176849">LogError</a> (const wchar_t *head, const wchar_t *str)</td></tr>
+<tr class="memdesc:a61da4c3f5a842157f998139a72176849"><td class="mdescLeft">&#160;</td><td class="mdescRight">log for error level.  <br /></td></tr>
+<tr class="separator:a61da4c3f5a842157f998139a72176849"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37e45e2629780aa34de8b254913e4233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#a37e45e2629780aa34de8b254913e4233">LogWarning</a> (const wchar_t *head, const wchar_t *str)</td></tr>
+<tr class="memdesc:a37e45e2629780aa34de8b254913e4233"><td class="mdescLeft">&#160;</td><td class="mdescRight">log for warning level.  <br /></td></tr>
+<tr class="separator:a37e45e2629780aa34de8b254913e4233"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac27ba2ab587641da14d3d26383331e4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_log.html#ac27ba2ab587641da14d3d26383331e4c">LogInfo</a> (const wchar_t *head, const wchar_t *str)</td></tr>
+<tr class="memdesc:ac27ba2ab587641da14d3d26383331e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">log for informaton level.  <br /></td></tr>
+<tr class="separator:ac27ba2ab587641da14d3d26383331e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>logging class this class provides logging function. </p>
+
+<p class="definition"> <a class="el" href="isc__log_8h_source.html">isc_log.h</a> の <a class="el" href="isc__log_8h_source.html#l00027">27</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">列挙型メンバ詳解</h2>
+<a id="a4bec068a34587face328b9dfd3ed70f7" name="a4bec068a34587face328b9dfd3ed70f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bec068a34587face328b9dfd3ed70f7">&#9670;&#160;</a></span>Level</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum class <a class="el" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7">IscLog::Level</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Specifies the log retention level </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf" name="a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf"></a>Information&#160;</td><td class="fielddoc"><p>notification </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa" name="a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa"></a>Warning&#160;</td><td class="fielddoc"><p>warning </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd" name="a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"><p>error </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba" name="a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba"></a>Debug&#160;</td><td class="fielddoc"><p>debug </p>
+</td></tr>
+</table>
+
+<p class="definition"> <a class="el" href="isc__log_8h_source.html">isc_log.h</a> の <a class="el" href="isc__log_8h_source.html#l00034">34</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">構築子と解体子</h2>
+<a id="a4b4690afd14c65dae4a92e4436fbe207" name="a4b4690afd14c65dae4a92e4436fbe207"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b4690afd14c65dae4a92e4436fbe207">&#9670;&#160;</a></span>IscLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IscLog::IscLog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>constructor </p>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a945a3014ed62d24197152f2968627316" name="a945a3014ed62d24197152f2968627316"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a945a3014ed62d24197152f2968627316">&#9670;&#160;</a></span>~IscLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">IscLog::~IscLog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>destructor </p>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="abf575d9062b2c4fba00dc80f64be0f1a" name="abf575d9062b2c4fba00dc80f64be0f1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf575d9062b2c4fba00dc80f64be0f1a">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::Close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>close the file and exit. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>終了処理をします.</p>
+<dl class="section return"><dt>戻り値</dt><dd>none </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00177">177</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_isc_log_abf575d9062b2c4fba00dc80f64be0f1a_cgraph.png" border="0" usemap="#aclass_isc_log_abf575d9062b2c4fba00dc80f64be0f1a_cgraph" alt=""/></div>
+<map name="aclass_isc_log_abf575d9062b2c4fba00dc80f64be0f1a_cgraph" id="aclass_isc_log_abf575d9062b2c4fba00dc80f64be0f1a_cgraph">
+<area shape="rect" title="close the file and exit." alt="" coords="5,5,107,31"/>
+<area shape="rect" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96" title="flush te buffer." alt="" coords="155,5,255,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac63e548de33a81065f678243e2378d96" name="ac63e548de33a81065f678243e2378d96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac63e548de33a81065f678243e2378d96">&#9670;&#160;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>flush te buffer. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>ログファイルをFlushします.</p>
+<dl class="section return"><dt>戻り値</dt><dd>none </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00240">240</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_isc_log_ac63e548de33a81065f678243e2378d96_icgraph.png" border="0" usemap="#aclass_isc_log_ac63e548de33a81065f678243e2378d96_icgraph" alt=""/></div>
+<map name="aclass_isc_log_ac63e548de33a81065f678243e2378d96_icgraph" id="aclass_isc_log_ac63e548de33a81065f678243e2378d96_icgraph">
+<area shape="rect" title="flush te buffer." alt="" coords="155,5,255,31"/>
+<area shape="rect" href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a" title="close the file and exit." alt="" coords="5,5,107,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2a876337e8da5f688984a1cbf100637d" name="a2a876337e8da5f688984a1cbf100637d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a876337e8da5f688984a1cbf100637d">&#9670;&#160;</a></span>LogDebug()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::LogDebug </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log for debug level. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>外部から呼び出されるログ関数です.(Debug)</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>タイトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>本文</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00382">382</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a61da4c3f5a842157f998139a72176849" name="a61da4c3f5a842157f998139a72176849"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61da4c3f5a842157f998139a72176849">&#9670;&#160;</a></span>LogError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::LogError </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log for error level. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>外部から呼び出されるログ関数です.(Error)</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>タイトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>本文</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00404">404</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac27ba2ab587641da14d3d26383331e4c" name="ac27ba2ab587641da14d3d26383331e4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac27ba2ab587641da14d3d26383331e4c">&#9670;&#160;</a></span>LogInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::LogInfo </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log for informaton level. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>外部から呼び出されるログ関数です.(Information)</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>タイトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>本文</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00448">448</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a37e45e2629780aa34de8b254913e4233" name="a37e45e2629780aa34de8b254913e4233"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37e45e2629780aa34de8b254913e4233">&#9670;&#160;</a></span>LogWarning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::LogWarning </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>head</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>log for warning level. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>外部から呼び出されるログ関数です.(Warning)</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">head</td><td>タイトル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>本文</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00426">426</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaffb52c3739fc10df8afa71759453bd4" name="aaffb52c3739fc10df8afa71759453bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaffb52c3739fc10df8afa71759453bd4">&#9670;&#160;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IscLog::Open </td>
+          <td>(</td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>save_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wchar_t *&#160;</td>
+          <td class="paramname"><em>save_file_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>log_level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>is_immediate_mode</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>initialize the class. </p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<p>クラスを初期化します.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">save_path</td><td>ルートパス </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">save_file_name</td><td>初期保存ファイル名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">log_level</td><td>ログのレベル </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">is_immediate_mode</td><td>true:即時ファイルクローズ false:Close時にファイルもクローズする </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+<dl class="section note"><dt>覚え書き</dt><dd><ul>
+<li>Log保存レベル <br  />
+ &ndash; 0:保存しない <br  />
+ &ndash; 1:エラーを保存 <br  />
+ &ndash; 2:ワーニングを保存 <br  />
+ &ndash; 3:全て保存 <br  />
+ &ndash; 4:デバック <br  />
+ </li>
+</ul>
+</dd></dl>
+
+<p class="definition"> <a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a> の <a class="el" href="isc__log_8cpp_source.html#l00076">76</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>source/shared/<a class="el" href="isc__log_8h_source.html">isc_log.h</a></li>
+<li>source/shared/<a class="el" href="isc__log_8cpp_source.html">isc_log.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_isc_log.html">IscLog</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

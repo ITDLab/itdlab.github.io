@@ -1,0 +1,5 @@
+<map id="BlockMatching::matching" name="BlockMatching::matching">
+<area shape="rect" id="node1" title="perform stereo matching." alt="" coords="228,45,397,70"/>
+<area shape="rect" id="node2" href="$class_isc_block_matching_interface.html#acdd869813ae8dd353cab91f6ba6a75a3" title="get parallax block information." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node3" href="$class_isc_block_matching_interface.html#ad8babe6babb1aa94e45eded5137b5855" title="get parallax pixel information." alt="" coords="5,69,180,109"/>
+</map>

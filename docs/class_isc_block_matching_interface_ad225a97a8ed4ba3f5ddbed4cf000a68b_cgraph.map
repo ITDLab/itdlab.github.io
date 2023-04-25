@@ -1,0 +1,6 @@
+<map id="IscBlockMatchingInterface::Initialize" name="IscBlockMatchingInterface::Initialize">
+<area shape="rect" id="node1" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,63,180,103"/>
+<area shape="rect" id="node2" href="$class_block_matching.html#ad4dc6a94354d889d613f386029866f48" title="spawn a block matching thread." alt="" coords="228,5,433,45"/>
+<area shape="rect" id="node3" href="$class_block_matching.html#ad8607708d70249bccfb78a0f4258d660" title="initialize block matching." alt="" coords="249,70,412,95"/>
+<area shape="rect" id="node4" href="$class_block_matching.html#a05fd42bbee506def14cf95fbf90553b0" title="configure use of OpenCL for block matching." alt="" coords="237,120,425,160"/>
+</map>

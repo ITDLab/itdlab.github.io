@@ -1,0 +1,4 @@
+<map id="IscBlockMatchingInterface::Terminate" name="IscBlockMatchingInterface::Terminate">
+<area shape="rect" id="node1" title="... Shut down the system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node2" href="$class_block_matching.html#a959857a83292cd04cd52d325d832da6a" title="destroy the matching thread." alt="" coords="228,5,432,45"/>
+</map>

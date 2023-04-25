@@ -1,0 +1,4 @@
+<map id="BlockMatching::setUseOpenCLForBlockMatching" name="BlockMatching::setUseOpenCLForBlockMatching">
+<area shape="rect" id="node1" title="configure use of OpenCL for block matching." alt="" coords="228,5,416,45"/>
+<area shape="rect" id="node2" href="$class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,180,45"/>
+</map>

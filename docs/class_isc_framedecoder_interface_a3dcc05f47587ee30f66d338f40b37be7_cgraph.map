@@ -1,0 +1,4 @@
+<map id="IscFramedecoderInterface::Terminate" name="IscFramedecoderInterface::Terminate">
+<area shape="rect" id="node1" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,176,45"/>
+<area shape="rect" id="node2" href="$class_i_s_c_frame_decoder.html#a87692aa0b1a5e55ec5b116e22fd88ab0" title="Destroy parallax averaging thread." alt="" coords="224,5,451,45"/>
+</map>

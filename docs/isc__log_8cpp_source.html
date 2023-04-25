@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: source/shared/isc_log.cpp ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('isc__log_8cpp_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">isc_log.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="isc__log_8cpp.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2023 ITD Lab Corp.All Rights Reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// http ://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// limitations under the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor"> #include &quot;pch.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#include &lt;process.h&gt;</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#include &lt;stdexcept&gt;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#include &lt;stdarg.h&gt;</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#include &lt;mutex&gt;</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#include &lt;Shlwapi.h&gt;</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#include &lt;Shlobj.h&gt;</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &lt;share.h&gt;</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="isc__log_8h.html">isc_log.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">   42</a></span><a class="code hl_function" href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">IscLog::IscLog</a>():</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    immediate_mode_(false), mutex_(), file_(NULL), file_opened_(false),</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    save_path_(), save_file_name_(), log_file_name_(), log_level_(0), file_size_(0), max_file_size_(0),</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    thread_terminate_request_(0), thread_terminate_done_(0), thread_end_code_(0), abort_request_(false),</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    handle_semaphore_(NULL), thread_handle_(NULL), threads_critical_(), log_data_que_(nullptr)</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>{</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    log_level_ = 99;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_isc_log.html#a945a3014ed62d24197152f2968627316">   55</a></span><a class="code hl_function" href="class_isc_log.html#a945a3014ed62d24197152f2968627316">IscLog::~IscLog</a>()</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_isc_log.html#aaffb52c3739fc10df8afa71759453bd4">   76</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#aaffb52c3739fc10df8afa71759453bd4">IscLog::Open</a>(<span class="keywordtype">wchar_t</span>* save_path, <span class="keywordtype">wchar_t</span>* save_file_name, <span class="keywordtype">int</span> log_level, <span class="keywordtype">bool</span> is_immediate_mode)</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// init</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    thread_terminate_done_ = 0;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    thread_terminate_request_ = 0;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    thread_end_code_ = 0;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    abort_request_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    log_level_ = log_level;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    max_file_size_ = 10 * 1024 * 1024;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    immediate_mode_ = is_immediate_mode;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span> </div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="comment">// 保存しない</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="comment">// folder check</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    swprintf_s(save_path_, L<span class="stringliteral">&quot;%s&quot;</span>, save_path);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    swprintf_s(save_file_name_, L<span class="stringliteral">&quot;%s&quot;</span>, save_file_name);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">if</span> (::PathFileExists(save_path_) &amp;&amp; !::PathIsDirectory(save_path_)) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>        <span class="comment">// 指定されたパスにファイルが存在、かつディレクトリでない</span></div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    }</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (::PathFileExists(save_path_)) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="comment">// 指定されたパスがディレクトリである</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    }</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        <span class="comment">// 作成する</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        SHCreateDirectoryEx(NULL, save_path_, NULL);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    <span class="comment">// open file</span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordflow">if</span> (file_opened_) {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        fclose(file_);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        file_ = NULL;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>    }</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    SYSTEMTIME st;</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    GetLocalTime(&amp;st);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    swprintf_s(log_file_name_, L<span class="stringliteral">&quot;%s-%02d%02d%02d%02d%02d.txt&quot;</span>, save_file_name_, st.wMonth, st.wDay, st.wHour, st.wMinute, st.wSecond);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <span class="comment">// Threadで書き込みます</span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span> (immediate_mode_) {</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        <span class="comment">// 書き込み時にファイルを開き直します</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        errno_t err = _wfopen_s(&amp;file_, log_file_name_, L<span class="stringliteral">&quot;wt+, ccs=UTF-8&quot;</span>);</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <span class="keywordflow">if</span> (file_ == NULL) {</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>        }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>            fclose(file_);</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            file_ = NULL;</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        errno_t err = _wfopen_s(&amp;file_, log_file_name_, L<span class="stringliteral">&quot;wt+, ccs=UTF-8&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <span class="keywordflow">if</span> (file_ == NULL) {</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>            file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>        }</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>            file_opened_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        }</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    log_data_que_ = <span class="keyword">new</span> LogDataQue;</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    log_data_que_-&gt;open(128, <span class="keyword">false</span>);        <span class="comment">// mode=all data</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            </div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment">// thread start</span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordtype">wchar_t</span> semaphore_name[64] = {};</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    swprintf_s(semaphore_name, <span class="keyword">sizeof</span>(semaphore_name) / <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>), L<span class="stringliteral">&quot;MAIN_THREAD_SEMAPHORENAME_%d&quot;</span>, 0);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    handle_semaphore_ = CreateSemaphore(NULL, 0, 1, semaphore_name);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordflow">if</span> (handle_semaphore_ == NULL) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="comment">// Fail</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    InitializeCriticalSection(&amp;threads_critical_);</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    <span class="keywordflow">if</span> ((thread_handle_ = (HANDLE)_beginthreadex(0, 0, LogThread, (<span class="keywordtype">void</span>*)<span class="keyword">this</span>, 0, 0)) == 0) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="comment">// Fail</span></div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    }</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="comment">// THREAD_PRIORITY_TIME_CRITICAL</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>    <span class="comment">// THREAD_PRIORITY_HIGHEST +2</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    <span class="comment">// THREAD_PRIORITY_ABOVE_NORMAL +1</span></div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment">// THREAD_PRIORITY_NORMAL  +0</span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// THREAD_PRIORITY_BELOW_NORMAL -1</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <span class="keywordflow">if</span> (thread_handle_ != NULL) {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        SetThreadPriority(thread_handle_, THREAD_PRIORITY_BELOW_NORMAL);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span> </div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>}</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a">  177</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a">IscLog::Close</a>()</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>{</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="comment">// stop thread and release</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>    <span class="comment">// </span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="comment">// 1回はLoopさせておく</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    Sleep(60);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    thread_terminate_done_ = 0;</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    thread_terminate_request_ = 1;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    thread_end_code_ = 0;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span> </div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    ReleaseSemaphore(handle_semaphore_, 1, NULL);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    Sleep(60);</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>    <span class="keywordflow">while</span> (thread_terminate_done_ == 0) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        <span class="keywordflow">if</span> (count &gt; 100) {</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>            <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>        }</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        count++;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>        Sleep(10L);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    }</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span> </div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    <span class="keywordflow">if</span> (thread_terminate_done_ == 0) {</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        abort_request_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        count = 0;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <span class="keywordflow">while</span> (thread_terminate_done_ == 0) {</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="keywordflow">if</span> (count &gt; 100) {</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            }</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            count++;</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            Sleep(10L);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>        }</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>    }</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span> </div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <span class="keywordflow">if</span> (thread_handle_ != NULL) {</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>        CloseHandle(thread_handle_);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        thread_handle_ = NULL;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    }</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>    <span class="keywordflow">if</span> (handle_semaphore_ != NULL) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        CloseHandle(handle_semaphore_);</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>        handle_semaphore_ = NULL;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>    }</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    DeleteCriticalSection(&amp;threads_critical_);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span> </div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    <a class="code hl_function" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">Flush</a>();</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">if</span> (file_ &amp;&amp; file_opened_) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        fclose(file_);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        file_ = NULL;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>    }</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span> </div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>}</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span> </div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno"><a class="line" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">  240</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">IscLog::Flush</a>()</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>{</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>    <span class="keywordflow">if</span> (file_ &amp;&amp; file_opened_)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>    {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>        fflush(file_);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>}</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="keywordtype">void</span> IscLog::LogForThread(<span class="keyword">const</span> SYSTEMTIME* st, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *head, Level level, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *str)</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>{</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>        <span class="comment">// off</span></div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordflow">if</span> (immediate_mode_) {</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>        errno_t err = _wfopen_s(&amp;file_, log_file_name_, L<span class="stringliteral">&quot;at+, ccs=UTF-8&quot;</span>);</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>        <span class="keywordflow">if</span> (file_ == NULL) {</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>            file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>        }</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            file_opened_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        }</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    }</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>    <span class="keywordflow">if</span> (file_ &amp;&amp; file_opened_) {</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordtype">bool</span> en_log = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>        <span class="keywordflow">if</span> (log_level_ == 1) {</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>            <span class="comment">// エラーを保存(Debug含む）</span></div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)level &gt;= (<span class="keywordtype">int</span>)<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>) {</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>                en_log = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            }</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>        }</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (log_level_ == 2) {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>            <span class="comment">// ワーニングを保存</span></div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)level &gt;= (<span class="keywordtype">int</span>)<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Level::Warning</a>) {</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>                en_log = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>            }</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>        }</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (log_level_ &gt;= 3) {</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>            <span class="comment">// 全て保存</span></div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>            <span class="keywordflow">if</span> ((<span class="keywordtype">int</span>)level &gt;= (<span class="keywordtype">int</span>)<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>) {</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                en_log = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        <span class="keywordflow">if</span> (en_log) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span> </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *type;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="keywordflow">switch</span> (level)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>            {</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">Level::Debug</a>:</div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                type = L<span class="stringliteral">&quot;DEBUG&quot;</span>;</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>:</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>                type = L<span class="stringliteral">&quot;ERROR&quot;</span>;</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Level::Warning</a>:</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>                type = L<span class="stringliteral">&quot;WARN&quot;</span>;</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>:</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>                type = L<span class="stringliteral">&quot;INFO&quot;</span>;</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>                type = L<span class="stringliteral">&quot;UNKOWN&quot;</span>;</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            }</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>            <span class="keywordtype">wchar_t</span> dt[1024] = {};</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span>            swprintf_s(dt, L<span class="stringliteral">&quot;%02d%02d:%02d%02d%02d.%03d[%s][%s] &quot;</span>, st-&gt;wMonth, st-&gt;wDay, st-&gt;wHour, st-&gt;wMinute, st-&gt;wSecond, st-&gt;wMilliseconds, head, type);</div>
+<div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
+<div class="line"><a id="l00324" name="l00324"></a><span class="lineno">  324</span>            fputws(dt, file_);</div>
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno">  325</span> </div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>            file_size_ += (int)wcslen(dt);</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>            fputws(str, file_);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span> </div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            file_size_ += (int)wcslen(str);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span> </div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            <span class="keywordflow">if</span> (level == <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>) {</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>                fflush(file_);</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>            }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>            <span class="keywordflow">if</span> (file_size_ &gt;= max_file_size_) {</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>                fclose(file_);</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>                swprintf_s(log_file_name_, L<span class="stringliteral">&quot;%s-%02d%02d%02d%02d%02d.txt&quot;</span>, save_file_name_, st-&gt;wMonth, st-&gt;wDay, st-&gt;wHour, st-&gt;wMinute, st-&gt;wSecond);</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span> </div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>                <span class="keywordflow">if</span> (immediate_mode_) {</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>                    <span class="comment">// 書き込み時にファイルを開き直します</span></div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>                    errno_t err = _wfopen_s(&amp;file_, log_file_name_, L<span class="stringliteral">&quot;wt+, ccs=UTF-8&quot;</span>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>                    <span class="keywordflow">if</span> (file_ == NULL) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>                        file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>                    }</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                        file_opened_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                    }</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                }</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                    errno_t err = _wfopen_s(&amp;file_, log_file_name_, L<span class="stringliteral">&quot;wt+, ccs=UTF-8&quot;</span>);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                    <span class="keywordflow">if</span> (file_ == NULL) {</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                        file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                    }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>                    <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                        file_opened_ = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>                    }</div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                }</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span> </div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                file_size_ = 0;</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            }</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>        }</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    }</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span> </div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keywordflow">if</span> (immediate_mode_ &amp;&amp; (file_ != NULL)) {</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>        <a class="code hl_function" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">Flush</a>();</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        fclose(file_);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        file_ = NULL;</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        file_opened_ = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>    }</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span> </div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>}</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span> </div>
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="class_isc_log.html#a2a876337e8da5f688984a1cbf100637d">  382</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#a2a876337e8da5f688984a1cbf100637d">IscLog::LogDebug</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *head, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *str)</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>{</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>        <span class="comment">// off</span></div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00387" name="l00387"></a><span class="lineno">  387</span>    }</div>
+<div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span> </div>
+<div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>    mutex_.lock();</div>
+<div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>    log_data_que_-&gt;put(<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">Level::Debug</a>, head, str);</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>    mutex_.unlock();</div>
+<div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span> </div>
+<div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>}</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span> </div>
+<div class="line"><a id="l00404" name="l00404"></a><span class="lineno"><a class="line" href="class_isc_log.html#a61da4c3f5a842157f998139a72176849">  404</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#a61da4c3f5a842157f998139a72176849">IscLog::LogError</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *head, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *str)</div>
+<div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>{</div>
+<div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00407" name="l00407"></a><span class="lineno">  407</span>        <span class="comment">// off</span></div>
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno">  408</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    }</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span> </div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>    mutex_.lock();</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>    log_data_que_-&gt;put(<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>, head, str);</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>    mutex_.unlock();</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span> </div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>}</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span> </div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno"><a class="line" href="class_isc_log.html#a37e45e2629780aa34de8b254913e4233">  426</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#a37e45e2629780aa34de8b254913e4233">IscLog::LogWarning</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *head, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *str)</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>{</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>        <span class="comment">// off</span></div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    }</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span> </div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>    mutex_.lock();</div>
+<div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>    log_data_que_-&gt;put(<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Level::Warning</a>, head, str);</div>
+<div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span>    mutex_.unlock();</div>
+<div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span> </div>
+<div class="line"><a id="l00437" name="l00437"></a><span class="lineno">  437</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00438" name="l00438"></a><span class="lineno">  438</span>}</div>
+<div class="line"><a id="l00439" name="l00439"></a><span class="lineno">  439</span> </div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno"><a class="line" href="class_isc_log.html#ac27ba2ab587641da14d3d26383331e4c">  448</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_isc_log.html#ac27ba2ab587641da14d3d26383331e4c">IscLog::LogInfo</a>(<span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *head, <span class="keyword">const</span> <span class="keywordtype">wchar_t</span> *str)</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>{</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>    <span class="keywordflow">if</span> (log_level_ == 0) {</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        <span class="comment">// off</span></div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    }</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span> </div>
+<div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>    mutex_.lock();</div>
+<div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>    log_data_que_-&gt;put(<a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>, head, str);</div>
+<div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>    mutex_.unlock();</div>
+<div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span> </div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>    <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>}</div>
+<div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span> </div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span><span class="keywordtype">unsigned</span> __stdcall IscLog::LogThread(<span class="keywordtype">void</span>* context)</div>
+<div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span>{</div>
+<div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>    <a class="code hl_class" href="class_isc_log.html">IscLog</a>* isc_lLog = (<a class="code hl_class" href="class_isc_log.html">IscLog</a>*)context;</div>
+<div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span> </div>
+<div class="line"><a id="l00473" name="l00473"></a><span class="lineno">  473</span>    <span class="keywordflow">if</span> (isc_lLog == <span class="keyword">nullptr</span>) {</div>
+<div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>    }</div>
+<div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span> </div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>    <span class="keywordtype">int</span> ret = isc_lLog-&gt;LogProc();</div>
+<div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span> </div>
+<div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>    <span class="keywordflow">return</span> ret;</div>
+<div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>}</div>
+<div class="line"><a id="l00481" name="l00481"></a><span class="lineno">  481</span> </div>
+<div class="line"><a id="l00487" name="l00487"></a><span class="lineno">  487</span><span class="keywordtype">int</span> IscLog::LogProc()</div>
+<div class="line"><a id="l00488" name="l00488"></a><span class="lineno">  488</span>{</div>
+<div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
+<div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>    DWORD sleep_time = 30;</div>
+<div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span> </div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>    <span class="keywordtype">wchar_t</span> head[2048] = {};</div>
+<div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span>    <span class="keywordtype">wchar_t</span> buffer[2048] = {};</div>
+<div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>    <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>    <a class="code hl_enumeration" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7">Level</a> level = <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>;</div>
+<div class="line"><a id="l00496" name="l00496"></a><span class="lineno">  496</span>    SYSTEMTIME st;</div>
+<div class="line"><a id="l00497" name="l00497"></a><span class="lineno">  497</span> </div>
+<div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span>    <span class="keywordflow">while</span> (thread_terminate_request_ &lt; 1) {</div>
+<div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span> </div>
+<div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>        <span class="keywordtype">int</span> get_index = log_data_que_-&gt;get(&amp;st, &amp;level, head, <span class="keyword">sizeof</span>(head) / <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>), buffer, <span class="keyword">sizeof</span>(buffer) / <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>        <span class="keywordflow">if</span> (get_index &gt;= 0) {</div>
+<div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span> </div>
+<div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>            <span class="comment">// Log</span></div>
+<div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>            <span class="keywordflow">switch</span> (level)</div>
+<div class="line"><a id="l00505" name="l00505"></a><span class="lineno">  505</span>            {</div>
+<div class="line"><a id="l00506" name="l00506"></a><span class="lineno">  506</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">Level::Debug</a>:</div>
+<div class="line"><a id="l00507" name="l00507"></a><span class="lineno">  507</span>                this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00508" name="l00508"></a><span class="lineno">  508</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>:</div>
+<div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>                this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Level::Warning</a>:</div>
+<div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>                this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>            <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>:</div>
+<div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>                this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>            <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>            }</div>
+<div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span> </div>
+<div class="line"><a id="l00522" name="l00522"></a><span class="lineno">  522</span>            log_data_que_-&gt;done(get_index);</div>
+<div class="line"><a id="l00523" name="l00523"></a><span class="lineno">  523</span> </div>
+<div class="line"><a id="l00524" name="l00524"></a><span class="lineno">  524</span>            <span class="comment">// 一旦全部書き込む</span></div>
+<div class="line"><a id="l00525" name="l00525"></a><span class="lineno">  525</span>            <span class="keywordflow">while</span> (<span class="keyword">true</span>) {</div>
+<div class="line"><a id="l00526" name="l00526"></a><span class="lineno">  526</span> </div>
+<div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                <span class="keywordflow">if</span> (abort_request_) {</div>
+<div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                }</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span> </div>
+<div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                <span class="keywordtype">int</span> get_index = log_data_que_-&gt;get(&amp;st, &amp;level, head, <span class="keyword">sizeof</span>(head) / <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>), buffer, <span class="keyword">sizeof</span>(buffer) / <span class="keyword">sizeof</span>(<span class="keywordtype">wchar_t</span>));</div>
+<div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                <span class="keywordflow">if</span> (get_index &gt;= 0) {</div>
+<div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span> </div>
+<div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                    <span class="comment">// Log</span></div>
+<div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                    <span class="keywordflow">switch</span> (level)</div>
+<div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                    {</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">Level::Debug</a>:</div>
+<div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                        this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">Level::Error</a>:</div>
+<div class="line"><a id="l00541" name="l00541"></a><span class="lineno">  541</span>                        this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00542" name="l00542"></a><span class="lineno">  542</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00543" name="l00543"></a><span class="lineno">  543</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">Level::Warning</a>:</div>
+<div class="line"><a id="l00544" name="l00544"></a><span class="lineno">  544</span>                        this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>                    <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">Level::Information</a>:</div>
+<div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                        this-&gt;LogForThread(&amp;st, head, level, buffer);</div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                    <span class="keywordflow">default</span>:</div>
+<div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                        <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                    }</div>
+<div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span> </div>
+<div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                    log_data_que_-&gt;done(get_index);</div>
+<div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                }</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                }</div>
+<div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>            }</div>
+<div class="line"><a id="l00559" name="l00559"></a><span class="lineno">  559</span> </div>
+<div class="line"><a id="l00560" name="l00560"></a><span class="lineno">  560</span>            sleep_time = 1;</div>
+<div class="line"><a id="l00561" name="l00561"></a><span class="lineno">  561</span>        }</div>
+<div class="line"><a id="l00562" name="l00562"></a><span class="lineno">  562</span>        <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00563" name="l00563"></a><span class="lineno">  563</span>            sleep_time = 30;</div>
+<div class="line"><a id="l00564" name="l00564"></a><span class="lineno">  564</span>        }</div>
+<div class="line"><a id="l00565" name="l00565"></a><span class="lineno">  565</span> </div>
+<div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>        Sleep(sleep_time);</div>
+<div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>    }</div>
+<div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span> </div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>    thread_terminate_request_ = 0;</div>
+<div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span>    thread_terminate_done_ = 1;</div>
+<div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span> </div>
+<div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00573" name="l00573"></a><span class="lineno">  573</span>}</div>
+<div class="ttc" id="aclass_isc_log_html"><div class="ttname"><a href="class_isc_log.html">IscLog</a></div><div class="ttdoc">logging class this class provides logging function.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8h_source.html#l00027">isc_log.h:28</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a2a876337e8da5f688984a1cbf100637d"><div class="ttname"><a href="class_isc_log.html#a2a876337e8da5f688984a1cbf100637d">IscLog::LogDebug</a></div><div class="ttdeci">void LogDebug(const wchar_t *head, const wchar_t *str)</div><div class="ttdoc">log for debug level.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00382">isc_log.cpp:382</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a37e45e2629780aa34de8b254913e4233"><div class="ttname"><a href="class_isc_log.html#a37e45e2629780aa34de8b254913e4233">IscLog::LogWarning</a></div><div class="ttdeci">void LogWarning(const wchar_t *head, const wchar_t *str)</div><div class="ttdoc">log for warning level.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00426">isc_log.cpp:426</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a4b4690afd14c65dae4a92e4436fbe207"><div class="ttname"><a href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">IscLog::IscLog</a></div><div class="ttdeci">IscLog()</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00042">isc_log.cpp:42</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a4bec068a34587face328b9dfd3ed70f7"><div class="ttname"><a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7">IscLog::Level</a></div><div class="ttdeci">Level</div><div class="ttdoc">Specifies the log retention level</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8h_source.html#l00034">isc_log.h:35</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa"><div class="ttname"><a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a0eaadb4fcb48a0a0ed7bc9868be9fbaa">IscLog::Level::Warning</a></div><div class="ttdeci">@ Warning</div></div>
+<div class="ttc" id="aclass_isc_log_html_a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd"><div class="ttname"><a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7a902b0d55fddef6f8d651fe1035b7d4bd">IscLog::Level::Error</a></div><div class="ttdeci">@ Error</div></div>
+<div class="ttc" id="aclass_isc_log_html_a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba"><div class="ttname"><a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa603905470e2a5b8c13e96b579ef0dba">IscLog::Level::Debug</a></div><div class="ttdeci">@ Debug</div></div>
+<div class="ttc" id="aclass_isc_log_html_a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf"><div class="ttname"><a href="class_isc_log.html#a4bec068a34587face328b9dfd3ed70f7aa82be0f551b8708bc08eb33cd9ded0cf">IscLog::Level::Information</a></div><div class="ttdeci">@ Information</div></div>
+<div class="ttc" id="aclass_isc_log_html_a61da4c3f5a842157f998139a72176849"><div class="ttname"><a href="class_isc_log.html#a61da4c3f5a842157f998139a72176849">IscLog::LogError</a></div><div class="ttdeci">void LogError(const wchar_t *head, const wchar_t *str)</div><div class="ttdoc">log for error level.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00404">isc_log.cpp:404</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_a945a3014ed62d24197152f2968627316"><div class="ttname"><a href="class_isc_log.html#a945a3014ed62d24197152f2968627316">IscLog::~IscLog</a></div><div class="ttdeci">~IscLog()</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00055">isc_log.cpp:55</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_aaffb52c3739fc10df8afa71759453bd4"><div class="ttname"><a href="class_isc_log.html#aaffb52c3739fc10df8afa71759453bd4">IscLog::Open</a></div><div class="ttdeci">void Open(wchar_t *save_path, wchar_t *save_file_name, int log_level, bool is_immediate_mode=false)</div><div class="ttdoc">initialize the class.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00076">isc_log.cpp:76</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_abf575d9062b2c4fba00dc80f64be0f1a"><div class="ttname"><a href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a">IscLog::Close</a></div><div class="ttdeci">void Close()</div><div class="ttdoc">close the file and exit.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00177">isc_log.cpp:177</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_ac27ba2ab587641da14d3d26383331e4c"><div class="ttname"><a href="class_isc_log.html#ac27ba2ab587641da14d3d26383331e4c">IscLog::LogInfo</a></div><div class="ttdeci">void LogInfo(const wchar_t *head, const wchar_t *str)</div><div class="ttdoc">log for informaton level.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00448">isc_log.cpp:448</a></div></div>
+<div class="ttc" id="aclass_isc_log_html_ac63e548de33a81065f678243e2378d96"><div class="ttname"><a href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">IscLog::Flush</a></div><div class="ttdeci">void Flush()</div><div class="ttdoc">flush te buffer.</div><div class="ttdef"><b>Definition:</b> <a href="isc__log_8cpp_source.html#l00240">isc_log.cpp:240</a></div></div>
+<div class="ttc" id="aisc__log_8h_html"><div class="ttname"><a href="isc__log_8h.html">isc_log.h</a></div><div class="ttdoc">this class provides logging function.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_491923f2b25b02374a9edfbf50b48839.html">shared</a></li><li class="navelem"><a class="el" href="isc__log_8cpp.html">isc_log.cpp</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

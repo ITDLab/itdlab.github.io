@@ -1,0 +1,6 @@
+<map id="ISCFrameDecoder::averageDisparityData" name="ISCFrameDecoder::averageDisparityData">
+<area shape="rect" id="node1" title="average the parallax." alt="" coords="528,35,708,75"/>
+<area shape="rect" id="node2" href="$class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
+<area shape="rect" id="node4" href="$class_isc_framedecoder_interface.html#a8ab044c7b75fbb9c46fdf870b9f6e1b0" title="average the parallax." alt="" coords="243,63,461,103"/>
+<area shape="rect" id="node3" href="$class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,5,176,45"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IscDataprocResultdataRingBuffer::BufferData" name="IscDataprocResultdataRingBuffer::BufferData">
+<area shape="rect" id="node1" title="buffer for result data" alt="" coords="157,181,336,221"/>
+<area shape="rect" id="node2" href="$struct_isc_data_proc_result_data.html" title=" " alt="" coords="168,93,325,119"/>
+<area shape="rect" id="node3" href="$struct_isc_data_proc_status.html" title="This is the status of data proccesing" alt="" coords="5,5,136,31"/>
+<area shape="rect" id="node4" href="$struct_isc_data_proc_module_status.html" title="This is the status of each data proccesing module" alt="" coords="160,5,333,31"/>
+<area shape="rect" id="node5" href="$struct_isc_image_info.html" title="This is the structure to get image" alt="" coords="358,5,453,31"/>
+</map>

@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: source/include/isc_dpl_def.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('isc__dpl__def_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">isc_dpl_def.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="isc__dpl__def_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2023 ITD Lab Corp.All Rights Reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// http ://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// limitations under the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef ISC_DPL_DEF_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define ISC_DPL_DEF_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &quot;<a class="code" href="isc__camera__def_8h.html">isc_camera_def.h</a>&quot;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &quot;isc_dataprocessing_def.h&quot;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html">   30</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_isc_dpl_configuration.html">IscDplConfiguration</a> {</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#ab05fd69aa3a736993fa3cb30973a9e2c">   31</a></span>    <span class="keywordtype">wchar_t</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#ab05fd69aa3a736993fa3cb30973a9e2c">configuration_file_path</a>[_MAX_PATH]; </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#a66b9cfde0ec58ad40c369ffea92bd6b4">   32</a></span>    <span class="keywordtype">wchar_t</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#a66b9cfde0ec58ad40c369ffea92bd6b4">log_file_path</a>[_MAX_PATH];           </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#a06fb8cebf6c9884218f41d40bc0876c1">   34</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#a06fb8cebf6c9884218f41d40bc0876c1">log_level</a>;                              </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#a8443dd70005e15ddbe43281e0f3e5f2e">   36</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#a8443dd70005e15ddbe43281e0f3e5f2e">enabled_camera</a>;                        </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#a8dd50d4433628d99b7c339f9d219a1c4">   37</a></span>    <a class="code hl_enumeration" href="isc__camera__def_8h.html#a90306c36bebad80c452ab6113c2b9d0a">IscCameraModel</a> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#a8dd50d4433628d99b7c339f9d219a1c4">isc_camera_model</a>;            </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#a7185c398e5b60844d5a9657bad689c1f">   38</a></span>    <span class="keywordtype">wchar_t</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#a7185c398e5b60844d5a9657bad689c1f">save_image_path</a>[_MAX_PATH];         </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#ad700cab55ca7ffb92658d8208a5b4650">   39</a></span>    <span class="keywordtype">wchar_t</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#ad700cab55ca7ffb92658d8208a5b4650">load_image_path</a>[_MAX_PATH];         </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="struct_isc_dpl_configuration.html#ae50300bf3d0cf75f1c142df4e348748f">   41</a></span>    <span class="keywordtype">bool</span> <a class="code hl_variable" href="struct_isc_dpl_configuration.html#ae50300bf3d0cf75f1c142df4e348748f">enabled_data_proc_module</a>;              </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>};</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_isc_start_mode.html">   47</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_isc_start_mode.html">IscStartMode</a> {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_struct" href="struct_isc_grab_start_mode.html">IscGrabStartMode</a> isc_grab_start_mode;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_struct" href="struct_isc_data_proc_start_mode.html">IscDataProcStartMode</a> isc_dataproc_start_mode;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html">   55</a></span><span class="keyword">struct </span><a class="code hl_struct" href="struct_isc_area_data_statistics.html">IscAreaDataStatistics</a> {</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html">   56</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_isc_area_data_statistics_1_1_statistics.html">Statistics</a> {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html#a1df07bfffbe6a676f10e5f94337f3fca">   57</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_statistics.html#a1df07bfffbe6a676f10e5f94337f3fca">max_value</a>;                </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html#a0a55c650c8a40eb8d526901dcb96ead8">   58</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_statistics.html#a0a55c650c8a40eb8d526901dcb96ead8">min_value</a>;                </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html#a2041774e108e139d8db9f278a0544906">   59</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_statistics.html#a2041774e108e139d8db9f278a0544906">std_dev</a>;                  </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html#aa34205ef229fd726781fd690e55a2d35">   60</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_statistics.html#aa34205ef229fd726781fd690e55a2d35">average</a>;                  </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_statistics.html#af7b52b74d260f44e8f7a359168dc79b4">   61</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_statistics.html#af7b52b74d260f44e8f7a359168dc79b4">median</a>;                   </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    };</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_roi3_d.html">   64</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="struct_isc_area_data_statistics_1_1_roi3_d.html">Roi3D</a> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_roi3_d.html#ac93591d8909d32027e3a699ecc4eb265">   65</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_roi3_d.html#ac93591d8909d32027e3a699ecc4eb265">width</a>;                    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a280fd0d3385f96b4bb9221f1ef54bdd4">   66</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a280fd0d3385f96b4bb9221f1ef54bdd4">height</a>;                   </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a5ab9a836b9cc0b47b6542bceee3dd2cb">   67</a></span>        <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a5ab9a836b9cc0b47b6542bceee3dd2cb">distance</a>;                 </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    };</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#a4ad5645881c197881850295741bd1321">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#a4ad5645881c197881850295741bd1321">x</a>;                              </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#a2ffcb5399a2eba119d57ff518c642429">   71</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#a2ffcb5399a2eba119d57ff518c642429">y</a>;                              </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#aeb8fb439812f67829af4052b4870916b">   72</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#aeb8fb439812f67829af4052b4870916b">width</a>;                          </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#a1a18274617b8f3d4bc3573dfc25d7a3c">   73</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#a1a18274617b8f3d4bc3573dfc25d7a3c">height</a>;                         </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#a0c4b02179d0fb079a604712f9866c21b">   75</a></span>    <a class="code hl_struct" href="struct_isc_area_data_statistics_1_1_statistics.html">Statistics</a> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#a0c4b02179d0fb079a604712f9866c21b">statistics_depth</a>;        </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#a413d1bc27b878db150f901220c4a475a">   76</a></span>    <a class="code hl_struct" href="struct_isc_area_data_statistics_1_1_statistics.html">Statistics</a> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#a413d1bc27b878db150f901220c4a475a">statistics_distance</a>;     </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="struct_isc_area_data_statistics.html#af7e4d4ab67e98581de24fcbdc5e39004">   77</a></span>    <a class="code hl_struct" href="struct_isc_area_data_statistics_1_1_roi3_d.html">Roi3D</a> <a class="code hl_variable" href="struct_isc_area_data_statistics.html#af7e4d4ab67e98581de24fcbdc5e39004">roi_3d</a>;                       </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>};</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="preprocessor">#endif </span><span class="comment">/* ISC_DPL_DEF_H */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aisc__camera__def_8h_html"><div class="ttname"><a href="isc__camera__def_8h.html">isc_camera_def.h</a></div><div class="ttdoc">Defines structures that are commonly used in projects.</div></div>
+<div class="ttc" id="aisc__camera__def_8h_html_a90306c36bebad80c452ab6113c2b9d0a"><div class="ttname"><a href="isc__camera__def_8h.html#a90306c36bebad80c452ab6113c2b9d0a">IscCameraModel</a></div><div class="ttdeci">IscCameraModel</div><div class="ttdoc">This is a camera model name parameter</div><div class="ttdef"><b>Definition:</b> <a href="isc__camera__def_8h_source.html#l00026">isc_camera_def.h:26</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_roi3_d_html"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_roi3_d.html">IscAreaDataStatistics::Roi3D</a></div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00064">isc_dpl_def.h:64</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_roi3_d_html_a280fd0d3385f96b4bb9221f1ef54bdd4"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_roi3_d.html#a280fd0d3385f96b4bb9221f1ef54bdd4">IscAreaDataStatistics::Roi3D::height</a></div><div class="ttdeci">float height</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00066">isc_dpl_def.h:66</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_roi3_d_html_a5ab9a836b9cc0b47b6542bceee3dd2cb"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_roi3_d.html#a5ab9a836b9cc0b47b6542bceee3dd2cb">IscAreaDataStatistics::Roi3D::distance</a></div><div class="ttdeci">float distance</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00067">isc_dpl_def.h:67</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_roi3_d_html_ac93591d8909d32027e3a699ecc4eb265"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_roi3_d.html#ac93591d8909d32027e3a699ecc4eb265">IscAreaDataStatistics::Roi3D::width</a></div><div class="ttdeci">float width</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00065">isc_dpl_def.h:65</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html">IscAreaDataStatistics::Statistics</a></div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00056">isc_dpl_def.h:56</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html_a0a55c650c8a40eb8d526901dcb96ead8"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html#a0a55c650c8a40eb8d526901dcb96ead8">IscAreaDataStatistics::Statistics::min_value</a></div><div class="ttdeci">float min_value</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00058">isc_dpl_def.h:58</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html_a1df07bfffbe6a676f10e5f94337f3fca"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html#a1df07bfffbe6a676f10e5f94337f3fca">IscAreaDataStatistics::Statistics::max_value</a></div><div class="ttdeci">float max_value</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00057">isc_dpl_def.h:57</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html_a2041774e108e139d8db9f278a0544906"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html#a2041774e108e139d8db9f278a0544906">IscAreaDataStatistics::Statistics::std_dev</a></div><div class="ttdeci">float std_dev</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00059">isc_dpl_def.h:59</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html_aa34205ef229fd726781fd690e55a2d35"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html#aa34205ef229fd726781fd690e55a2d35">IscAreaDataStatistics::Statistics::average</a></div><div class="ttdeci">float average</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00060">isc_dpl_def.h:60</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_1_1_statistics_html_af7b52b74d260f44e8f7a359168dc79b4"><div class="ttname"><a href="struct_isc_area_data_statistics_1_1_statistics.html#af7b52b74d260f44e8f7a359168dc79b4">IscAreaDataStatistics::Statistics::median</a></div><div class="ttdeci">float median</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00061">isc_dpl_def.h:61</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html"><div class="ttname"><a href="struct_isc_area_data_statistics.html">IscAreaDataStatistics</a></div><div class="ttdoc">This is the data statistics information</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00055">isc_dpl_def.h:55</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_a0c4b02179d0fb079a604712f9866c21b"><div class="ttname"><a href="struct_isc_area_data_statistics.html#a0c4b02179d0fb079a604712f9866c21b">IscAreaDataStatistics::statistics_depth</a></div><div class="ttdeci">Statistics statistics_depth</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00075">isc_dpl_def.h:75</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_a1a18274617b8f3d4bc3573dfc25d7a3c"><div class="ttname"><a href="struct_isc_area_data_statistics.html#a1a18274617b8f3d4bc3573dfc25d7a3c">IscAreaDataStatistics::height</a></div><div class="ttdeci">int height</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00073">isc_dpl_def.h:73</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_a2ffcb5399a2eba119d57ff518c642429"><div class="ttname"><a href="struct_isc_area_data_statistics.html#a2ffcb5399a2eba119d57ff518c642429">IscAreaDataStatistics::y</a></div><div class="ttdeci">int y</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00071">isc_dpl_def.h:71</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_a413d1bc27b878db150f901220c4a475a"><div class="ttname"><a href="struct_isc_area_data_statistics.html#a413d1bc27b878db150f901220c4a475a">IscAreaDataStatistics::statistics_distance</a></div><div class="ttdeci">Statistics statistics_distance</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00076">isc_dpl_def.h:76</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_a4ad5645881c197881850295741bd1321"><div class="ttname"><a href="struct_isc_area_data_statistics.html#a4ad5645881c197881850295741bd1321">IscAreaDataStatistics::x</a></div><div class="ttdeci">int x</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00070">isc_dpl_def.h:70</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_aeb8fb439812f67829af4052b4870916b"><div class="ttname"><a href="struct_isc_area_data_statistics.html#aeb8fb439812f67829af4052b4870916b">IscAreaDataStatistics::width</a></div><div class="ttdeci">int width</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00072">isc_dpl_def.h:72</a></div></div>
+<div class="ttc" id="astruct_isc_area_data_statistics_html_af7e4d4ab67e98581de24fcbdc5e39004"><div class="ttname"><a href="struct_isc_area_data_statistics.html#af7e4d4ab67e98581de24fcbdc5e39004">IscAreaDataStatistics::roi_3d</a></div><div class="ttdeci">Roi3D roi_3d</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00077">isc_dpl_def.h:77</a></div></div>
+<div class="ttc" id="astruct_isc_data_proc_start_mode_html"><div class="ttname"><a href="struct_isc_data_proc_start_mode.html">IscDataProcStartMode</a></div><div class="ttdoc">This is the parameter for start process</div><div class="ttdef"><b>Definition:</b> <a href="isc__dataprocessing__def_8h_source.html#l00043">isc_dataprocessing_def.h:43</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html"><div class="ttname"><a href="struct_isc_dpl_configuration.html">IscDplConfiguration</a></div><div class="ttdoc">This is the configuration information</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00030">isc_dpl_def.h:30</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_a06fb8cebf6c9884218f41d40bc0876c1"><div class="ttname"><a href="struct_isc_dpl_configuration.html#a06fb8cebf6c9884218f41d40bc0876c1">IscDplConfiguration::log_level</a></div><div class="ttdeci">int log_level</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00034">isc_dpl_def.h:34</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_a66b9cfde0ec58ad40c369ffea92bd6b4"><div class="ttname"><a href="struct_isc_dpl_configuration.html#a66b9cfde0ec58ad40c369ffea92bd6b4">IscDplConfiguration::log_file_path</a></div><div class="ttdeci">wchar_t log_file_path[_MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00032">isc_dpl_def.h:32</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_a7185c398e5b60844d5a9657bad689c1f"><div class="ttname"><a href="struct_isc_dpl_configuration.html#a7185c398e5b60844d5a9657bad689c1f">IscDplConfiguration::save_image_path</a></div><div class="ttdeci">wchar_t save_image_path[_MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00038">isc_dpl_def.h:38</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_a8443dd70005e15ddbe43281e0f3e5f2e"><div class="ttname"><a href="struct_isc_dpl_configuration.html#a8443dd70005e15ddbe43281e0f3e5f2e">IscDplConfiguration::enabled_camera</a></div><div class="ttdeci">bool enabled_camera</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00036">isc_dpl_def.h:36</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_a8dd50d4433628d99b7c339f9d219a1c4"><div class="ttname"><a href="struct_isc_dpl_configuration.html#a8dd50d4433628d99b7c339f9d219a1c4">IscDplConfiguration::isc_camera_model</a></div><div class="ttdeci">IscCameraModel isc_camera_model</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00037">isc_dpl_def.h:37</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_ab05fd69aa3a736993fa3cb30973a9e2c"><div class="ttname"><a href="struct_isc_dpl_configuration.html#ab05fd69aa3a736993fa3cb30973a9e2c">IscDplConfiguration::configuration_file_path</a></div><div class="ttdeci">wchar_t configuration_file_path[_MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00031">isc_dpl_def.h:31</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_ad700cab55ca7ffb92658d8208a5b4650"><div class="ttname"><a href="struct_isc_dpl_configuration.html#ad700cab55ca7ffb92658d8208a5b4650">IscDplConfiguration::load_image_path</a></div><div class="ttdeci">wchar_t load_image_path[_MAX_PATH]</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00039">isc_dpl_def.h:39</a></div></div>
+<div class="ttc" id="astruct_isc_dpl_configuration_html_ae50300bf3d0cf75f1c142df4e348748f"><div class="ttname"><a href="struct_isc_dpl_configuration.html#ae50300bf3d0cf75f1c142df4e348748f">IscDplConfiguration::enabled_data_proc_module</a></div><div class="ttdeci">bool enabled_data_proc_module</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00041">isc_dpl_def.h:41</a></div></div>
+<div class="ttc" id="astruct_isc_grab_start_mode_html"><div class="ttname"><a href="struct_isc_grab_start_mode.html">IscGrabStartMode</a></div><div class="ttdoc">This is the request to grab</div><div class="ttdef"><b>Definition:</b> <a href="isc__camera__def_8h_source.html#l00201">isc_camera_def.h:201</a></div></div>
+<div class="ttc" id="astruct_isc_start_mode_html"><div class="ttname"><a href="struct_isc_start_mode.html">IscStartMode</a></div><div class="ttdoc">This is the for start</div><div class="ttdef"><b>Definition:</b> <a href="isc__dpl__def_8h_source.html#l00047">isc_dpl_def.h:47</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_8ee1a5e78eaec319fe5d64075812fc61.html">include</a></li><li class="navelem"><a class="el" href="isc__dpl__def_8h.html">isc_dpl_def.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

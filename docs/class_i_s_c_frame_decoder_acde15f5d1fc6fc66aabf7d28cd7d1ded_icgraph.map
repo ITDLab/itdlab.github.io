@@ -1,0 +1,4 @@
+<map id="ISCFrameDecoder::createAveragingThread" name="ISCFrameDecoder::createAveragingThread">
+<area shape="rect" id="node1" title="spawn parallax averaging thread." alt="" coords="224,5,452,45"/>
+<area shape="rect" id="node2" href="$class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+</map>

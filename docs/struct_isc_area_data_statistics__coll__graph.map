@@ -1,0 +1,5 @@
+<map id="IscAreaDataStatistics" name="IscAreaDataStatistics">
+<area shape="rect" id="node1" title="This is the data statistics information" alt="" coords="91,123,239,148"/>
+<area shape="rect" id="node2" href="$struct_isc_area_data_statistics_1_1_statistics.html" title=" " alt="" coords="5,5,153,45"/>
+<area shape="rect" id="node3" href="$struct_isc_area_data_statistics_1_1_roi3_d.html" title=" " alt="" coords="177,5,325,45"/>
+</map>

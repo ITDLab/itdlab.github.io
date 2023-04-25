@@ -1,0 +1,6 @@
+<map id="IscFramedecoderInterface::GetDecodeData" name="IscFramedecoderInterface::GetDecodeData">
+<area shape="rect" id="node1" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,31,176,71"/>
+<area shape="rect" id="node2" href="$class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
+<area shape="rect" id="node4" href="$class_i_s_c_frame_decoder.html#a55858af397df5bcc737859a173c1c87f" title="split frame data into image data." alt="" coords="231,62,473,87"/>
+<area shape="rect" id="node3" href="$class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df" title="average the parallax." alt="" coords="528,5,708,45"/>
+</map>

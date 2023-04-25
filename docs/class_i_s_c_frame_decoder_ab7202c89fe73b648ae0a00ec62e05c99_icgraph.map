@@ -1,0 +1,4 @@
+<map id="ISCFrameDecoder::decodeDisparityData" name="ISCFrameDecoder::decodeDisparityData">
+<area shape="rect" id="node1" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
+<area shape="rect" id="node2" href="$class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,5,176,45"/>
+</map>

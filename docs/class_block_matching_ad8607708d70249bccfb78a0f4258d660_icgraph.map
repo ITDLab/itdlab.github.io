@@ -1,0 +1,4 @@
+<map id="BlockMatching::initialize" name="BlockMatching::initialize">
+<area shape="rect" id="node1" title="initialize block matching." alt="" coords="228,13,391,38"/>
+<area shape="rect" id="node2" href="$class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,180,45"/>
+</map>

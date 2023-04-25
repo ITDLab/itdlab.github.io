@@ -1,0 +1,4 @@
+<map id="BlockMatching::deleteMatchingThread" name="BlockMatching::deleteMatchingThread">
+<area shape="rect" id="node1" title="destroy the matching thread." alt="" coords="228,5,432,45"/>
+<area shape="rect" id="node2" href="$class_isc_block_matching_interface.html#a2cc8c58efb39ef0aa4c9ce6ac7b0461f" title="... Shut down the system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,180,45"/>
+</map>

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: source/include/isc_dpl_error_def.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('isc__dpl__error__def_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">isc_dpl_error_def.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="isc__dpl__error__def_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">// Copyright 2023 ITD Lab Corp.All Rights Reserved.</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment">//</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">// http ://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">//</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment">// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">// limitations under the License.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#ifndef ISC_DPL_ERROR_DEF_H</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define ISC_DPL_ERROR_DEF_H</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * TODO: Define a more elaborate numbering scheme</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define DPL_RESULT int</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga039499ebec37ed38a35a62504f19ed33">   42</a></span><span class="preprocessor">#define DPC_E_OK                                ((DPL_RESULT) 0)           </span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga5531f4451547eda579926b2d82937d56">   44</a></span><span class="preprocessor">#define ISCDPL_E_FAIL                           ((DPL_RESULT) 0x81000001)  </span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga81be8171adf48f154b51aaca398af82e">   45</a></span><span class="preprocessor">#define ISCDPL_E_OPVERLAPED_OPERATION           ((DPL_RESULT) 0x81000002)  </span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga55344e497cfdebf1e6f0110d12ed5fbf">   46</a></span><span class="preprocessor">#define ISCDPL_E_INVALID_HANDLE                 ((DPL_RESULT) 0x81000003)  </span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga4783616f8eaae7e22d74d9de62cba9e3">   47</a></span><span class="preprocessor">#define ISCDPL_E_INVALID_PARAMETER              ((DPL_RESULT) 0x81000004)  </span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaa02b67b92c8b9795c8b5454b14bbeb27">   48</a></span><span class="preprocessor">#define ISCDPL_E_INCORRECT_MODE                 ((DPL_RESULT) 0x81000005)  </span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gadd178c1f3f2ac1e1cf06df31967eae73">   50</a></span><span class="preprocessor">#define CAMCONTROL_E_FAIL                       ((DPL_RESULT) 0xC2000001)  </span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga46d17303502d180760d43d7b2e03c3d6">   51</a></span><span class="preprocessor">#define CAMCONTROL_E_OPVERLAPED_OPERATION       ((DPL_RESULT) 0xC2000002)  </span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga0cf9fd08ddf25a5ac2d89f1af0fecc32">   52</a></span><span class="preprocessor">#define CAMCONTROL_E_INVALID_DEVICEHANDLE       ((DPL_RESULT) 0xC2000003)  </span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gac2c7693047fe675ac1f9ddfaa2532c45">   53</a></span><span class="preprocessor">#define CAMCONTROL_E_OPEN_DEVICE_FAILED         ((DPL_RESULT) 0xC2000004)  </span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga8290ac54d58810cd9bd68122ce552535">   54</a></span><span class="preprocessor">#define CAMCONTROL_E_CLOSE_DEVICE_FAILED        ((DPL_RESULT) 0xC2000005)  </span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga89ce409e4d677a5ae1aa6433e44d6b76">   55</a></span><span class="preprocessor">#define CAMCONTROL_E_INVALID_REQUEST            ((DPL_RESULT) 0xC2000006)  </span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gabdb11c660a3b920930c2d55388fbb726">   56</a></span><span class="preprocessor">#define CAMCONTROL_E_INVALID_PARAMETER          ((DPL_RESULT) 0xC2000007)  </span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga69cb9407634a1e0d3a61d25ae112a286">   57</a></span><span class="preprocessor">#define CAMCONTROL_E_NO_IMAGE                   ((DPL_RESULT) 0xC2000008)  </span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga30de8e2d57f41fcec8025751a7324076">   58</a></span><span class="preprocessor">#define CAMCONTROL_E_FTDI_ERROR                 ((DPL_RESULT) 0xC2000009)  </span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga3d04512d58699c336bcef410c551a816">   59</a></span><span class="preprocessor">#define CAMCONTROL_E_CAMERA_UNDER_CARIBRATION   ((DPL_RESULT) 0xC200000A)  </span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaa2bf881bd6910f95a1877c331664a576">   60</a></span><span class="preprocessor">#define CAMCONTROL_E_GRAB_START_FAILED          ((DPL_RESULT) 0xC200000B)  </span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaec44a44b279c520ad8d566c5feb98e29">   61</a></span><span class="preprocessor">#define CAMCONTROL_E_GRAB_STOP_FAILED           ((DPL_RESULT) 0xC200000C)  </span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga146ed1fe65810c919a6585ac30b6ee59">   62</a></span><span class="preprocessor">#define CAMCONTROL_E_GET_IMAGE_FAILED           ((DPL_RESULT) 0xC200000D)  </span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga8ea588ba3c5a24d9b3db2740a581855f">   63</a></span><span class="preprocessor">#define CAMCONTROL_E_GET_DEPTH_FAILED           ((DPL_RESULT) 0xC200000E)  </span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gada84d2a0384c687ca2f39389d11f50d5">   64</a></span><span class="preprocessor">#define CAMCONTROL_E_GET_FULL_FRAME_FAILED      ((DPL_RESULT) 0xC200000F)  </span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gabd54ba44f2c9d35da1eb138b6cdc6546">   65</a></span><span class="preprocessor">#define CAMCONTROL_E_SET_FETURE_FAILED          ((DPL_RESULT) 0xC2000010)  </span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga2f474a59c323c3cf8b51895dd5c5599f">   66</a></span><span class="preprocessor">#define CAMCONTROL_E_GET_FETURE_FAILED          ((DPL_RESULT) 0xC2000011)  </span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga9398dab82e997bc6a887d4de4ab601ce">   67</a></span><span class="preprocessor">#define CAMCONTROL_E_SART_SAVE_FAILED           ((DPL_RESULT) 0xC2000020)  </span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga265bb709bce30d2fbb0fce69842501fd">   68</a></span><span class="preprocessor">#define CAMCONTROL_E_INVALID_SAVE_FOLDER        ((DPL_RESULT) 0xC2000021)  </span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga611c22e6ee53810c5fbc01a3b1671830">   69</a></span><span class="preprocessor">#define CAMCONTROL_E_CREATE_SAVE_FILE           ((DPL_RESULT) 0xC2000022)  </span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaee92218a5d1e5d3f42fed0ffd88db58f">   70</a></span><span class="preprocessor">#define CAMCONTROL_E_WRITE_FAILED               ((DPL_RESULT) 0xC2000023)  </span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga672d9decde69ff04d38695ce62b8c13c">   71</a></span><span class="preprocessor">#define CAMCONTROL_E_OPEN_READ_FILE_FAILED      ((DPL_RESULT) 0xC2000030)  </span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaf2936ff5da1bd6bbce4bf667e58419a1">   72</a></span><span class="preprocessor">#define CAMCONTROL_E_READ_FILE_FAILED           ((DPL_RESULT) 0xC2000031)  </span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaab5ca1bc4222db06bc6de0aaa272a30e">   73</a></span><span class="preprocessor">#define CAMCONTROL_E_READ_CAMERA_MODEL          ((DPL_RESULT) 0xC2000032)  </span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga7c504ec978169f9c630509f9866c7e50">   74</a></span><span class="preprocessor">#define CAMCONTROL_E_NOT_ENOUGH_FREE_SPACE      ((DPL_RESULT) 0xC2000033)  </span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga882871450424f27120efbf03ce126999">   76</a></span><span class="preprocessor">#define DPCCONTROL_E_FAIL                       ((DPL_RESULT) 0xB2000001)  </span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga26cedf6ccc377c8972693f89a07dae32">   77</a></span><span class="preprocessor">#define DPCCONTROL_E_OPVERLAPED_OPERATION       ((DPL_RESULT) 0xB2000002)  </span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga2ae11dfa03a391b14b91f731af3717b1">   78</a></span><span class="preprocessor">#define DPCCONTROL_E_INVALID_DEVICEHANDLE       ((DPL_RESULT) 0xB2000003)  </span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gad162f3b31ca3e842a0680c494647583f">   79</a></span><span class="preprocessor">#define DPCCONTROL_E_INVALID_PARAMETER          ((DPL_RESULT) 0xB2000004)  </span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gafc8e4973bfc2541e1caa5dd2479a6fd4">   81</a></span><span class="preprocessor">#define DPCPROCESS_E_FAIL                       ((DPL_RESULT) 0xA2000001)  </span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno"><a class="line" href="group__errorcodes.html#ga268047e365f97ade5b2c90e5c70af687">   82</a></span><span class="preprocessor">#define DPCPROCESS_E_OPVERLAPED_OPERATION       ((DPL_RESULT) 0xA2000002)  </span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gace804362d87612127445680a1ca070ea">   83</a></span><span class="preprocessor">#define DPCPROCESS_E_INVALID_DEVICEHANDLE       ((DPL_RESULT) 0xA2000003)  </span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gaf66ad7489e9aec3959a699ff4502d27c">   84</a></span><span class="preprocessor">#define DPCPROCESS_E_INVALID_PARAMETER          ((DPL_RESULT) 0xA2000004)  </span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gadc36b745f73594b35a4e3d3a71022177">   85</a></span><span class="preprocessor">#define DPCPROCESS_E_FILE_NOT_FOUND             ((DPL_RESULT) 0xA2000005)  </span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group__errorcodes.html#gae88095dc0d632649939c081d42445484">   86</a></span><span class="preprocessor">#define DPCPROCESS_E_INVALID_MODE               ((DPL_RESULT) 0xA2000006)  </span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#endif </span><span class="comment">/* ISC_DPL_ERROR_DEF_H */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_8ee1a5e78eaec319fe5d64075812fc61.html">include</a></li><li class="navelem"><a class="el" href="isc__dpl__error__def_8h.html">isc_dpl_error_def.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>
