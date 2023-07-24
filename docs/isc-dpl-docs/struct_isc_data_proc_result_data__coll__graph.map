@@ -1,10 +1,8 @@
 <map id="IscDataProcResultData" name="IscDataProcResultData">
-<area shape="rect" id="node1" title=" " alt="" coords="720,74,877,99"/>
-<area shape="rect" id="node2" href="$struct_isc_data_proc_status.html" title="This is the status of data proccesing" alt="" coords="429,25,560,50"/>
-<area shape="rect" id="node3" href="$struct_isc_data_proc_module_status.html" title="This is the status of each data proccesing module" alt="" coords="408,74,581,99"/>
-<area shape="rect" id="node4" href="$struct_isc_image_info.html" title="This is the structure to get image" alt="" coords="447,123,542,149"/>
-<area shape="rect" id="node5" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,14,196,39"/>
-<area shape="rect" id="node6" href="$struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="39,63,162,89"/>
-<area shape="rect" id="node7" href="$struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="18,182,183,207"/>
-<area shape="rect" id="node8" href="$struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="19,231,183,257"/>
+<area shape="rect" id="node1" title=" " alt="" coords="168,181,325,207"/>
+<area shape="rect" id="node2" href="$struct_isc_data_proc_status.html" title="This is the status of data proccesing" alt="" coords="5,93,136,119"/>
+<area shape="rect" id="node3" href="$struct_isc_data_proc_module_status.html" title="This is the status of each data proccesing module" alt="" coords="160,93,333,119"/>
+<area shape="rect" id="node4" href="$struct_isc_image_info.html" title="This is the structure to get image" alt="" coords="358,93,453,119"/>
+<area shape="rect" id="node5" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="209,5,399,31"/>
+<area shape="rect" id="node6" href="$struct_isc_image_info_1_1_frame_data.html" title=" " alt="" coords="423,5,590,31"/>
 </map>

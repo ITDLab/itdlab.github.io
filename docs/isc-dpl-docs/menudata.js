@@ -100,11 +100,9 @@ var menudata={children:[
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
-{text:"g",url:"globals.html#index_g"},
 {text:"i",url:"globals.html#index_i"},
 {text:"k",url:"globals.html#index_k"},
-{text:"n",url:"globals.html#index_n"},
-{text:"o",url:"globals.html#index_o"}]},
+{text:"n",url:"globals.html#index_n"}]},
 {text:"変数",url:"globals_vars.html"},
 {text:"列挙型",url:"globals_enum.html"},
 {text:"マクロ定義",url:"globals_defs.html",children:[

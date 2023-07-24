@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -98,10 +98,11 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>image_width&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a6abbb561584e6a19ce7627e634e1272c">IscBlockDisparityData</a></li>
 <li>inedx&#160;:&#160;<a class="el" href="struct_isc_dataproc_resultdata_ring_buffer_1_1_buffer_data.html#afa18acfbf4914b106c250c164859b453">IscDataprocResultdataRingBuffer::BufferData</a>, <a class="el" href="struct_isc_image_info_ring_buffer_1_1_buffer_data.html#a830c8a85784ec43b9429a080bcefeba6">IscImageInfoRingBuffer::BufferData</a></li>
 <li>Init()&#160;:&#160;<a class="el" href="class_utility_measure_time.html#af9fb21b4d11136dd0d6cd887531b4013">UtilityMeasureTime</a></li>
-<li>initialize()&#160;:&#160;<a class="el" href="class_block_matching.html#ad8607708d70249bccfb78a0f4258d660">BlockMatching</a></li>
-<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a897ebdb759575855c60f7c337812e65a">IscDataprocResultdataRingBuffer</a></li>
+<li>initialize()&#160;:&#160;<a class="el" href="class_block_matching.html#ad8607708d70249bccfb78a0f4258d660">BlockMatching</a>, <a class="el" href="class_disparity_filter.html#a67ab68858eff24a162c8c7d66e20f4f7">DisparityFilter</a></li>
+<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a897ebdb759575855c60f7c337812e65a">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d">IscDisparityFilterInterface</a></li>
 <li>initialize()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a65b633c266447de1c0f993c65a75fc66">ISCFrameDecoder</a></li>
-<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a92dd9bfa49a578fa2228008ad7537e74">IscImageInfoRingBuffer</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#abee9405878f1c6c09103dc9499368e58">ns_isc_dpl::IscDpl</a></li>
+<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a92dd9bfa49a578fa2228008ad7537e74">IscImageInfoRingBuffer</a>, <a class="el" href="class_isc_stereo_matching_interface.html#a8def697d18ca7794d67765da10a92334">IscStereoMatchingInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#af2ac486f2b93d494af64e8b9a47a27a8">ns_isc_dpl::IscDpl</a></li>
+<li>initialize()&#160;:&#160;<a class="el" href="class_stereo_matching.html#a912c0c74ab41c75384d0d78db3636453">StereoMatching</a></li>
 <li>InitializeIscBlockDisparityData()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a18cf385ce6f9737ded973f5e4f55d7f7">IscBlockMatchingInterface</a></li>
 <li>InitializeIscDataProcResultData()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a01951d2a7d56af97dba5a4a66ce53f51">ns_isc_dpl::IscDpl</a></li>
 <li>InitializeIscIamgeinfo()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a71f1906bec0d61bef56bf572cb660b17">ns_isc_dpl::IscDpl</a></li>
@@ -119,10 +120,12 @@ $(document).ready(function(){initNavTree('functions_i.html',''); initResizable()
 <li>isc_record_mode&#160;:&#160;<a class="el" href="struct_isc_grab_start_mode.html#abfb245df99fd583d14889b00d2d99099">IscGrabStartMode</a></li>
 <li>IscBlockMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a10b0aaea074a7fd7df03c9973094ee10">IscBlockMatchingInterface</a></li>
 <li>IscDataprocResultdataRingBuffer()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a148bf70ba1282b1608ab8db60c160289">IscDataprocResultdataRingBuffer</a></li>
+<li>IscDisparityFilterInterface()&#160;:&#160;<a class="el" href="class_isc_disparity_filter_interface.html#ad3e7f6c17ef24b6e1345ff8e8126ccd6">IscDisparityFilterInterface</a></li>
 <li>IscDpl()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a14af685f0de9b419cccae4b78b134ce3">ns_isc_dpl::IscDpl</a></li>
 <li>IscFramedecoderInterface()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#af9cebaeda230f0131b70497c7f45a59c">IscFramedecoderInterface</a></li>
 <li>IscImageInfoRingBuffer()&#160;:&#160;<a class="el" href="class_isc_image_info_ring_buffer.html#a2969eef24719c7569083c57cdd145e21">IscImageInfoRingBuffer</a></li>
 <li>IscLog()&#160;:&#160;<a class="el" href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">IscLog</a></li>
+<li>IscStereoMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_stereo_matching_interface.html#aed2f8d2dd5e88656f5dad82062baf107">IscStereoMatchingInterface</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

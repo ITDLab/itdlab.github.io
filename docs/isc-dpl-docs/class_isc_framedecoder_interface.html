@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -127,12 +127,12 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
 <tr class="memitem:a8442c4f346231b5d93f7df0bfeb0f639"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_framedecoder_interface.html#a8442c4f346231b5d93f7df0bfeb0f639">ReloadParameterFromFile</a> (const wchar_t *file_name, const bool is_valid)</td></tr>
 <tr class="memdesc:a8442c4f346231b5d93f7df0bfeb0f639"><td class="mdescLeft">&#160;</td><td class="mdescRight">get parameters for the specified module from a file.  <br /></td></tr>
 <tr class="separator:a8442c4f346231b5d93f7df0bfeb0f639"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a286a69613536d325b02c03ba62fbe6ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed">GetDecodeData</a> (<a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *isc_image_Info, <a class="el" href="struct_isc_data_proc_result_data.html">IscDataProcResultData</a> *isc_data_proc_result_data)</td></tr>
-<tr class="memdesc:a286a69613536d325b02c03ba62fbe6ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode the parallax data, return it to the parallax image and parallax information, and perform averaging and interpolation processing.  <br /></td></tr>
-<tr class="separator:a286a69613536d325b02c03ba62fbe6ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ab044c7b75fbb9c46fdf870b9f6e1b0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_framedecoder_interface.html#a8ab044c7b75fbb9c46fdf870b9f6e1b0">GetDecodeAverageDisparityData</a> (<a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *isc_image_Info, <a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *isc_block_disparity_data, <a class="el" href="struct_isc_data_proc_result_data.html">IscDataProcResultData</a> *isc_data_proc_result_data)</td></tr>
-<tr class="memdesc:a8ab044c7b75fbb9c46fdf870b9f6e1b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">average the parallax.  <br /></td></tr>
-<tr class="separator:a8ab044c7b75fbb9c46fdf870b9f6e1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2705778638657b038bb0c793100f38"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_framedecoder_interface.html#aac2705778638657b038bb0c793100f38">GetDecodeData</a> (<a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *isc_image_Info, <a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *isc_block_disparity_data)</td></tr>
+<tr class="memdesc:aac2705778638657b038bb0c793100f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode the parallax data, return it to the parallax image and parallax information, and perform averaging and interpolation processing.  <br /></td></tr>
+<tr class="separator:aac2705778638657b038bb0c793100f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6ca9c7b58abfc865bba66cfca29c371"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_isc_framedecoder_interface.html#aa6ca9c7b58abfc865bba66cfca29c371">GetDecodeDataDoubleShutter</a> (<a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *isc_image_info_in, <a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *isc_block_disparity_data, <a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *isc_image_info_out)</td></tr>
+<tr class="memdesc:aa6ca9c7b58abfc865bba66cfca29c371"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decode the parallax data in Double-Shutter mode, return it to the parallax image and parallax information, and perform averaging and interpolation processing.  <br /></td></tr>
+<tr class="separator:aa6ca9c7b58abfc865bba66cfca29c371"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>interface class this class is an interface for Frame decoder module </p>
@@ -175,76 +175,13 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
 </div><div class="memdoc">
 <p>destructor </p>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00105">105</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00080">80</a> 行目に定義があります。</p>
 
 </div>
 </div>
 <h2 class="groupheader">関数詳解</h2>
-<a id="a8ab044c7b75fbb9c46fdf870b9f6e1b0" name="a8ab044c7b75fbb9c46fdf870b9f6e1b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ab044c7b75fbb9c46fdf870b9f6e1b0">&#9670;&#160;</a></span>GetDecodeAverageDisparityData()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int IscFramedecoderInterface::GetDecodeAverageDisparityData </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *&#160;</td>
-          <td class="paramname"><em>isc_image_Info</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *&#160;</td>
-          <td class="paramname"><em>isc_block_disparity_data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="struct_isc_data_proc_result_data.html">IscDataProcResultData</a> *&#160;</td>
-          <td class="paramname"><em>isc_data_proc_result_data</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>average the parallax. </p>
-<dl class="section return"><dt>戻り値</dt><dd>0, if successful.</dd></dl>
-<p>視差を平均化します.</p>
-<dl class="params"><dt>引数</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">isc_image_Info</td><td>入力画像・データ </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">isc_data_proc_result_data　処理結果データ</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="retval"><dt>戻り値</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">0</td><td>成功 </td></tr>
-    <tr><td class="paramname">other</td><td>失敗 </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00895">895</a> 行目に定義があります。</p>
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_isc_framedecoder_interface_a8ab044c7b75fbb9c46fdf870b9f6e1b0_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_a8ab044c7b75fbb9c46fdf870b9f6e1b0_cgraph" alt=""/></div>
-<map name="aclass_isc_framedecoder_interface_a8ab044c7b75fbb9c46fdf870b9f6e1b0_cgraph" id="aclass_isc_framedecoder_interface_a8ab044c7b75fbb9c46fdf870b9f6e1b0_cgraph">
-<area shape="rect" title="average the parallax." alt="" coords="5,5,224,45"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df" title="average the parallax." alt="" coords="272,5,452,45"/>
-</map>
-</div>
-
-</div>
-</div>
-<a id="a286a69613536d325b02c03ba62fbe6ed" name="a286a69613536d325b02c03ba62fbe6ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a286a69613536d325b02c03ba62fbe6ed">&#9670;&#160;</a></span>GetDecodeData()</h2>
+<a id="aac2705778638657b038bb0c793100f38" name="aac2705778638657b038bb0c793100f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2705778638657b038bb0c793100f38">&#9670;&#160;</a></span>GetDecodeData()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -258,8 +195,8 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="struct_isc_data_proc_result_data.html">IscDataProcResultData</a> *&#160;</td>
-          <td class="paramname"><em>isc_data_proc_result_data</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *&#160;</td>
+          <td class="paramname"><em>isc_block_disparity_data</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -287,16 +224,81 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00795">795</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00566">566</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_isc_framedecoder_interface_a286a69613536d325b02c03ba62fbe6ed_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_a286a69613536d325b02c03ba62fbe6ed_cgraph" alt=""/></div>
-<map name="aclass_isc_framedecoder_interface_a286a69613536d325b02c03ba62fbe6ed_cgraph" id="aclass_isc_framedecoder_interface_a286a69613536d325b02c03ba62fbe6ed_cgraph">
-<area shape="rect" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,31,176,71"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99" title="decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="224,13,480,38"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a55858af397df5bcc737859a173c1c87f" title="split frame data into image data." alt="" coords="231,62,473,87"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df" title="average the parallax." alt="" coords="528,5,708,45"/>
+<div class="center"><img src="class_isc_framedecoder_interface_aac2705778638657b038bb0c793100f38_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_aac2705778638657b038bb0c793100f38_cgraph" alt=""/></div>
+<map name="aclass_isc_framedecoder_interface_aac2705778638657b038bb0c793100f38_cgraph" id="aclass_isc_framedecoder_interface_aac2705778638657b038bb0c793100f38_cgraph">
+<area shape="rect" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="5,23,176,63"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a5f77d668c26b46a17bab0db78708faf9" title="split frame data into image data." alt="" coords="224,5,467,31"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a48f875e324aa0915f2dfa33e141e3395" title="Decode disparity encoded data, perform disparity averaging and completion processing." alt="" coords="229,55,461,80"/>
+<area shape="rect" href="class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="515,47,669,87"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6ca9c7b58abfc865bba66cfca29c371" name="aa6ca9c7b58abfc865bba66cfca29c371"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6ca9c7b58abfc865bba66cfca29c371">&#9670;&#160;</a></span>GetDecodeDataDoubleShutter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int IscFramedecoderInterface::GetDecodeDataDoubleShutter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *&#160;</td>
+          <td class="paramname"><em>isc_image_info_in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_isc_block_disparity_data.html">IscBlockDisparityData</a> *&#160;</td>
+          <td class="paramname"><em>isc_block_disparity_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_isc_image_info.html">IscImageInfo</a> *&#160;</td>
+          <td class="paramname"><em>isc_image_info_out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decode the parallax data in Double-Shutter mode, return it to the parallax image and parallax information, and perform averaging and interpolation processing. </p>
+<dl class="section return"><dt>戻り値</dt><dd>0, if successful.</dd></dl>
+<p>Double Shutterモード使用時に、視差データをデコードして視差画像と視差情報に戻し、平均化、補完処理を行いします.</p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">isc_image_Info</td><td>入力画像・データ </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">isc_data_proc_result_data　処理結果データ</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>成功 </td></tr>
+    <tr><td class="paramname">other</td><td>失敗 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00667">667</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_isc_framedecoder_interface_aa6ca9c7b58abfc865bba66cfca29c371_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_aa6ca9c7b58abfc865bba66cfca29c371_cgraph" alt=""/></div>
+<map name="aclass_isc_framedecoder_interface_aa6ca9c7b58abfc865bba66cfca29c371_cgraph" id="aclass_isc_framedecoder_interface_aa6ca9c7b58abfc865bba66cfca29c371_cgraph">
+<area shape="rect" title="Decode the parallax data in Double&#45;Shutter mode, return it to the parallax image and parallax informa..." alt="" coords="5,27,209,67"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a5f77d668c26b46a17bab0db78708faf9" title="split frame data into image data." alt="" coords="257,5,500,31"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="281,55,476,95"/>
+<area shape="rect" href="class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="548,55,703,95"/>
 </map>
 </div>
 
@@ -335,7 +337,7 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00578">578</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00399">399</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -383,7 +385,7 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00749">749</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00520">520</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -420,16 +422,14 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00117">117</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00092">92</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_isc_framedecoder_interface_a76da8bcf648997a863c62d9e7ea06c4c_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_a76da8bcf648997a863c62d9e7ea06c4c_cgraph" alt=""/></div>
 <map name="aclass_isc_framedecoder_interface_a76da8bcf648997a863c62d9e7ea06c4c_cgraph" id="aclass_isc_framedecoder_interface_a76da8bcf648997a863c62d9e7ea06c4c_cgraph">
-<area shape="rect" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,63,176,103"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#acde15f5d1fc6fc66aabf7d28cd7d1ded" title="spawn parallax averaging thread." alt="" coords="224,5,452,45"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a65b633c266447de1c0f993c65a75fc66" title="initialize the frame decoder." alt="" coords="247,70,429,95"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a8724c78d005a08afee7e8489484046f6" title="configure use of OpenCL for parallax averaging." alt="" coords="234,120,442,160"/>
+<area shape="rect" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,176,45"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a65b633c266447de1c0f993c65a75fc66" title="initialize the frame decoder." alt="" coords="224,13,407,38"/>
 </map>
 </div>
 
@@ -479,7 +479,7 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00768">768</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00539">539</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -527,7 +527,7 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00691">691</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00487">487</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -557,14 +557,14 @@ $(document).ready(function(){initNavTree('class_isc_framedecoder_interface.html'
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00456">456</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__framedecoder__interface_8cpp_source.html">isc_framedecoder_interface.cpp</a> の <a class="el" href="isc__framedecoder__interface_8cpp_source.html#l00272">272</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_isc_framedecoder_interface_a3dcc05f47587ee30f66d338f40b37be7_cgraph.png" border="0" usemap="#aclass_isc_framedecoder_interface_a3dcc05f47587ee30f66d338f40b37be7_cgraph" alt=""/></div>
 <map name="aclass_isc_framedecoder_interface_a3dcc05f47587ee30f66d338f40b37be7_cgraph" id="aclass_isc_framedecoder_interface_a3dcc05f47587ee30f66d338f40b37be7_cgraph">
 <area shape="rect" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,176,45"/>
-<area shape="rect" href="class_i_s_c_frame_decoder.html#a87692aa0b1a5e55ec5b116e22fd88ab0" title="Destroy parallax averaging thread." alt="" coords="224,5,451,45"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a7c709980a469f47d2aeba37742582e26" title="configure use of OpenCL for parallax averaging." alt="" coords="224,13,400,38"/>
 </map>
 </div>
 

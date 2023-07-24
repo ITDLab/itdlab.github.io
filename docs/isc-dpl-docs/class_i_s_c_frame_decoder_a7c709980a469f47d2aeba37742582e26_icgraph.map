@@ -1,0 +1,4 @@
+<map id="ISCFrameDecoder::finalize" name="ISCFrameDecoder::finalize">
+<area shape="rect" id="node1" title="configure use of OpenCL for parallax averaging." alt="" coords="224,13,400,38"/>
+<area shape="rect" id="node2" href="$class_isc_framedecoder_interface.html#a3dcc05f47587ee30f66d338f40b37be7" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,176,45"/>
+</map>

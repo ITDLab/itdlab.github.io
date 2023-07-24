@@ -1,7 +1,7 @@
 var searchData=
 [
   ['mark_0',['mark',['../struct_isc_raw_file_header.html#a2c8effa854919bfe10480a0b99301ee0',1,'IscRawFileHeader']]],
-  ['matching_1',['matching',['../class_block_matching.html#a14876a430c24719072e0e70174602b47',1,'BlockMatching']]],
+  ['matching_1',['matching',['../class_block_matching.html#a14876a430c24719072e0e70174602b47',1,'BlockMatching::matching()'],['../class_stereo_matching.html#a886f31f8ead93362b351aea5cf3e2ca6',1,'StereoMatching::matching()']]],
   ['max_5fheight_2',['max_height',['../struct_isc_raw_file_header.html#afc73ce9a2a397680a1341f43c6138127',1,'IscRawFileHeader']]],
   ['max_5fimage_5fheight_3',['max_image_height',['../struct_isc_data_proc_module_configuration.html#a66c770752f61316403eded00b3a43e29',1,'IscDataProcModuleConfiguration']]],
   ['max_5fsave_5ffolder_5fcount_4',['max_save_folder_count',['../struct_isc_save_data_configuration.html#ae69e72a85a264b8d63820b105fb2b292',1,'IscSaveDataConfiguration']]],
@@ -15,5 +15,7 @@ var searchData=
   ['module_5findex_12',['module_index',['../struct_isc_data_proc_module_parameter.html#a98f36249c87e617289e81eaa1cd26867',1,'IscDataProcModuleParameter']]],
   ['module_5fname_13',['module_name',['../struct_isc_data_proc_module_parameter.html#ae08470a7320b3bdf82a4047fb94c063b',1,'IscDataProcModuleParameter']]],
   ['module_5fnames_14',['module_names',['../struct_isc_data_proc_module_status.html#aea06199e7e4908f2ee760eb1bd433df0',1,'IscDataProcModuleStatus']]],
-  ['module_5fstatus_15',['module_status',['../struct_isc_data_proc_result_data.html#afecfd2cfcb57b42d32a3a79464b50399',1,'IscDataProcResultData']]]
+  ['module_5fstatus_15',['module_status',['../struct_isc_data_proc_result_data.html#afecfd2cfcb57b42d32a3a79464b50399',1,'IscDataProcResultData']]],
+  ['mtchgt_16',['mtchgt',['../struct_isc_block_disparity_data.html#a1f78fb44fdd21ff5ae90d2a335344d5a',1,'IscBlockDisparityData']]],
+  ['mtcwdt_17',['mtcwdt',['../struct_isc_block_disparity_data.html#a0bd9decf51b6cdb7fccbf608100bcaeb',1,'IscBlockDisparityData']]]
 ];

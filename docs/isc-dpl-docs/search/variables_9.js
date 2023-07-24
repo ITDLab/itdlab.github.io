@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['kernelaveragedisparity_0',['kernelAverageDisparity',['../_i_s_c_frame_decoder_8cpp.html#ad1acf6eee5440f073ee1a1803222235c',1,'ISCFrameDecoder.cpp']]],
-  ['kernelobjectaveraging_1',['kernelObjectAveraging',['../_i_s_c_frame_decoder_8cpp.html#ab071ae34384c09dcbccfa1b6acfcf110',1,'ISCFrameDecoder.cpp']]],
-  ['kernelprogramaveraging_2',['kernelProgramAveraging',['../_i_s_c_frame_decoder_8cpp.html#a52fc4de5d9feef8e1918dba51cf49251',1,'ISCFrameDecoder.cpp']]]
+  ['kernelobjectaveraging_0',['kernelObjectAveraging',['../_disparity_filter_8cpp.html#ab071ae34384c09dcbccfa1b6acfcf110',1,'DisparityFilter.cpp']]],
+  ['kiscimageinfo_5fframedata_5flatest_1',['kISCIMAGEINFO_FRAMEDATA_LATEST',['../isc__camera__def_8h.html#a73b2db11c160928e60e8330819101563',1,'isc_camera_def.h']]],
+  ['kiscimageinfo_5fframedata_5fmax_5fcount_2',['kISCIMAGEINFO_FRAMEDATA_MAX_COUNT',['../isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e',1,'isc_camera_def.h']]],
+  ['kiscimageinfo_5fframedata_5fmerged_3',['kISCIMAGEINFO_FRAMEDATA_MERGED',['../isc__camera__def_8h.html#a066d312f4e8840340ed91c60d17095e1',1,'isc_camera_def.h']]],
+  ['kiscimageinfo_5fframedata_5fprevious_4',['kISCIMAGEINFO_FRAMEDATA_PREVIOUS',['../isc__camera__def_8h.html#aae626dbd41ed0e904ed5ff8547a06095',1,'isc_camera_def.h']]]
 ];

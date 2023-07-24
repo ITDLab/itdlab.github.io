@@ -1,0 +1,5 @@
+<map id="StereoMatching::matching" name="StereoMatching::matching">
+<area shape="rect" id="node1" title="perform stereo matching." alt="" coords="232,45,407,70"/>
+<area shape="rect" id="node2" href="$class_isc_stereo_matching_interface.html#afd9a0a0827263c9c78ca6f24f1c5278b" title="get parallax stereo information." alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node3" href="$class_isc_stereo_matching_interface.html#acc2957d32bdce34aaada8d987c83aa84" title="get parallax pixel information." alt="" coords="5,69,184,109"/>
+</map>

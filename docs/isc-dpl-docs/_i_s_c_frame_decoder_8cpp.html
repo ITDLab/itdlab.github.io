@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -91,9 +91,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">クラス</a> &#124;
-<a href="#define-members">マクロ定義</a> &#124;
-<a href="#var-members">変数</a>  </div>
+<a href="#define-members">マクロ定義</a>  </div>
   <div class="headertitle"><div class="title">ISCFrameDecoder.cpp ファイル</div></div>
 </div><!--header-->
 <div class="contents">
@@ -104,22 +102,19 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;tchar.h&gt;</code><br />
+<code>#include &lt;math.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="_i_s_c_frame_decoder_8h_source.html">ISCFrameDecoder.h</a>&quot;</code><br />
 </div>
 <p><a href="_i_s_c_frame_decoder_8cpp_source.html">[ソースコード]</a></p>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-クラス</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_b_n_a_d___t_h_r_e_a_d___i_n_f_o.html">BNAD_THREAD_INFO</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">data for Thread execution  <a href="struct_b_n_a_d___t_h_r_e_a_d___i_n_f_o.html#details">[詳解]</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 マクロ定義</h2></td></tr>
 <tr class="memitem:a383b91edb9a1f67cf908465918ef391d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a383b91edb9a1f67cf908465918ef391d">MATCHING_SUBPIXEL_TIMES</a>&#160;&#160;&#160;1000</td></tr>
 <tr class="separator:a383b91edb9a1f67cf908465918ef391d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a43c881c6d7cfd9944037f5050d1a2623"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a43c881c6d7cfd9944037f5050d1a2623">AVERAGING_BLOCKS_MAX</a>&#160;&#160;&#160;289</td></tr>
-<tr class="separator:a43c881c6d7cfd9944037f5050d1a2623"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd0094f747d88fd3b3c6d136322f7e76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#abd0094f747d88fd3b3c6d136322f7e76">DISPARITY_BLOCK_HEIGHT_FPGA</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:abd0094f747d88fd3b3c6d136322f7e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9be1dbde37c0120ff04cc4537ed174d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aa9be1dbde37c0120ff04cc4537ed174d">DISPARITY_BLOCK_WIDTH_FPGA</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:aa9be1dbde37c0120ff04cc4537ed174d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2337a516fee83cf7d53b4b586cbe2d9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a2337a516fee83cf7d53b4b586cbe2d9e">IMG_WIDTH_VM</a>&#160;&#160;&#160;752</td></tr>
 <tr class="separator:a2337a516fee83cf7d53b4b586cbe2d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6d6084827f533a1c20758d86e59a4b9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#ac6d6084827f533a1c20758d86e59a4b9">IMG_WIDTH_XC</a>&#160;&#160;&#160;1280</td></tr>
@@ -132,39 +127,16 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
 <tr class="separator:af8e205abb367d1fd26480bbc11c403c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a245613976350de1712a2f1bd76d08e2c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a245613976350de1712a2f1bd76d08e2c">CONTRAST_OFFSET_XC</a>&#160;&#160;&#160;(1.2 * 1000)</td></tr>
 <tr class="separator:a245613976350de1712a2f1bd76d08e2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae7e2fa2af1d7011c4b64a0805bcca1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aae7e2fa2af1d7011c4b64a0805bcca1d">BLOCK_BRIGHTNESS_MAX</a>&#160;&#160;&#160;20</td></tr>
+<tr class="memitem:aae7e2fa2af1d7011c4b64a0805bcca1d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aae7e2fa2af1d7011c4b64a0805bcca1d">BLOCK_BRIGHTNESS_MAX</a>&#160;&#160;&#160;15</td></tr>
 <tr class="separator:aae7e2fa2af1d7011c4b64a0805bcca1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa67b34666321e4a2fa8c0269658586"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#acaa67b34666321e4a2fa8c0269658586">BLOCK_MIN_AVERAGE_BRIGHTNESS</a>&#160;&#160;&#160;(7.5)</td></tr>
+<tr class="separator:acaa67b34666321e4a2fa8c0269658586"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa74e0b638b146f387314bb94302e69bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aa74e0b638b146f387314bb94302e69bc">CONTRAST_CALC_AVERAGE_FOR_HIGH_RESO</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:aa74e0b638b146f387314bb94302e69bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d6a41574c26a4e16f5800fc731d6156"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a8d6a41574c26a4e16f5800fc731d6156">BLOCK_MIN_DELTA_BRIGHTNESS</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a8d6a41574c26a4e16f5800fc731d6156"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52102346798e9bb02b654c71092e2603"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a52102346798e9bb02b654c71092e2603">FPGA_PARALLAX_VALUE</a>&#160;&#160;&#160;0.0625F</td></tr>
 <tr class="separator:a52102346798e9bb02b654c71092e2603"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa90f795272c815411ca2f2210a7d2ae6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">NUM_OF_BANDS</a>&#160;&#160;&#160;8</td></tr>
-<tr class="memdesc:aa90f795272c815411ca2f2210a7d2ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">バンド視差平均化  <br /></td></tr>
-<tr class="separator:aa90f795272c815411ca2f2210a7d2ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d2074f262a2214aad56ffa8719327d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a7d2074f262a2214aad56ffa8719327d6">MAX_NUM_OF_BANDS</a>&#160;&#160;&#160;40</td></tr>
-<tr class="separator:a7d2074f262a2214aad56ffa8719327d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95e531d3a58c0adb143121e47391de94"><td class="memItemLeft" align="right" valign="top"><a id="a95e531d3a58c0adb143121e47391de94" name="a95e531d3a58c0adb143121e47391de94"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>STR_BUFFER_SIZE</b>&#160;&#160;&#160;5000</td></tr>
-<tr class="separator:a95e531d3a58c0adb143121e47391de94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
-変数</h2></td></tr>
-<tr class="memitem:ad1acf6eee5440f073ee1a1803222235c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#ad1acf6eee5440f073ee1a1803222235c">kernelAverageDisparity</a></td></tr>
-<tr class="memdesc:ad1acf6eee5440f073ee1a1803222235c"><td class="mdescLeft">&#160;</td><td class="mdescRight">視差平均化カーネルプログラム  <br /></td></tr>
-<tr class="separator:ad1acf6eee5440f073ee1a1803222235c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0fb3853cb6b8de7991809ecbb9ce918"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#af0fb3853cb6b8de7991809ecbb9ce918">openCLContextInit</a> = false</td></tr>
-<tr class="memdesc:af0fb3853cb6b8de7991809ecbb9ce918"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCLコンテキストの初期化フラグ  <br /></td></tr>
-<tr class="separator:af0fb3853cb6b8de7991809ecbb9ce918"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7a17733406f3794cc5ad8bb986fc36c"><td class="memItemLeft" align="right" valign="top">cv::ocl::Context&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#ae7a17733406f3794cc5ad8bb986fc36c">contextAveraging</a></td></tr>
-<tr class="memdesc:ae7a17733406f3794cc5ad8bb986fc36c"><td class="mdescLeft">&#160;</td><td class="mdescRight">OpenCLコンテキスト  <br /></td></tr>
-<tr class="separator:ae7a17733406f3794cc5ad8bb986fc36c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52fc4de5d9feef8e1918dba51cf49251"><td class="memItemLeft" align="right" valign="top">cv::ocl::Program&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#a52fc4de5d9feef8e1918dba51cf49251">kernelProgramAveraging</a></td></tr>
-<tr class="memdesc:a52fc4de5d9feef8e1918dba51cf49251"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーネルプログラム  <br /></td></tr>
-<tr class="separator:a52fc4de5d9feef8e1918dba51cf49251"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab071ae34384c09dcbccfa1b6acfcf110"><td class="memItemLeft" align="right" valign="top">cv::ocl::Kernel&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#ab071ae34384c09dcbccfa1b6acfcf110">kernelObjectAveraging</a></td></tr>
-<tr class="memdesc:ab071ae34384c09dcbccfa1b6acfcf110"><td class="mdescLeft">&#160;</td><td class="mdescRight">カーネルオブジェクト  <br /></td></tr>
-<tr class="separator:ab071ae34384c09dcbccfa1b6acfcf110"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed8d0d50bfb9e06fca3797282fa54919"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_i_s_c_frame_decoder_8cpp.html#aed8d0d50bfb9e06fca3797282fa54919">globalSizeAveraging</a> [2]</td></tr>
-<tr class="memdesc:aed8d0d50bfb9e06fca3797282fa54919"><td class="mdescLeft">&#160;</td><td class="mdescRight">glaobalWorkSize  <br /></td></tr>
-<tr class="separator:aed8d0d50bfb9e06fca3797282fa54919"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>This is the Frame Decoder implementatione </p>
@@ -173,29 +145,11 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
 <dl class="section version"><dt>バージョン</dt><dd>0.1</dd></dl>
 <ul>
 <li>カメラから出力されるフレームデータをSDK経由で取得し、画像データへ変換する <br  />
-</li>
-<li>視差の平均化、補完処理を行う <br  />
  </li>
 </ul>
 
 <p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> に定義があります。</p>
 </div><h2 class="groupheader">マクロ定義詳解</h2>
-<a id="a43c881c6d7cfd9944037f5050d1a2623" name="a43c881c6d7cfd9944037f5050d1a2623"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a43c881c6d7cfd9944037f5050d1a2623">&#9670;&#160;</a></span>AVERAGING_BLOCKS_MAX</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define AVERAGING_BLOCKS_MAX&#160;&#160;&#160;289</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00039">39</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="aae7e2fa2af1d7011c4b64a0805bcca1d" name="aae7e2fa2af1d7011c4b64a0805bcca1d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae7e2fa2af1d7011c4b64a0805bcca1d">&#9670;&#160;</a></span>BLOCK_BRIGHTNESS_MAX</h2>
 
@@ -203,12 +157,60 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define BLOCK_BRIGHTNESS_MAX&#160;&#160;&#160;20</td>
+          <td class="memname">#define BLOCK_BRIGHTNESS_MAX&#160;&#160;&#160;15</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00065">65</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00061">61</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acaa67b34666321e4a2fa8c0269658586" name="acaa67b34666321e4a2fa8c0269658586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa67b34666321e4a2fa8c0269658586">&#9670;&#160;</a></span>BLOCK_MIN_AVERAGE_BRIGHTNESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCK_MIN_AVERAGE_BRIGHTNESS&#160;&#160;&#160;(7.5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00064">64</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8d6a41574c26a4e16f5800fc731d6156" name="a8d6a41574c26a4e16f5800fc731d6156"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6a41574c26a4e16f5800fc731d6156">&#9670;&#160;</a></span>BLOCK_MIN_DELTA_BRIGHTNESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BLOCK_MIN_DELTA_BRIGHTNESS&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00070">70</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa74e0b638b146f387314bb94302e69bc" name="aa74e0b638b146f387314bb94302e69bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa74e0b638b146f387314bb94302e69bc">&#9670;&#160;</a></span>CONTRAST_CALC_AVERAGE_FOR_HIGH_RESO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CONTRAST_CALC_AVERAGE_FOR_HIGH_RESO&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00067">67</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -224,7 +226,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00059">59</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00055">55</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -240,7 +242,39 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00060">60</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00056">56</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="abd0094f747d88fd3b3c6d136322f7e76" name="abd0094f747d88fd3b3c6d136322f7e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd0094f747d88fd3b3c6d136322f7e76">&#9670;&#160;</a></span>DISPARITY_BLOCK_HEIGHT_FPGA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DISPARITY_BLOCK_HEIGHT_FPGA&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00040">40</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aa9be1dbde37c0120ff04cc4537ed174d" name="aa9be1dbde37c0120ff04cc4537ed174d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9be1dbde37c0120ff04cc4537ed174d">&#9670;&#160;</a></span>DISPARITY_BLOCK_WIDTH_FPGA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DISPARITY_BLOCK_WIDTH_FPGA&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00042">42</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -256,7 +290,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00068">68</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00073">73</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -272,7 +306,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00047">47</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00045">45</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -288,7 +322,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00048">48</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00046">46</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -304,7 +338,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00052">52</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00050">50</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -320,7 +354,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00053">53</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00051">51</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -336,151 +370,7 @@ $(document).ready(function(){initNavTree('_i_s_c_frame_decoder_8cpp.html',''); i
       </table>
 </div><div class="memdoc">
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00036">36</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a7d2074f262a2214aad56ffa8719327d6" name="a7d2074f262a2214aad56ffa8719327d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d2074f262a2214aad56ffa8719327d6">&#9670;&#160;</a></span>MAX_NUM_OF_BANDS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MAX_NUM_OF_BANDS&#160;&#160;&#160;40</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00301">301</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aa90f795272c815411ca2f2210a7d2ae6" name="aa90f795272c815411ca2f2210a7d2ae6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa90f795272c815411ca2f2210a7d2ae6">&#9670;&#160;</a></span>NUM_OF_BANDS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define NUM_OF_BANDS&#160;&#160;&#160;8</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>バンド視差平均化 </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00299">299</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<h2 class="groupheader">変数詳解</h2>
-<a id="ae7a17733406f3794cc5ad8bb986fc36c" name="ae7a17733406f3794cc5ad8bb986fc36c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7a17733406f3794cc5ad8bb986fc36c">&#9670;&#160;</a></span>contextAveraging</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::ocl::Context contextAveraging</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>OpenCLコンテキスト </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l01128">1128</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aed8d0d50bfb9e06fca3797282fa54919" name="aed8d0d50bfb9e06fca3797282fa54919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed8d0d50bfb9e06fca3797282fa54919">&#9670;&#160;</a></span>globalSizeAveraging</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">size_t globalSizeAveraging[2]</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>glaobalWorkSize </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l01143">1143</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ad1acf6eee5440f073ee1a1803222235c" name="ad1acf6eee5440f073ee1a1803222235c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1acf6eee5440f073ee1a1803222235c">&#9670;&#160;</a></span>kernelAverageDisparity</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">char* kernelAverageDisparity</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>視差平均化カーネルプログラム </p>
-<p>平均化最大ブロック数 AVERAGING_BLOCKS_MAX 289 (17x17)</p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00996">996</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="ab071ae34384c09dcbccfa1b6acfcf110" name="ab071ae34384c09dcbccfa1b6acfcf110"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab071ae34384c09dcbccfa1b6acfcf110">&#9670;&#160;</a></span>kernelObjectAveraging</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::ocl::Kernel kernelObjectAveraging</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>カーネルオブジェクト </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l01138">1138</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a52fc4de5d9feef8e1918dba51cf49251" name="a52fc4de5d9feef8e1918dba51cf49251"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52fc4de5d9feef8e1918dba51cf49251">&#9670;&#160;</a></span>kernelProgramAveraging</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">cv::ocl::Program kernelProgramAveraging</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>カーネルプログラム </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l01133">1133</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="af0fb3853cb6b8de7991809ecbb9ce918" name="af0fb3853cb6b8de7991809ecbb9ce918"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0fb3853cb6b8de7991809ecbb9ce918">&#9670;&#160;</a></span>openCLContextInit</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool openCLContextInit = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>OpenCLコンテキストの初期化フラグ </p>
-
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l01123">1123</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00037">37</a> 行目に定義があります。</p>
 
 </div>
 </div>

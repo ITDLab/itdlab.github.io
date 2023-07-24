@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -93,10 +93,10 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <div class="textblock">ファイル直下のメンバ一覧です。各々詳解があればそこへリンクしています。</div>
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
-<li>backMatchingEvaluationRange&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#aea50e52f58f2338cebfaf58856770797">BlockMatching.cpp</a></li>
-<li>backMatchingEvaluationWidth&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#ae062875407ddb794685f3059779f459c">BlockMatching.cpp</a></li>
-<li>backMatchingValidRatio&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#ae7636fd593f670475caa645455551b2b">BlockMatching.cpp</a></li>
-<li>backMatchingZeroRatio&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#a2d79754d92651905cd8003cce32135b6">BlockMatching.cpp</a></li>
+<li>backMatchingEvaluationRange&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#aea50e52f58f2338cebfaf58856770797">BlockMatching.cpp</a>, <a class="el" href="_stereo_matching_8cpp.html#aea50e52f58f2338cebfaf58856770797">StereoMatching.cpp</a></li>
+<li>backMatchingEvaluationWidth&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#ae062875407ddb794685f3059779f459c">BlockMatching.cpp</a>, <a class="el" href="_stereo_matching_8cpp.html#ae062875407ddb794685f3059779f459c">StereoMatching.cpp</a></li>
+<li>backMatchingValidRatio&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#ae7636fd593f670475caa645455551b2b">BlockMatching.cpp</a>, <a class="el" href="_stereo_matching_8cpp.html#ae7636fd593f670475caa645455551b2b">StereoMatching.cpp</a></li>
+<li>backMatchingZeroRatio&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#a2d79754d92651905cd8003cce32135b6">BlockMatching.cpp</a>, <a class="el" href="_stereo_matching_8cpp.html#a2d79754d92651905cd8003cce32135b6">StereoMatching.cpp</a></li>
 </ul>
 
 
@@ -116,6 +116,7 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>CAMCONTROL_E_INVALID_PARAMETER&#160;:&#160;<a class="el" href="group__errorcodes.html#gabdb11c660a3b920930c2d55388fbb726">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_INVALID_REQUEST&#160;:&#160;<a class="el" href="group__errorcodes.html#ga89ce409e4d677a5ae1aa6433e44d6b76">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_INVALID_SAVE_FOLDER&#160;:&#160;<a class="el" href="group__errorcodes.html#ga265bb709bce30d2fbb0fce69842501fd">isc_dpl_error_def.h</a></li>
+<li>CAMCONTROL_E_LOAD_DLL_FAILED&#160;:&#160;<a class="el" href="group__errorcodes.html#ga17e68dfb09e9126168ee9e4d5ed53431">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_NO_IMAGE&#160;:&#160;<a class="el" href="group__errorcodes.html#ga69cb9407634a1e0d3a61d25ae112a286">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_NOT_ENOUGH_FREE_SPACE&#160;:&#160;<a class="el" href="group__errorcodes.html#ga7c504ec978169f9c630509f9866c7e50">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_OPEN_DEVICE_FAILED&#160;:&#160;<a class="el" href="group__errorcodes.html#gac2c7693047fe675ac1f9ddfaa2532c45">isc_dpl_error_def.h</a></li>
@@ -126,7 +127,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>CAMCONTROL_E_SART_SAVE_FAILED&#160;:&#160;<a class="el" href="group__errorcodes.html#ga9398dab82e997bc6a887d4de4ab601ce">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_SET_FETURE_FAILED&#160;:&#160;<a class="el" href="group__errorcodes.html#gabd54ba44f2c9d35da1eb138b6cdc6546">isc_dpl_error_def.h</a></li>
 <li>CAMCONTROL_E_WRITE_FAILED&#160;:&#160;<a class="el" href="group__errorcodes.html#gaee92218a5d1e5d3f42fed0ffd88db58f">isc_dpl_error_def.h</a></li>
-<li>contextAveraging&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#ae7a17733406f3794cc5ad8bb986fc36c">ISCFrameDecoder.cpp</a></li>
 </ul>
 
 
@@ -142,11 +142,6 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 <li>DPCPROCESS_E_INVALID_MODE&#160;:&#160;<a class="el" href="group__errorcodes.html#gae88095dc0d632649939c081d42445484">isc_dpl_error_def.h</a></li>
 <li>DPCPROCESS_E_INVALID_PARAMETER&#160;:&#160;<a class="el" href="group__errorcodes.html#gaf66ad7489e9aec3959a699ff4502d27c">isc_dpl_error_def.h</a></li>
 <li>DPCPROCESS_E_OPVERLAPED_OPERATION&#160;:&#160;<a class="el" href="group__errorcodes.html#ga268047e365f97ade5b2c90e5c70af687">isc_dpl_error_def.h</a></li>
-</ul>
-
-
-<h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>globalSizeAveraging&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#aed8d0d50bfb9e06fca3797282fa54919">ISCFrameDecoder.cpp</a></li>
 </ul>
 
 
@@ -172,19 +167,16 @@ $(document).ready(function(){initNavTree('globals.html',''); initResizable(); })
 
 
 <h3><a id="index_k" name="index_k"></a>- k -</h3><ul>
-<li>kernelAverageDisparity&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#ad1acf6eee5440f073ee1a1803222235c">ISCFrameDecoder.cpp</a></li>
-<li>kernelObjectAveraging&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#ab071ae34384c09dcbccfa1b6acfcf110">ISCFrameDecoder.cpp</a></li>
-<li>kernelProgramAveraging&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#a52fc4de5d9feef8e1918dba51cf49251">ISCFrameDecoder.cpp</a></li>
+<li>kernelObjectAveraging&#160;:&#160;<a class="el" href="_disparity_filter_8cpp.html#ab071ae34384c09dcbccfa1b6acfcf110">DisparityFilter.cpp</a></li>
+<li>kISCIMAGEINFO_FRAMEDATA_LATEST&#160;:&#160;<a class="el" href="isc__camera__def_8h.html#a73b2db11c160928e60e8330819101563">isc_camera_def.h</a></li>
+<li>kISCIMAGEINFO_FRAMEDATA_MAX_COUNT&#160;:&#160;<a class="el" href="isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e">isc_camera_def.h</a></li>
+<li>kISCIMAGEINFO_FRAMEDATA_MERGED&#160;:&#160;<a class="el" href="isc__camera__def_8h.html#a066d312f4e8840340ed91c60d17095e1">isc_camera_def.h</a></li>
+<li>kISCIMAGEINFO_FRAMEDATA_PREVIOUS&#160;:&#160;<a class="el" href="isc__camera__def_8h.html#aae626dbd41ed0e904ed5ff8547a06095">isc_camera_def.h</a></li>
 </ul>
 
 
 <h3><a id="index_n" name="index_n"></a>- n -</h3><ul>
-<li>NUM_OF_BANDS&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">BlockMatching.cpp</a>, <a class="el" href="_i_s_c_frame_decoder_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">ISCFrameDecoder.cpp</a></li>
-</ul>
-
-
-<h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
-<li>openCLContextInit&#160;:&#160;<a class="el" href="_i_s_c_frame_decoder_8cpp.html#af0fb3853cb6b8de7991809ecbb9ce918">ISCFrameDecoder.cpp</a></li>
+<li>NUM_OF_BANDS&#160;:&#160;<a class="el" href="_block_matching_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">BlockMatching.cpp</a>, <a class="el" href="_disparity_filter_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">DisparityFilter.cpp</a>, <a class="el" href="_stereo_matching_8cpp.html#aa90f795272c815411ca2f2210a7d2ae6">StereoMatching.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

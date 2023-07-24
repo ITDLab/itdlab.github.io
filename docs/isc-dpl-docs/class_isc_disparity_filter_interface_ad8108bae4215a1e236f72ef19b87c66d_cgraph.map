@@ -1,0 +1,6 @@
+<map id="IscDisparityFilterInterface::Initialize" name="IscDisparityFilterInterface::Initialize">
+<area shape="rect" id="node1" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,63,173,103"/>
+<area shape="rect" id="node2" href="$class_disparity_filter.html#a142dc857a12908b18a96d6c8a513fa36" title="Generate parallax averaging thread." alt="" coords="221,5,424,45"/>
+<area shape="rect" id="node3" href="$class_disparity_filter.html#a67ab68858eff24a162c8c7d66e20f4f7" title="initialize the disparity filter." alt="" coords="244,70,401,95"/>
+<area shape="rect" id="node4" href="$class_disparity_filter.html#ab9ad53315520969439a7f0e53d28b50a" title="Configure the use of OpenCL for the disparity averaging process." alt="" coords="231,120,414,160"/>
+</map>

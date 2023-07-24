@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -99,19 +99,21 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 <h3><a id="index_b" name="index_b"></a>- b -</h3><ul>
 <li>base_length&#160;:&#160;<a class="el" href="struct_isc_camera_specific_parameter.html#a082a439aee3c06e3442a1bab71e47ecd">IscCameraSpecificParameter</a>, <a class="el" href="struct_isc_raw_file_header.html#ad92ffd6ae785773edebceb3e3afaee53">IscRawFileHeader</a></li>
-<li>bayer_base&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a79ec7a3cb3ad56fe2ad1c85e678f4dc0">IscImageInfo</a></li>
-<li>bayer_compare&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a1b705ad73c536c5fd3e961375c729b4e">IscImageInfo</a></li>
+<li>bayer_base&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a6fdeee2c3917cf5f56ed43ccd6b39d06">IscImageInfo::FrameData</a></li>
+<li>bayer_compare&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a1feb3aa39f930ea56dcf50be46018343">IscImageInfo::FrameData</a></li>
 <li>bf&#160;:&#160;<a class="el" href="struct_isc_camera_specific_parameter.html#a159fb98663ffa3c8f16811ddd67f6957">IscCameraSpecificParameter</a>, <a class="el" href="struct_isc_raw_file_header.html#a2f0f31c7f6e50e4edd9aa4a7eb0d109d">IscRawFileHeader</a></li>
+<li>blkhgt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a896ceb2910417f6069b52e8aa8ee8514">IscBlockDisparityData</a></li>
+<li>blkwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#acf8b679a7ae702523e9cf48443a9e70e">IscBlockDisparityData</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>camera_model&#160;:&#160;<a class="el" href="struct_isc_raw_file_header.html#a249736a493af69812113dab98e10f061">IscRawFileHeader</a></li>
 <li>camera_specific_parameter&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a1c3a96fc56e41de190d3e83baa46a51a">IscImageInfo</a></li>
-<li>camera_status&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a0040b82ec7fcddf13c9e570b28b1aea1">IscImageInfo</a></li>
+<li>camera_status&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a0a7d4ef0eb6d5f2d19d53c95cec447e7">IscImageInfo::FrameData</a></li>
 <li>category&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter_1_1_parameter_set.html#a86b7f062ea483d5d2f50517089b4a966">IscDataProcModuleParameter::ParameterSet</a></li>
 <li>channel_count&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_image_type.html#aba84aad72b216767324b81d88a458598">IscImageInfo::ImageType</a></li>
-<li>color&#160;:&#160;<a class="el" href="struct_isc_image_info.html#afee26bf7444df04bec7c883ae4478d00">IscImageInfo</a></li>
+<li>color&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a72c792c591ee3dce365166dc310ebf3b">IscImageInfo::FrameData</a></li>
 <li>color_grab_mode&#160;:&#160;<a class="el" href="struct_isc_image_info.html#aa287542fdce07ac9f88d7610c26f43de">IscImageInfo</a></li>
 <li>color_mode&#160;:&#160;<a class="el" href="struct_isc_raw_file_header.html#adf7c0b8b236ea1f6cdf0764f4c86b311">IscRawFileHeader</a></li>
 <li>compressed&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#a31943bf8d10acb2465b012419d5deda1">IscRawDataHeader</a></li>
@@ -123,38 +125,42 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>d_inf&#160;:&#160;<a class="el" href="struct_isc_camera_specific_parameter.html#af14af29a6b2b5ff171c52b8074ad35fd">IscCameraSpecificParameter</a>, <a class="el" href="struct_isc_raw_file_header.html#afd58dc706e8b8c6481090209ea65d71a">IscRawFileHeader</a></li>
 <li>data_receive_tact_time&#160;:&#160;<a class="el" href="struct_isc_camera_status.html#a873e4c9aa1cef51a71c760eb16badf49">IscCameraStatus</a></li>
 <li>data_size&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#a6a276e77c327a38eebaeb37aae78c18a">IscRawDataHeader</a></li>
-<li>depth&#160;:&#160;<a class="el" href="struct_isc_image_info.html#ad2ef67512a78be543a6c07afca34065b">IscImageInfo</a></li>
+<li>depth&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a5c8c3aa912592080b4ee2666c27c1d44">IscBlockDisparityData</a>, <a class="el" href="struct_isc_image_info_1_1_frame_data.html#accf606bd5e06e436324058b135160ddf">IscImageInfo::FrameData</a></li>
 <li>description&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter_1_1_parameter_set.html#aea860609277fff3ee061032566fd3d3f">IscDataProcModuleParameter::ParameterSet</a></li>
 <li>distance&#160;:&#160;<a class="el" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a5ab9a836b9cc0b47b6542bceee3dd2cb">IscAreaDataStatistics::Roi3D</a></li>
+<li>dspofsx&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a25f738ed6ecd50d60591cd17a241f2bf">IscBlockDisparityData</a></li>
+<li>dspofsy&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#acdfcd84d7135294288fceac4562e681b">IscBlockDisparityData</a></li>
 <li>dz&#160;:&#160;<a class="el" href="struct_isc_camera_specific_parameter.html#aa867f6e7c84236b55d21ff09059e5e55">IscCameraSpecificParameter</a>, <a class="el" href="struct_isc_raw_file_header.html#a8cc912589786f42621395eb63674e45e">IscRawFileHeader</a></li>
 </ul>
 
 
 <h3><a id="index_e" name="index_e"></a>- e -</h3><ul>
-<li>enabled_block_matching&#160;:&#160;<a class="el" href="struct_isc_data_proc_start_mode.html#a8afd9dc48d34ba41036082cd49982fca">IscDataProcStartMode</a></li>
 <li>enabled_camera&#160;:&#160;<a class="el" href="struct_isc_camera_control_configuration.html#a66fd9daa368382d65015e75b1457aadb">IscCameraControlConfiguration</a>, <a class="el" href="struct_isc_dpl_configuration.html#a8443dd70005e15ddbe43281e0f3e5f2e">IscDplConfiguration</a></li>
 <li>enabled_data_proc_module&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_configuration.html#a4867fd71b431f5091ac51e0ea7a7f3ac">IscDataProcModuleConfiguration</a>, <a class="el" href="struct_isc_dpl_configuration.html#ae50300bf3d0cf75f1c142df4e348748f">IscDplConfiguration</a></li>
+<li>enabled_disparity_filter&#160;:&#160;<a class="el" href="struct_isc_data_proc_start_mode.html#abab28a363a54a7c1b118c651e9133c25">IscDataProcStartMode</a></li>
 <li>enabled_frame_decoder&#160;:&#160;<a class="el" href="struct_isc_data_proc_start_mode.html#a8d39f90612926561e1a4530a8120201b">IscDataProcStartMode</a></li>
+<li>enabled_stereo_matching&#160;:&#160;<a class="el" href="struct_isc_data_proc_start_mode.html#a35e4b9bde874a0d613e8504b7bb8a0fc">IscDataProcStartMode</a></li>
 <li>error_code&#160;:&#160;<a class="el" href="struct_isc_camera_status.html#a070a34e7cff01e3579db8dc669c58699">IscCameraStatus</a>, <a class="el" href="struct_isc_data_proc_module_status.html#abb7296b3db7168dcb626f3e1c94eb8ee">IscDataProcModuleStatus</a>, <a class="el" href="struct_isc_data_proc_status.html#a8374aeb006104d0e2fae6fa1f20b7897">IscDataProcStatus</a>, <a class="el" href="struct_isc_raw_data_header.html#a7ac8732aa813225e4a78df88ae3149e1">IscRawDataHeader</a></li>
-<li>exposure&#160;:&#160;<a class="el" href="struct_isc_image_info.html#aef11dbab898caa13f7e3f120c0dd6712">IscImageInfo</a>, <a class="el" href="struct_isc_raw_data_header.html#ac37b62b754af35605aad470c9d26d193">IscRawDataHeader</a></li>
+<li>exposure&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#aa285fe959a673e65a78f3e0d894c4650">IscImageInfo::FrameData</a>, <a class="el" href="struct_isc_raw_data_header.html#ac37b62b754af35605aad470c9d26d193">IscRawDataHeader</a></li>
 </ul>
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>frame_data&#160;:&#160;<a class="el" href="struct_isc_image_info.html#ac01cb0df0473abf6975222c58363cb39">IscImageInfo</a></li>
 <li>frame_index&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#a2e40016c10e7f22ce006d6eadf7c5bfb">IscRawDataHeader</a></li>
-<li>frameNo&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a75850d4c528b18c2f8180d83562b7bed">IscImageInfo</a></li>
+<li>frameNo&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a5cfdc1bd24032ba5ce6944eda71c9cb2">IscImageInfo::FrameData</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
-<li>gain&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a41ec78a465a94934f8422869bf9846f7">IscImageInfo</a>, <a class="el" href="struct_isc_raw_data_header.html#a57f601ab7623e4dc1b777fcb80ede2ea">IscRawDataHeader</a></li>
+<li>gain&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a9ad90274f4b3048ffd6bc5be46971e95">IscImageInfo::FrameData</a>, <a class="el" href="struct_isc_raw_data_header.html#a57f601ab7623e4dc1b777fcb80ede2ea">IscRawDataHeader</a></li>
 <li>grab&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a91114d9c235b2171600d6d1720c6547d">IscImageInfo</a></li>
 <li>grab_mode&#160;:&#160;<a class="el" href="struct_isc_raw_file_header.html#adc782630eef1c9df8061916eaa9a29d6">IscRawFileHeader</a></li>
 </ul>
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>hedaer_size&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#a5e4a0da5940c83ba4b1f0a0d0d31fdc7">IscRawDataHeader</a>, <a class="el" href="struct_isc_raw_file_header.html#a8dced5a8f2902eab0916f17f01a00f64">IscRawFileHeader</a></li>
+<li>header_size&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#a28e3c8f84f17893ddb31b9fa3dcd7d08">IscRawDataHeader</a>, <a class="el" href="struct_isc_raw_file_header.html#a8ae1ca2f78f7cf711b55b936787a0c3a">IscRawFileHeader</a></li>
 <li>height&#160;:&#160;<a class="el" href="struct_isc_area_data_statistics.html#a1a18274617b8f3d4bc3573dfc25d7a3c">IscAreaDataStatistics</a>, <a class="el" href="struct_isc_area_data_statistics_1_1_roi3_d.html#a280fd0d3385f96b4bb9221f1ef54bdd4">IscAreaDataStatistics::Roi3D</a>, <a class="el" href="struct_isc_image_info_1_1_depth_type.html#a34a9db5040379385e967381c016b643e">IscImageInfo::DepthType</a>, <a class="el" href="struct_isc_image_info_1_1_image_type.html#af41bbe5314f194fb126627379205c0d6">IscImageInfo::ImageType</a></li>
 </ul>
 
@@ -202,6 +208,8 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <li>module_name&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter.html#ae08470a7320b3bdf82a4047fb94c063b">IscDataProcModuleParameter</a></li>
 <li>module_names&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_status.html#aea06199e7e4908f2ee760eb1bd433df0">IscDataProcModuleStatus</a></li>
 <li>module_status&#160;:&#160;<a class="el" href="struct_isc_data_proc_result_data.html#afecfd2cfcb57b42d32a3a79464b50399">IscDataProcResultData</a></li>
+<li>mtchgt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a1f78fb44fdd21ff5ae90d2a335344d5a">IscBlockDisparityData</a></li>
+<li>mtcwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a0bd9decf51b6cdb7fccbf608100bcaeb">IscBlockDisparityData</a></li>
 </ul>
 
 
@@ -212,29 +220,26 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 
 
 <h3><a id="index_p" name="index_p"></a>- p -</h3><ul>
-<li>p1&#160;:&#160;<a class="el" href="struct_isc_image_info.html#aa49e1ec43644e5ae636209e39260d943">IscImageInfo</a></li>
-<li>p2&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a10d4383e0a2bfe48eda981479df3db45">IscImageInfo</a></li>
+<li>p1&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#aa8b9b34e6fba9068881faa74a694c7a9">IscImageInfo::FrameData</a></li>
+<li>p2&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a82976e87821ceb2619af81b89c69b2bb">IscImageInfo::FrameData</a></li>
 <li>parameter_count&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter.html#a77a46ef93696533ecd40a2dfe359135c">IscDataProcModuleParameter</a></li>
-<li>parameter_set&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter.html#a7d7d81940cd819a8ab3a0a72b299269b">IscDataProcModuleParameter</a></li>
+<li>parameter_set&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_parameter.html#a6173b5d7da988dfd18e868c0eb31cc44">IscDataProcModuleParameter</a></li>
+<li>pbldimg&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a536b3e84cfdb7c668fd412b16fe85ee1">IscBlockDisparityData</a></li>
 <li>pblkcrst&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#aaba65d714ebf8c88540be11c1c611c80">IscBlockDisparityData</a></li>
 <li>pblkdsp&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#afeb5f5ac6d23dd7a16febb03ee2e8c82">IscBlockDisparityData</a></li>
-<li>pblkhgt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#aec62a326a474115103567e4e1a3d7fc8">IscBlockDisparityData</a></li>
-<li>pblkofsx&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a84e578eb5c4740012635cb5f8c398555">IscBlockDisparityData</a></li>
-<li>pblkofsy&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a53458208f737ad7a82f40aabcf56b6c7">IscBlockDisparityData</a></li>
 <li>pblkval&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#ae8d1dc8612baf7b74aef9f19c2663282">IscBlockDisparityData</a></li>
-<li>pblkwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a738cceff6e3d42e602ee9b97c1d0b6a1">IscBlockDisparityData</a></li>
-<li>pdepth&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a46b929340308f296912d09f05f61108b">IscBlockDisparityData</a></li>
+<li>pdspimg&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#ae5015715201b48c349b4b54c8d5bf3be">IscBlockDisparityData</a></li>
 <li>play_file_name&#160;:&#160;<a class="el" href="struct_isc_paly_mode_parameter.html#a3b56ed4a99e1ad373c165560ad257c0b">IscPalyModeParameter</a></li>
-<li>pmtchgt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a0e450a5394c175651920da0054b38283">IscBlockDisparityData</a></li>
-<li>pmtcwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a4978606355d92e7d88bdf60143eff645">IscBlockDisparityData</a></li>
+<li>ppxldsp&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a26933d0eeb548ad5260700c5ac95e76d">IscBlockDisparityData</a></li>
+<li>prgtimg&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a851661de05f46b11f23bcae259996d45">IscBlockDisparityData</a></li>
 <li>proc_tact_time&#160;:&#160;<a class="el" href="struct_isc_data_proc_status.html#a86e8cb0b6961a06b2b972241ed0ea83a">IscDataProcStatus</a></li>
 <li>processing_time&#160;:&#160;<a class="el" href="struct_isc_data_proc_module_status.html#a35f35c2304822c93eaeffa3611ecf7fd">IscDataProcModuleStatus</a></li>
-<li>pshdwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a8053474d571346663c7de22f90a8883a">IscBlockDisparityData</a></li>
 </ul>
 
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
-<li>raw&#160;:&#160;<a class="el" href="struct_isc_image_info.html#a444dcf812d8e497fa56321eed0867f94">IscImageInfo</a></li>
+<li>raw&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a30c614a112b5f2b258f48bab3eae5125">IscImageInfo::FrameData</a></li>
+<li>raw_color&#160;:&#160;<a class="el" href="struct_isc_image_info_1_1_frame_data.html#a97647f596eeb162861a20f61060a815f">IscImageInfo::FrameData</a></li>
 <li>reserve&#160;:&#160;<a class="el" href="struct_isc_raw_data_header.html#aa34ffd58989c6e26bc2ae611fd8e4e40">IscRawDataHeader</a>, <a class="el" href="struct_isc_raw_file_header.html#a6d623557e622198465af4602e76c97d9">IscRawFileHeader</a></li>
 <li>roi_3d&#160;:&#160;<a class="el" href="struct_isc_area_data_statistics.html#af7e4d4ab67e98581de24fcbdc5e39004">IscAreaDataStatistics</a></li>
 </ul>
@@ -243,6 +248,7 @@ $(document).ready(function(){initNavTree('functions_vars.html',''); initResizabl
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>save_image_path&#160;:&#160;<a class="el" href="struct_isc_camera_control_configuration.html#a8c65e03da6147891296b8d2fd988597c">IscCameraControlConfiguration</a>, <a class="el" href="struct_isc_dpl_configuration.html#a7185c398e5b60844d5a9657bad689c1f">IscDplConfiguration</a></li>
 <li>save_time_for_one_file&#160;:&#160;<a class="el" href="struct_isc_save_data_configuration.html#a563336da27bd915c22f2434b4281a6d7">IscSaveDataConfiguration</a></li>
+<li>shdwdt&#160;:&#160;<a class="el" href="struct_isc_block_disparity_data.html#a7ea41489ff1086b9e387f9012a065c98">IscBlockDisparityData</a></li>
 <li>shutter_mode&#160;:&#160;<a class="el" href="struct_isc_image_info.html#acdac5f6f3debec126ef63e686d998508">IscImageInfo</a>, <a class="el" href="struct_isc_raw_file_header.html#a643cfa7472bc70b909161629673121fa">IscRawFileHeader</a></li>
 <li>state&#160;:&#160;<a class="el" href="struct_isc_dataproc_resultdata_ring_buffer_1_1_buffer_data.html#ad17a375f2c9dce23f43b7fa0b76975f3">IscDataprocResultdataRingBuffer::BufferData</a>, <a class="el" href="struct_isc_image_info_ring_buffer_1_1_buffer_data.html#a24fa875fcb7f1b58a873058956bc913a">IscImageInfoRingBuffer::BufferData</a></li>
 <li>statistics_depth&#160;:&#160;<a class="el" href="struct_isc_area_data_statistics.html#a0c4b02179d0fb079a604712f9866c21b">IscAreaDataStatistics</a></li>

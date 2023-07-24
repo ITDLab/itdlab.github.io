@@ -1,0 +1,6 @@
+<map id="IscImageInfo::FrameData" name="IscImageInfo::FrameData">
+<area shape="rect" id="node1" title=" " alt="" coords="151,181,318,207"/>
+<area shape="rect" id="node2" href="$struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="5,5,128,31"/>
+<area shape="rect" id="node3" href="$struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="152,5,317,31"/>
+<area shape="rect" id="node4" href="$struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="342,5,506,31"/>
+</map>

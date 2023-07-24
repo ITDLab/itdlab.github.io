@@ -1,0 +1,5 @@
+<map id="IscStereoMatchingInterface::GetDisparity" name="IscStereoMatchingInterface::GetDisparity">
+<area shape="rect" id="node1" title="get parallax pixel information." alt="" coords="5,23,184,63"/>
+<area shape="rect" id="node2" href="$class_stereo_matching.html#a360afc896a68caa984085eb8a2474781" title="get parallax pixel information." alt="" coords="232,5,423,31"/>
+<area shape="rect" id="node3" href="$class_stereo_matching.html#a886f31f8ead93362b351aea5cf3e2ca6" title="perform stereo matching." alt="" coords="240,55,415,80"/>
+</map>

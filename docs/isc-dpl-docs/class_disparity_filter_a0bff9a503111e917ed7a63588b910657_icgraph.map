@@ -1,0 +1,4 @@
+<map id="DisparityFilter::deleteAveragingThread" name="DisparityFilter::deleteAveragingThread">
+<area shape="rect" id="node1" title="Discard parallax averaging threads." alt="" coords="221,5,423,45"/>
+<area shape="rect" id="node2" href="$class_isc_disparity_filter_interface.html#ad8134ca6fc7c657c828196e063e3d75b" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,173,45"/>
+</map>

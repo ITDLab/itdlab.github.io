@@ -14,5 +14,7 @@ var searchData=
   ['module_5findex_11',['module_index',['../struct_isc_data_proc_module_parameter.html#a98f36249c87e617289e81eaa1cd26867',1,'IscDataProcModuleParameter']]],
   ['module_5fname_12',['module_name',['../struct_isc_data_proc_module_parameter.html#ae08470a7320b3bdf82a4047fb94c063b',1,'IscDataProcModuleParameter']]],
   ['module_5fnames_13',['module_names',['../struct_isc_data_proc_module_status.html#aea06199e7e4908f2ee760eb1bd433df0',1,'IscDataProcModuleStatus']]],
-  ['module_5fstatus_14',['module_status',['../struct_isc_data_proc_result_data.html#afecfd2cfcb57b42d32a3a79464b50399',1,'IscDataProcResultData']]]
+  ['module_5fstatus_14',['module_status',['../struct_isc_data_proc_result_data.html#afecfd2cfcb57b42d32a3a79464b50399',1,'IscDataProcResultData']]],
+  ['mtchgt_15',['mtchgt',['../struct_isc_block_disparity_data.html#a1f78fb44fdd21ff5ae90d2a335344d5a',1,'IscBlockDisparityData']]],
+  ['mtcwdt_16',['mtcwdt',['../struct_isc_block_disparity_data.html#a0bd9decf51b6cdb7fccbf608100bcaeb',1,'IscBlockDisparityData']]]
 ];

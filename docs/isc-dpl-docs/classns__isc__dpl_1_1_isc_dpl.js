@@ -57,7 +57,7 @@ var classns__isc__dpl_1_1_isc_dpl =
     [ "GetPosition3D", "classns__isc__dpl_1_1_isc_dpl.html#ae3e9b37f6771b5039c82e944a03730f9", null ],
     [ "GetPositionDepth", "classns__isc__dpl_1_1_isc_dpl.html#a9a9063634d1022ca48f6232dfc3f60c6", null ],
     [ "GetTotalModuleCount", "classns__isc__dpl_1_1_isc_dpl.html#a42e6eeef059ed6ebafedae7f1970a1a1", null ],
-    [ "Initialize", "classns__isc__dpl_1_1_isc_dpl.html#abee9405878f1c6c09103dc9499368e58", null ],
+    [ "Initialize", "classns__isc__dpl_1_1_isc_dpl.html#af2ac486f2b93d494af64e8b9a47a27a8", null ],
     [ "InitializeIscDataProcResultData", "classns__isc__dpl_1_1_isc_dpl.html#a01951d2a7d56af97dba5a4a66ce53f51", null ],
     [ "InitializeIscIamgeinfo", "classns__isc__dpl_1_1_isc_dpl.html#a71f1906bec0d61bef56bf572cb660b17", null ],
     [ "ReleaeIscDataProcResultData", "classns__isc__dpl_1_1_isc_dpl.html#aeb5be268b42ef85fdaf58e28e418a9b0", null ],

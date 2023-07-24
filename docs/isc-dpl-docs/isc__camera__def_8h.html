@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -130,6 +130,8 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_image_type.html">IscImageInfo::ImageType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_depth_type.html">IscImageInfo::DepthType</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_frame_data.html">IscImageInfo::FrameData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_raw_file_header.html">IscRawFileHeader</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the structure to file  <a href="struct_isc_raw_file_header.html#details">[詳解]</a><br /></td></tr>
@@ -255,6 +257,14 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 変数</h2></td></tr>
 <tr class="memitem:a1c43d98ede12d406308fde1ed6a5037c"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a1c43d98ede12d406308fde1ed6a5037c">kISC_SAVE_MAX_SAVE_FOLDER_COUNT</a> = 16</td></tr>
 <tr class="separator:a1c43d98ede12d406308fde1ed6a5037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae242fe760e571c85d8b7bb57c2f3930e"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e">kISCIMAGEINFO_FRAMEDATA_MAX_COUNT</a> = 3</td></tr>
+<tr class="separator:ae242fe760e571c85d8b7bb57c2f3930e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73b2db11c160928e60e8330819101563"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a73b2db11c160928e60e8330819101563">kISCIMAGEINFO_FRAMEDATA_LATEST</a> = 0</td></tr>
+<tr class="separator:a73b2db11c160928e60e8330819101563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae626dbd41ed0e904ed5ff8547a06095"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#aae626dbd41ed0e904ed5ff8547a06095">kISCIMAGEINFO_FRAMEDATA_PREVIOUS</a> = 1</td></tr>
+<tr class="separator:aae626dbd41ed0e904ed5ff8547a06095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a066d312f4e8840340ed91c60d17095e1"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a066d312f4e8840340ed91c60d17095e1">kISCIMAGEINFO_FRAMEDATA_MERGED</a> = 2</td></tr>
+<tr class="separator:a066d312f4e8840340ed91c60d17095e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b4a3dadb1ac5c0474c89ffb3a86f85"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a38b4a3dadb1ac5c0474c89ffb3a86f85">ISC_ROW_FILE_HEADER_VERSION</a> = 200</td></tr>
 <tr class="separator:a38b4a3dadb1ac5c0474c89ffb3a86f85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a2de71d97a1cdd19cb5ecd44d0f4d0"><td class="memItemLeft" align="right" valign="top">constexpr int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a90a2de71d97a1cdd19cb5ecd44d0f4d0">ISC_ROW_DATA_HEADER_VERSION</a> = 200</td></tr>
@@ -687,7 +697,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>Header Version 2.0.0 </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00345">345</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00358">358</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -712,7 +722,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>Header Version 2.0.0 </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00303">303</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00316">316</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -737,6 +747,106 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 
 <p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00053">53</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a73b2db11c160928e60e8330819101563" name="a73b2db11c160928e60e8330819101563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73b2db11c160928e60e8330819101563">&#9670;&#160;</a></span>kISCIMAGEINFO_FRAMEDATA_LATEST</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kISCIMAGEINFO_FRAMEDATA_LATEST = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>latest FrameData </p>
+
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00223">223</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae242fe760e571c85d8b7bb57c2f3930e" name="ae242fe760e571c85d8b7bb57c2f3930e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae242fe760e571c85d8b7bb57c2f3930e">&#9670;&#160;</a></span>kISCIMAGEINFO_FRAMEDATA_MAX_COUNT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kISCIMAGEINFO_FRAMEDATA_MAX_COUNT = 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>max FrameData count </p>
+
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00222">222</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a066d312f4e8840340ed91c60d17095e1" name="a066d312f4e8840340ed91c60d17095e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a066d312f4e8840340ed91c60d17095e1">&#9670;&#160;</a></span>kISCIMAGEINFO_FRAMEDATA_MERGED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kISCIMAGEINFO_FRAMEDATA_MERGED = 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>merge for double shutter FrameData </p>
+
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00225">225</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aae626dbd41ed0e904ed5ff8547a06095" name="aae626dbd41ed0e904ed5ff8547a06095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae626dbd41ed0e904ed5ff8547a06095">&#9670;&#160;</a></span>kISCIMAGEINFO_FRAMEDATA_PREVIOUS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr int kISCIMAGEINFO_FRAMEDATA_PREVIOUS = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>previous FrameData </p>
+
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00224">224</a> 行目に定義があります。</p>
 
 </div>
 </div>

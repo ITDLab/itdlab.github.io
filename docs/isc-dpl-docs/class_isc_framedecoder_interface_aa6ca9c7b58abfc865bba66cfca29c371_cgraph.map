@@ -1,0 +1,6 @@
+<map id="IscFramedecoderInterface::GetDecodeDataDoubleShutter" name="IscFramedecoderInterface::GetDecodeDataDoubleShutter">
+<area shape="rect" id="node1" title="Decode the parallax data in Double&#45;Shutter mode, return it to the parallax image and parallax informa..." alt="" coords="5,27,209,67"/>
+<area shape="rect" id="node2" href="$class_i_s_c_frame_decoder.html#a5f77d668c26b46a17bab0db78708faf9" title="split frame data into image data." alt="" coords="257,5,500,31"/>
+<area shape="rect" id="node3" href="$class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="281,55,476,95"/>
+<area shape="rect" id="node4" href="$class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="548,55,703,95"/>
+</map>

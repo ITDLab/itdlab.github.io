@@ -1,0 +1,4 @@
+<map id="IscStereoMatchingInterface::Terminate" name="IscStereoMatchingInterface::Terminate">
+<area shape="rect" id="node1" title="... Shut down the system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,184,45"/>
+<area shape="rect" id="node2" href="$class_stereo_matching.html#a8b2030c29d30f5f9e1438994400b86ce" title="destroy the matching thread." alt="" coords="232,5,441,45"/>
+</map>

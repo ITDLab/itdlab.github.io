@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['averagedisparitydata_0',['averageDisparityData',['../class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df',1,'ISCFrameDecoder']]]
+  ['averagedisparitydata_0',['averageDisparityData',['../class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4',1,'DisparityFilter']]]
 ];

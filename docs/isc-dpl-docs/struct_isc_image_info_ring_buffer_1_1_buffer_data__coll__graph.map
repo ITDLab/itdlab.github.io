@@ -1,8 +1,6 @@
 <map id="IscImageInfoRingBuffer::BufferData" name="IscImageInfoRingBuffer::BufferData">
-<area shape="rect" id="node1" title="buffer for result data" alt="" coords="641,112,795,152"/>
-<area shape="rect" id="node2" href="$struct_isc_image_info.html" title="This is the structure to get image" alt="" coords="408,119,503,145"/>
-<area shape="rect" id="node3" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,10,196,35"/>
-<area shape="rect" id="node4" href="$struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="39,59,162,85"/>
-<area shape="rect" id="node5" href="$struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="18,178,183,203"/>
-<area shape="rect" id="node6" href="$struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="19,227,183,253"/>
+<area shape="rect" id="node1" title="buffer for result data" alt="" coords="125,181,279,221"/>
+<area shape="rect" id="node2" href="$struct_isc_image_info.html" title="This is the structure to get image" alt="" coords="155,93,249,119"/>
+<area shape="rect" id="node3" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,5,196,31"/>
+<area shape="rect" id="node4" href="$struct_isc_image_info_1_1_frame_data.html" title=" " alt="" coords="220,5,387,31"/>
 </map>

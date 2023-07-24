@@ -1,0 +1,4 @@
+<map id="DisparityFilter::averageDisparityData" name="DisparityFilter::averageDisparityData">
+<area shape="rect" id="node1" title="Parallax averaging." alt="" coords="5,5,160,45"/>
+<area shape="rect" id="node2" href="$class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57" title="Sharpen parallax on straight edges." alt="" coords="208,5,364,45"/>
+</map>

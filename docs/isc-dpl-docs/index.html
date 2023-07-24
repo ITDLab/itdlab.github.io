@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -98,25 +98,29 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 概要</h1>
 <hr  />
 <p> isc-dplは、ISCシリーズのステレオカメラに対応したデータ処理ライブラリと、ライブラリを使用したサンプルプログラムを提供するプロジェクトです。 <br  />
- データ処理ライブラリには、現在は２つのライブラリが含まれています。 <br  />
+ データ処理ライブラリには、現在は２つのライブラリと１つのサポートライブラリが含まれています。 <br  />
 </p>
 <ul>
 <li>Soft Stereo Matching <br  />
- 　ステレオマッチングを行います <br  />
+ ステレオマッチングを行います <br  />
+</li>
+<li>Disparity Filter <br  />
+ カメラ本体又はSoft Stereo Matching出力の視差に対して平均化、補間処理を行います <br  />
 </li>
 <li>Frame Decoder <br  />
- 　カメラ本体又はSoft Stereo Matching出力の視差に対して平均化、補間処理を行います <br  />
-</li>
+ カメラから取得するデータの展開などを行います</li>
 </ul>
 <p>本サンプルプログラムを実際のステレオカメラと接続して使用することで、動作の検証が可能となります。 <br  />
 </p>
-<p>なお、本プロジェクトにおいてデータ処理ライブラリは、それぞれ以下の名称で提供されています。</p>
+<p>なお、本プロジェクトにおいてデータ処理ライブラリは、それぞれ以下の名称です。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Library   </th><th class="markdownTableHeadLeft">module(class)   </th><th class="markdownTableHeadLeft">DLL    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">Soft Stereo Matching   </td><td class="markdownTableBodyLeft">IscBlockMatching   </td><td class="markdownTableBodyLeft">IscBlockMatching.dll    </td></tr>
+<td class="markdownTableBodyLeft">Soft Stereo Matching   </td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll    </td></tr>
 <tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">Disparity Filter   </td><td class="markdownTableBodyLeft">IscDisparityFilter   </td><td class="markdownTableBodyLeft">IscDisparityFilter.dll    </td></tr>
+<tr class="markdownTableRowOdd">
 <td class="markdownTableBodyLeft">Frame Decoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder.dll   </td></tr>
 </table>
 <p>注意 <br  />
@@ -129,35 +133,48 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <p> <a href="data_processing_lib-Overall-Structure.drawio.html" title="プロジェクト構成">プロジェクト構成図(link)</a> <br  />
  <a href="data_processing_lib-Data-Flow.drawio.html" title="データフロー">データフロー(link)</a> <br  />
 </p>
-<ul>
-<li>DPC_gui 表示及び各種の制御を行うGUIです <br  />
-</li>
-<li>ISC DPL カメラの制御及びデータ処理を行うライブラリ群です <br  />
-<ul>
-<li>IscDpl インターフェース用DLLです <br  />
-</li>
-<li>IscDplMainControl 全体の制御、データの受け渡しを行います <br  />
-</li>
-<li>IScCameraControl 実カメラの制御及びカメラデータのファイル読み書きを行います <br  />
-<ul>
-<li>VmSdkWrapper <br  />
-</li>
-<li>XcSdkWrapper <br  />
-</li>
-</ul>
-</li>
-<li>IscDataProcessingControl データ処理ライブラリの呼び出しを行います<ul>
-<li>IscBlockMatching ステレオマッチングを行います <br  />
-</li>
-<li>IscFrameDecoder 視差の平均化、補間処理を行います <br  />
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>ISC SDK(VM/XC) それぞれのカメラに対応したSDKです <br  />
-</li>
-</ul>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadLeft"></th><th class="markdownTableHeadLeft">Project   </th><th class="markdownTableHeadLeft">exe/dll   </th><th class="markdownTableHeadLeft">Content    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Application   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">DPC_gui   </td><td class="markdownTableBodyLeft">DPC_gui.exe   </td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Examples   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">Sample_OpenCV1   </td><td class="markdownTableBodyLeft">Sample_OpenCV1.exe   </td><td class="markdownTableBodyLeft">OpenCVを使用するサンプル    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">Sample_Yolo1   </td><td class="markdownTableBodyLeft">Sample_Yolo1.exe   </td><td class="markdownTableBodyLeft">Yoloを使用するサンプル    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">Sample_Python1   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">Pythonで使用するサンプル    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Library   </td><td class="markdownTableBodyLeft">ISC DPL   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">カメラの制御及びデータ処理を行うライブラリ群です    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDpl   </td><td class="markdownTableBodyLeft">IscDpl.dll   </td><td class="markdownTableBodyLeft">インターフェース用DLLです    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDplC   </td><td class="markdownTableBodyLeft">IscDplC.dll   </td><td class="markdownTableBodyLeft">インターフェース用DLLです(Extern C)    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDplMainControl   </td><td class="markdownTableBodyLeft">IscDplMainControl.dll   </td><td class="markdownTableBodyLeft">全体の制御、データの受け渡しを行います    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IScCameraControl   </td><td class="markdownTableBodyLeft">IscCameraControl.dll   </td><td class="markdownTableBodyLeft">実カメラの制御及びカメラデータのファイル読み書きを行います    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">VmSdkWrapper   </td><td class="markdownTableBodyLeft">VmSdkWrapper.dll   </td><td class="markdownTableBodyLeft">SDKとのインターフェースです    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">XcSdkWrapper   </td><td class="markdownTableBodyLeft">XcSdkWrapper.dll   </td><td class="markdownTableBodyLeft">SDKとのインターフェースです    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDataProcessingControl   </td><td class="markdownTableBodyLeft">IscDataProcessingControl.dll   </td><td class="markdownTableBodyLeft">データ処理ライブラリの呼び出しを行います    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll   </td><td class="markdownTableBodyLeft">ステレオマッチングを行います    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscFrameDecoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder.dll   </td><td class="markdownTableBodyLeft">カメラデータの展開を行います    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDisparityFilter   </td><td class="markdownTableBodyLeft">IscDisparityFilter.dll   </td><td class="markdownTableBodyLeft">視差の平均化、補間処理を行います    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyLeft">SDK   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">ISC SDK(VM/XC)   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">それぞれのカメラに対応したSDKです   </td></tr>
+</table>
 <hr  />
  <h1><a class="anchor" id="autotoc_md3"></a>
 Link</h1>

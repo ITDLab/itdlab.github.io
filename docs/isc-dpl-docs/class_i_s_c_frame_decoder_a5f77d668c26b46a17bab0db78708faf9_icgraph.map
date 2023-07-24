@@ -1,0 +1,5 @@
+<map id="ISCFrameDecoder::decodeFrameData" name="ISCFrameDecoder::decodeFrameData">
+<area shape="rect" id="node1" title="split frame data into image data." alt="" coords="257,45,500,70"/>
+<area shape="rect" id="node2" href="$class_isc_framedecoder_interface.html#aac2705778638657b038bb0c793100f38" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="22,5,193,45"/>
+<area shape="rect" id="node3" href="$class_isc_framedecoder_interface.html#aa6ca9c7b58abfc865bba66cfca29c371" title="Decode the parallax data in Double&#45;Shutter mode, return it to the parallax image and parallax informa..." alt="" coords="5,69,209,109"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="IscDisparityFilterInterface::Terminate" name="IscDisparityFilterInterface::Terminate">
+<area shape="rect" id="node1" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,173,45"/>
+<area shape="rect" id="node2" href="$class_disparity_filter.html#a0bff9a503111e917ed7a63588b910657" title="Discard parallax averaging threads." alt="" coords="221,5,423,45"/>
+</map>

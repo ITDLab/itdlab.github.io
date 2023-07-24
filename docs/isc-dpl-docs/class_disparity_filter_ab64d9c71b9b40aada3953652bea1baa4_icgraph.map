@@ -1,0 +1,9 @@
+<map id="DisparityFilter::averageDisparityData" name="DisparityFilter::averageDisparityData">
+<area shape="rect" id="node1" title="Parallax averaging." alt="" coords="537,109,692,149"/>
+<area shape="rect" id="node2" href="$class_isc_disparity_filter_interface.html#a52d2d82f188ddc4c036f20ea6a30c9b8" title="average the parallax." alt="" coords="286,5,461,45"/>
+<area shape="rect" id="node3" href="$class_isc_disparity_filter_interface.html#a0cf873001c48a6e1f1d7f47f3c841e97" title="average the parallax for double shutter." alt="" coords="266,70,481,125"/>
+<area shape="rect" id="node4" href="$class_i_s_c_frame_decoder.html#a48f875e324aa0915f2dfa33e141e3395" title="Decode disparity encoded data, perform disparity averaging and completion processing." alt="" coords="257,149,489,174"/>
+<area shape="rect" id="node6" href="$class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="276,200,471,240"/>
+<area shape="rect" id="node5" href="$class_isc_framedecoder_interface.html#aac2705778638657b038bb0c793100f38" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="22,139,193,179"/>
+<area shape="rect" id="node7" href="$class_isc_framedecoder_interface.html#aa6ca9c7b58abfc865bba66cfca29c371" title="Decode the parallax data in Double&#45;Shutter mode, return it to the parallax image and parallax informa..." alt="" coords="5,203,209,243"/>
+</map>

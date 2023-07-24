@@ -1,0 +1,1154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>IscDpl: DisparityFilter クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   </div>
+   <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('class_disparity_filter.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="class_disparity_filter-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">DisparityFilter クラス</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>implementation class this class is an implementation of Disparity Filter  
+ <a href="class_disparity_filter.html#details">[詳解]</a></p>
+
+<p><code>#include &lt;<a class="el" href="_disparity_filter_8h_source.html">source/modules/IscDisparityFilter/include/DisparityFilter.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a67ab68858eff24a162c8c7d66e20f4f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a67ab68858eff24a162c8c7d66e20f4f7">initialize</a> (int imghgt, int imgwdt)</td></tr>
+<tr class="memdesc:a67ab68858eff24a162c8c7d66e20f4f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialize the disparity filter.  <br /></td></tr>
+<tr class="separator:a67ab68858eff24a162c8c7d66e20f4f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac610931a3da8345077dc962a491300c7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#ac610931a3da8345077dc962a491300c7">finalize</a> ()</td></tr>
+<tr class="memdesc:ac610931a3da8345077dc962a491300c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">terminate the disparity filter.  <br /></td></tr>
+<tr class="separator:ac610931a3da8345077dc962a491300c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9ad53315520969439a7f0e53d28b50a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#ab9ad53315520969439a7f0e53d28b50a">setUseOpenCLForAveragingDisparity</a> (int usecl)</td></tr>
+<tr class="memdesc:ab9ad53315520969439a7f0e53d28b50a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the use of OpenCL for the disparity averaging process.  <br /></td></tr>
+<tr class="separator:ab9ad53315520969439a7f0e53d28b50a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1492bf15ffec3e4f36bcd4b7cee6339b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a1492bf15ffec3e4f36bcd4b7cee6339b">saveBlockDisparity</a> ()</td></tr>
+<tr class="memdesc:a1492bf15ffec3e4f36bcd4b7cee6339b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save parallax values for blocks.  <br /></td></tr>
+<tr class="separator:a1492bf15ffec3e4f36bcd4b7cee6339b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92e8fa1d110297b7a0db974190c25187"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a92e8fa1d110297b7a0db974190c25187">setDisparityLimitation</a> (int limit, double lower, double upper)</td></tr>
+<tr class="memdesc:a92e8fa1d110297b7a0db974190c25187"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the upper and lower parallax limits.  <br /></td></tr>
+<tr class="separator:a92e8fa1d110297b7a0db974190c25187"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a513a008f175fb763206c8903b9c84f21"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a513a008f175fb763206c8903b9c84f21">setAveragingParameter</a> (int enb, int blkshgt, int blkswdt, double intg, double range, int dsprt, int vldrt, int reprt)</td></tr>
+<tr class="memdesc:a513a008f175fb763206c8903b9c84f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parallax averaging parameters.  <br /></td></tr>
+<tr class="separator:a513a008f175fb763206c8903b9c84f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f9e950a9c0605a480b349f76c9c190"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a89f9e950a9c0605a480b349f76c9c190">setAveragingBlockWeight</a> (int cntwgt, int nrwgt, int rndwgt)</td></tr>
+<tr class="memdesc:a89f9e950a9c0605a480b349f76c9c190"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the weights of the disparity averaging blocks.  <br /></td></tr>
+<tr class="separator:a89f9e950a9c0605a480b349f76c9c190"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dc0bc5c3f7f8b7a8c29746867c7e21b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a6dc0bc5c3f7f8b7a8c29746867c7e21b">setComplementParameter</a> (int enb, double lowlmt, double slplmt, double insrt, double rndrt, double btmrt, int crstlmt, int hlfil, double hlsz)</td></tr>
+<tr class="memdesc:a6dc0bc5c3f7f8b7a8c29746867c7e21b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set parallax completion parameters.  <br /></td></tr>
+<tr class="separator:a6dc0bc5c3f7f8b7a8c29746867c7e21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2b46148425b142c15280ff683888ce6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#ad2b46148425b142c15280ff683888ce6">setEdgeComplementParameter</a> (int edgcmp, int minblks, double mincoef, int cmpwdt)</td></tr>
+<tr class="memdesc:ad2b46148425b142c15280ff683888ce6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set edge completion parameters.  <br /></td></tr>
+<tr class="separator:ad2b46148425b142c15280ff683888ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeaeeb419a6e7576041bc6e59befa1c4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#afeaeeb419a6e7576041bc6e59befa1c4">setHoughTransformParameter</a> (int edgthr1, int edgthr2, int linthr, int minlen, int maxgap)</td></tr>
+<tr class="memdesc:afeaeeb419a6e7576041bc6e59befa1c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set Hough transform parameters.  <br /></td></tr>
+<tr class="separator:afeaeeb419a6e7576041bc6e59befa1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64d9c71b9b40aada3953652bea1baa4"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4">averageDisparityData</a> (int imghgt, int imgwdt, unsigned char *prgtimg, int blkhgt, int blkwdt, int mtchgt, int mtcwdt, int dspofsx, int dspofsy, int depth, int shdwdt, int *pblkval, int *pblkcrst, unsigned char *pdspimg, float *ppxldsp, float *pblkdsp)</td></tr>
+<tr class="memdesc:ab64d9c71b9b40aada3953652bea1baa4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parallax averaging.  <br /></td></tr>
+<tr class="separator:ab64d9c71b9b40aada3953652bea1baa4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a142dc857a12908b18a96d6c8a513fa36"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a142dc857a12908b18a96d6c8a513fa36">createAveragingThread</a> ()</td></tr>
+<tr class="memdesc:a142dc857a12908b18a96d6c8a513fa36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate parallax averaging thread.  <br /></td></tr>
+<tr class="separator:a142dc857a12908b18a96d6c8a513fa36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bff9a503111e917ed7a63588b910657"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#a0bff9a503111e917ed7a63588b910657">deleteAveragingThread</a> ()</td></tr>
+<tr class="memdesc:a0bff9a503111e917ed7a63588b910657"><td class="mdescLeft">&#160;</td><td class="mdescRight">Discard parallax averaging threads.  <br /></td></tr>
+<tr class="separator:a0bff9a503111e917ed7a63588b910657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af32597831f0ac8cbbe82f957f6c0be57"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57">sharpenLinearEdge</a> (int imghgt, int imgwdt, unsigned char *prgtimg, int blkhgt, int blkwdt, int mtchgt, int mtcwdt, int dspofsx, int dspofsy, int depth, int shdwdt, int *pblkval)</td></tr>
+<tr class="memdesc:af32597831f0ac8cbbe82f957f6c0be57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sharpen parallax on straight edges.  <br /></td></tr>
+<tr class="separator:af32597831f0ac8cbbe82f957f6c0be57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>implementation class this class is an implementation of Disparity Filter </p>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8h_source.html">DisparityFilter.h</a> の <a class="el" href="_disparity_filter_8h_source.html#l00030">30</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="ab64d9c71b9b40aada3953652bea1baa4" name="ab64d9c71b9b40aada3953652bea1baa4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64d9c71b9b40aada3953652bea1baa4">&#9670;&#160;</a></span>averageDisparityData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DisparityFilter::averageDisparityData </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>prgtimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkhgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtchgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtcwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shdwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pblkval</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pblkcrst</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>pdspimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>ppxldsp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float *&#160;</td>
+          <td class="paramname"><em>pblkdsp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Parallax averaging. </p>
+<p>視差を平均化する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(IN)</td></tr>
+    <tr><td class="paramname">blkhgt</td><td>視差ブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">blkwdt</td><td>視差ブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">mtchgt</td><td>マッチングブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">mtcwdt</td><td>マッチングブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">dspofsx</td><td>視差ブロック横オフセット(IN)</td></tr>
+    <tr><td class="paramname">dspofsy</td><td>視差ブロック縦オフセット(IN)</td></tr>
+    <tr><td class="paramname">depth</td><td>マッチング探索幅(IN)</td></tr>
+    <tr><td class="paramname">shdwdt</td><td>遮蔽領域幅(IN)</td></tr>
+    <tr><td class="paramname">pblkval</td><td>視差ブロック視差値(1000倍サブピクセル精度整数)(IN)</td></tr>
+    <tr><td class="paramname">pblkcrst</td><td>ブロックコントラスト(IN)</td></tr>
+    <tr><td class="paramname">pdspimg</td><td>視差画像 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">ppxldsp</td><td>視差データ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">pblkdsp</td><td>ブロック視差データ 右下原点(OUT)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>処理結果を返す</dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00641">641</a> 行目に定義があります。</p>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_cgraph.png" border="0" usemap="#aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_cgraph" alt=""/></div>
+<map name="aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_cgraph" id="aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_cgraph">
+<area shape="rect" title="Parallax averaging." alt="" coords="5,5,160,45"/>
+<area shape="rect" href="class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57" title="Sharpen parallax on straight edges." alt="" coords="208,5,364,45"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_icgraph.png" border="0" usemap="#aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_icgraph" id="aclass_disparity_filter_ab64d9c71b9b40aada3953652bea1baa4_icgraph">
+<area shape="rect" title="Parallax averaging." alt="" coords="537,109,692,149"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#a52d2d82f188ddc4c036f20ea6a30c9b8" title="average the parallax." alt="" coords="286,5,461,45"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#a0cf873001c48a6e1f1d7f47f3c841e97" title="average the parallax for double shutter." alt="" coords="266,70,481,125"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a48f875e324aa0915f2dfa33e141e3395" title="Decode disparity encoded data, perform disparity averaging and completion processing." alt="" coords="257,149,489,174"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="276,200,471,240"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#aac2705778638657b038bb0c793100f38" title="Decode the parallax data, return it to the parallax image and parallax information,..." alt="" coords="22,139,193,179"/>
+<area shape="rect" href="class_isc_framedecoder_interface.html#aa6ca9c7b58abfc865bba66cfca29c371" title="Decode the parallax data in Double&#45;Shutter mode, return it to the parallax image and parallax informa..." alt="" coords="5,203,209,243"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a142dc857a12908b18a96d6c8a513fa36" name="a142dc857a12908b18a96d6c8a513fa36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a142dc857a12908b18a96d6c8a513fa36">&#9670;&#160;</a></span>createAveragingThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::createAveragingThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate parallax averaging thread. </p>
+<p>視差平均化スレッドを生成する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l01965">1965</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_a142dc857a12908b18a96d6c8a513fa36_icgraph.png" border="0" usemap="#aclass_disparity_filter_a142dc857a12908b18a96d6c8a513fa36_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_a142dc857a12908b18a96d6c8a513fa36_icgraph" id="aclass_disparity_filter_a142dc857a12908b18a96d6c8a513fa36_icgraph">
+<area shape="rect" title="Generate parallax averaging thread." alt="" coords="221,5,424,45"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,173,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0bff9a503111e917ed7a63588b910657" name="a0bff9a503111e917ed7a63588b910657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bff9a503111e917ed7a63588b910657">&#9670;&#160;</a></span>deleteAveragingThread()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::deleteAveragingThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Discard parallax averaging threads. </p>
+<p>視差平均化スレッドを破棄する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l01988">1988</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_a0bff9a503111e917ed7a63588b910657_icgraph.png" border="0" usemap="#aclass_disparity_filter_a0bff9a503111e917ed7a63588b910657_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_a0bff9a503111e917ed7a63588b910657_icgraph" id="aclass_disparity_filter_a0bff9a503111e917ed7a63588b910657_icgraph">
+<area shape="rect" title="Discard parallax averaging threads." alt="" coords="221,5,423,45"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#ad8134ca6fc7c657c828196e063e3d75b" title="... Shut down the runtime system. Don&#39;t call any method after calling Terminate()." alt="" coords="5,5,173,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac610931a3da8345077dc962a491300c7" name="ac610931a3da8345077dc962a491300c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac610931a3da8345077dc962a491300c7">&#9670;&#160;</a></span>finalize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::finalize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>terminate the disparity filter. </p>
+<p>視差フィルターを終了する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00418">418</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a67ab68858eff24a162c8c7d66e20f4f7" name="a67ab68858eff24a162c8c7d66e20f4f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ab68858eff24a162c8c7d66e20f4f7">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::initialize </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>initialize the disparity filter. </p>
+<p>視差フィルターを初期化する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00400">400</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_a67ab68858eff24a162c8c7d66e20f4f7_icgraph.png" border="0" usemap="#aclass_disparity_filter_a67ab68858eff24a162c8c7d66e20f4f7_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_a67ab68858eff24a162c8c7d66e20f4f7_icgraph" id="aclass_disparity_filter_a67ab68858eff24a162c8c7d66e20f4f7_icgraph">
+<area shape="rect" title="initialize the disparity filter." alt="" coords="221,13,379,38"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,173,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1492bf15ffec3e4f36bcd4b7cee6339b" name="a1492bf15ffec3e4f36bcd4b7cee6339b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1492bf15ffec3e4f36bcd4b7cee6339b">&#9670;&#160;</a></span>saveBlockDisparity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::saveBlockDisparity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save parallax values for blocks. </p>
+<p>ブロックの視差値を保存する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00447">447</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a89f9e950a9c0605a480b349f76c9c190" name="a89f9e950a9c0605a480b349f76c9c190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f9e950a9c0605a480b349f76c9c190">&#9670;&#160;</a></span>setAveragingBlockWeight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setAveragingBlockWeight </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cntwgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nrwgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rndwgt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the weights of the disparity averaging blocks. </p>
+<p>視差平均化ブロックの重みを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cntwgt</td><td>ブロックの重み（中央）(IN)</td></tr>
+    <tr><td class="paramname">nrwgt</td><td>ブロックの重み（近傍）(IN)</td></tr>
+    <tr><td class="paramname">rndwgt</td><td>ブロックの重み（周辺）(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00511">511</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a513a008f175fb763206c8903b9c84f21" name="a513a008f175fb763206c8903b9c84f21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a513a008f175fb763206c8903b9c84f21">&#9670;&#160;</a></span>setAveragingParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setAveragingParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>enb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkshgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkswdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>intg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>range</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dsprt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>vldrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reprt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set parallax averaging parameters. </p>
+<p>視差平均化パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enb</td><td>平均化処理しない：0 する：1(IN)</td></tr>
+    <tr><td class="paramname">blkshgt</td><td>視差平均化ブロック高さ（片側）(IN)</td></tr>
+    <tr><td class="paramname">blkswdt</td><td>視差平均化ブロック幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">intg</td><td>視差平均化移動積分幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">range</td><td>視差平均化分布範囲最大幅（片側）(IN)</td></tr>
+    <tr><td class="paramname">dsprt</td><td>視差平均化視差含有率(IN)</td></tr>
+    <tr><td class="paramname">vldrt</td><td>視差平均化有効比率(IN)</td></tr>
+    <tr><td class="paramname">reprt</td><td>視差平均化置換有効比率(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00481">481</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6dc0bc5c3f7f8b7a8c29746867c7e21b" name="a6dc0bc5c3f7f8b7a8c29746867c7e21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dc0bc5c3f7f8b7a8c29746867c7e21b">&#9670;&#160;</a></span>setComplementParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setComplementParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>enb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lowlmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>slplmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>insrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rndrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>btmrt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>crstlmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hlfil</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>hlsz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set parallax completion parameters. </p>
+<p>視差補完パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enb</td><td>補完処理しない：0 する：1(IN)</td></tr>
+    <tr><td class="paramname">lowlmt</td><td>補完最小視差値(IN)</td></tr>
+    <tr><td class="paramname">slplmt</td><td>補完幅の最大視差勾配(IN)</td></tr>
+    <tr><td class="paramname">insrt</td><td>補完画素幅の視差値倍率（内側）(IN)</td></tr>
+    <tr><td class="paramname">rndrt</td><td>補完画素幅の視差値倍率（周辺）(IN)</td></tr>
+    <tr><td class="paramname">btmrt</td><td>補完画素幅の視差値倍率（下端）(IN)</td></tr>
+    <tr><td class="paramname">crstlmt</td><td>補完ブロックのコントラスト上限値(IN)</td></tr>
+    <tr><td class="paramname">hlfil</td><td>穴埋め処理しない：0 する：1 (IN)</td></tr>
+    <tr><td class="paramname">hlsz</td><td>穴埋め幅 (IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00535">535</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a92e8fa1d110297b7a0db974190c25187" name="a92e8fa1d110297b7a0db974190c25187"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92e8fa1d110297b7a0db974190c25187">&#9670;&#160;</a></span>setDisparityLimitation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setDisparityLimitation </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>limit</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>lower</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>upper</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the upper and lower parallax limits. </p>
+<p>視差の下限値、上限値を設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">limit</td><td>視差値の制限　0:しない 1:する(IN)</td></tr>
+    <tr><td class="paramname">lower</td><td>視差値の下限(IN)</td></tr>
+    <tr><td class="paramname">upper</td><td>視差値の上限(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00461">461</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad2b46148425b142c15280ff683888ce6" name="ad2b46148425b142c15280ff683888ce6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2b46148425b142c15280ff683888ce6">&#9670;&#160;</a></span>setEdgeComplementParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setEdgeComplementParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>edgcmp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minblks</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>mincoef</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cmpwdt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set edge completion parameters. </p>
+<p>エッジ補完パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edgcmp</td><td>エッジ補完 0:しない 1:する(IN)</td></tr>
+    <tr><td class="paramname">minblks</td><td>エッジ線分上の最小視差ブロック数(IN)</td></tr>
+    <tr><td class="paramname">mincoef</td><td>エッジ視差の最小線形性指数（回帰線の決定係数）(IN)</td></tr>
+    <tr><td class="paramname">cmpwdt</td><td>エッジ線の補完視差ブロック幅(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00570">570</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afeaeeb419a6e7576041bc6e59befa1c4" name="afeaeeb419a6e7576041bc6e59befa1c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeaeeb419a6e7576041bc6e59befa1c4">&#9670;&#160;</a></span>setHoughTransformParameter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setHoughTransformParameter </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>edgthr1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>edgthr2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>linthr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>minlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxgap</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set Hough transform parameters. </p>
+<p>ハフ変換パラメータを設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">edgthr1</td><td>Cannyエッジ検出閾値1(IN)</td></tr>
+    <tr><td class="paramname">edgthr2</td><td>Cannyエッジ検出閾値2(IN)</td></tr>
+    <tr><td class="paramname">linthr</td><td>HoughLinesP投票閾値(IN)</td></tr>
+    <tr><td class="paramname">minlen</td><td>HoughLinesP最小線分長(IN)</td></tr>
+    <tr><td class="paramname">maxgap</td><td>HoughLinesP最大ギャップ長(IN)</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00604">604</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ab9ad53315520969439a7f0e53d28b50a" name="ab9ad53315520969439a7f0e53d28b50a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9ad53315520969439a7f0e53d28b50a">&#9670;&#160;</a></span>setUseOpenCLForAveragingDisparity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::setUseOpenCLForAveragingDisparity </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usecl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configure the use of OpenCL for the disparity averaging process. </p>
+<p>視差平均化処理にOpenCLの使用を設定する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">usecl</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00438">438</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_ab9ad53315520969439a7f0e53d28b50a_icgraph.png" border="0" usemap="#aclass_disparity_filter_ab9ad53315520969439a7f0e53d28b50a_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_ab9ad53315520969439a7f0e53d28b50a_icgraph" id="aclass_disparity_filter_ab9ad53315520969439a7f0e53d28b50a_icgraph">
+<area shape="rect" title="Configure the use of OpenCL for the disparity averaging process." alt="" coords="221,5,404,45"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,173,45"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af32597831f0ac8cbbe82f957f6c0be57" name="af32597831f0ac8cbbe82f957f6c0be57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af32597831f0ac8cbbe82f957f6c0be57">&#9670;&#160;</a></span>sharpenLinearEdge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DisparityFilter::sharpenLinearEdge </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imghgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>imgwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>prgtimg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkhgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>blkwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtchgt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mtcwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dspofsy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>shdwdt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>pblkval</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sharpen parallax on straight edges. </p>
+<p>直線エッジの視差を鮮明化する</p>
+<dl class="section return"><dt>戻り値</dt><dd>none.</dd></dl>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
+    <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(IN)</td></tr>
+    <tr><td class="paramname">blkhgt</td><td>視差ブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">blkwdt</td><td>視差ブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">mtchgt</td><td>マッチングブロックの高さ(IN)</td></tr>
+    <tr><td class="paramname">mtcwdt</td><td>マッチングブロックの幅(IN)</td></tr>
+    <tr><td class="paramname">dspofsx</td><td>視差ブロック横オフセット(IN)</td></tr>
+    <tr><td class="paramname">dspofsy</td><td>視差ブロック縦オフセット(IN)</td></tr>
+    <tr><td class="paramname">depth</td><td>マッチング探索幅(IN)</td></tr>
+    <tr><td class="paramname">shdwdt</td><td>遮蔽領域幅(IN)</td></tr>
+    <tr><td class="paramname">pblkval</td><td>ブロック視差値(倍精度整数サブピクセル)(IN/OUT)</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>処理結果を返す</dd></dl>
+
+<p class="definition"> <a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a> の <a class="el" href="_disparity_filter_8cpp_source.html#l00730">730</a> 行目に定義があります。</p>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disparity_filter_af32597831f0ac8cbbe82f957f6c0be57_icgraph.png" border="0" usemap="#aclass_disparity_filter_af32597831f0ac8cbbe82f957f6c0be57_icgraph" alt=""/></div>
+<map name="aclass_disparity_filter_af32597831f0ac8cbbe82f957f6c0be57_icgraph" id="aclass_disparity_filter_af32597831f0ac8cbbe82f957f6c0be57_icgraph">
+<area shape="rect" title="Sharpen parallax on straight edges." alt="" coords="488,109,644,149"/>
+<area shape="rect" href="class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="285,109,440,149"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#a52d2d82f188ddc4c036f20ea6a30c9b8" title="average the parallax." alt="" coords="34,5,209,45"/>
+<area shape="rect" href="class_isc_disparity_filter_interface.html#a0cf873001c48a6e1f1d7f47f3c841e97" title="average the parallax for double shutter." alt="" coords="14,70,229,125"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#a48f875e324aa0915f2dfa33e141e3395" title="Decode disparity encoded data, perform disparity averaging and completion processing." alt="" coords="5,149,237,174"/>
+<area shape="rect" href="class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="24,199,219,239"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li>source/modules/IscDisparityFilter/include/<a class="el" href="_disparity_filter_8h_source.html">DisparityFilter.h</a></li>
+<li>source/modules/IscDisparityFilter/src/<a class="el" href="_disparity_filter_8cpp_source.html">DisparityFilter.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_disparity_filter.html">DisparityFilter</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6 </li>
+  </ul>
+</div>
+</body>
+</html>

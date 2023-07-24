@@ -1,0 +1,5 @@
+<map id="IscDisparityFilterInterface::GetAverageDisparityData" name="IscDisparityFilterInterface::GetAverageDisparityData">
+<area shape="rect" id="node1" title="average the parallax." alt="" coords="5,5,180,45"/>
+<area shape="rect" id="node2" href="$class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="228,5,383,45"/>
+<area shape="rect" id="node3" href="$class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57" title="Sharpen parallax on straight edges." alt="" coords="431,5,587,45"/>
+</map>

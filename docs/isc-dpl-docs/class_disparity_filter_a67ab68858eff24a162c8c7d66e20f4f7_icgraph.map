@@ -1,0 +1,4 @@
+<map id="DisparityFilter::initialize" name="DisparityFilter::initialize">
+<area shape="rect" id="node1" title="initialize the disparity filter." alt="" coords="221,13,379,38"/>
+<area shape="rect" id="node2" href="$class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,173,45"/>
+</map>

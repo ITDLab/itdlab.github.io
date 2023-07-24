@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -93,7 +93,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 &#160;
 
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
-<li>averageDisparityData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a2830e51236317f38c08450dec2c794df">ISCFrameDecoder</a></li>
+<li>averageDisparityData()&#160;:&#160;<a class="el" href="class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4">DisparityFilter</a></li>
 </ul>
 
 
@@ -105,16 +105,15 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>Clear()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#aa6ce59de011724ce55f96c540a1dc869">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a9680b17ce5389e9f569abe4aacfc6983">IscImageInfoRingBuffer</a></li>
 <li>Close()&#160;:&#160;<a class="el" href="class_isc_log.html#abf575d9062b2c4fba00dc80f64be0f1a">IscLog</a></li>
-<li>createAveragingThread()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#acde15f5d1fc6fc66aabf7d28cd7d1ded">ISCFrameDecoder</a></li>
-<li>createMatchingThread()&#160;:&#160;<a class="el" href="class_block_matching.html#ad4dc6a94354d889d613f386029866f48">BlockMatching</a></li>
+<li>createAveragingThread()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a142dc857a12908b18a96d6c8a513fa36">DisparityFilter</a></li>
+<li>createMatchingThread()&#160;:&#160;<a class="el" href="class_block_matching.html#ad4dc6a94354d889d613f386029866f48">BlockMatching</a>, <a class="el" href="class_stereo_matching.html#a4dcc2d77651f72a3580b31ff563c04e8">StereoMatching</a></li>
 </ul>
 
 
 <h3><a id="index_d" name="index_d"></a>- d -</h3><ul>
-<li>decodeDisparityData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#ab7202c89fe73b648ae0a00ec62e05c99">ISCFrameDecoder</a></li>
-<li>decodeFrameData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a55858af397df5bcc737859a173c1c87f">ISCFrameDecoder</a></li>
-<li>deleteAveragingThread()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a87692aa0b1a5e55ec5b116e22fd88ab0">ISCFrameDecoder</a></li>
-<li>deleteMatchingThread()&#160;:&#160;<a class="el" href="class_block_matching.html#a959857a83292cd04cd52d325d832da6a">BlockMatching</a></li>
+<li>decodeFrameData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a5f77d668c26b46a17bab0db78708faf9">ISCFrameDecoder</a></li>
+<li>deleteAveragingThread()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a0bff9a503111e917ed7a63588b910657">DisparityFilter</a></li>
+<li>deleteMatchingThread()&#160;:&#160;<a class="el" href="class_block_matching.html#a959857a83292cd04cd52d325d832da6a">BlockMatching</a>, <a class="el" href="class_stereo_matching.html#a8b2030c29d30f5f9e1438994400b86ce">StereoMatching</a></li>
 <li>DeviceGetOption()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a30d1d8c9ece74e5a74db9efda8a0cd48">ns_isc_dpl::IscDpl</a></li>
 <li>DeviceGetOptionInc()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a8579ff4a4bb2e5607583b76881420b7e">ns_isc_dpl::IscDpl</a></li>
 <li>DeviceGetOptionMax()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aec870e174fcbe8b9f50b85b83196d9a3">ns_isc_dpl::IscDpl</a></li>
@@ -129,29 +128,35 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
-<li>finalize()&#160;:&#160;<a class="el" href="class_block_matching.html#aaa37c4accc5fedf23dd5149ee1e2170b">BlockMatching</a>, <a class="el" href="class_i_s_c_frame_decoder.html#a7c709980a469f47d2aeba37742582e26">ISCFrameDecoder</a></li>
+<li>finalize()&#160;:&#160;<a class="el" href="class_block_matching.html#aaa37c4accc5fedf23dd5149ee1e2170b">BlockMatching</a>, <a class="el" href="class_disparity_filter.html#ac610931a3da8345077dc962a491300c7">DisparityFilter</a>, <a class="el" href="class_i_s_c_frame_decoder.html#a7c709980a469f47d2aeba37742582e26">ISCFrameDecoder</a>, <a class="el" href="class_stereo_matching.html#af1d5a7ace525ff77927d626b3da6877e">StereoMatching</a></li>
 <li>Flush()&#160;:&#160;<a class="el" href="class_isc_log.html#ac63e548de33a81065f678243e2378d96">IscLog</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>GetAreaStatistics()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aeae3d6f5d5fb95c0230ec857c8c71244">ns_isc_dpl::IscDpl</a></li>
+<li>GetAverageDisparityData()&#160;:&#160;<a class="el" href="class_isc_disparity_filter_interface.html#a52d2d82f188ddc4c036f20ea6a30c9b8">IscDisparityFilterInterface</a></li>
+<li>GetAverageDisparityDataDoubleShutter()&#160;:&#160;<a class="el" href="class_isc_disparity_filter_interface.html#a0cf873001c48a6e1f1d7f47f3c841e97">IscDisparityFilterInterface</a></li>
 <li>getBlockDisparity()&#160;:&#160;<a class="el" href="class_block_matching.html#ad17058808fa72432eae76351df2ff7b9">BlockMatching</a></li>
-<li>GetBlockDisparity()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#acdd869813ae8dd353cab91f6ba6a75a3">IscBlockMatchingInterface</a></li>
+<li>GetBlockDisparity()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#acdd869813ae8dd353cab91f6ba6a75a3">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#afd9a0a0827263c9c78ca6f24f1c5278b">IscStereoMatchingInterface</a></li>
+<li>getBlockDisparity()&#160;:&#160;<a class="el" href="class_stereo_matching.html#a1c8974f8ec90d77142beaa8516772e0e">StereoMatching</a></li>
 <li>GetCameraData()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a4b5348ef3924f686822d5139769d21aa">ns_isc_dpl::IscDpl</a></li>
 <li>GetDataProcModuleData()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a02cf9b138d8d7a411f63582ad320191d">ns_isc_dpl::IscDpl</a></li>
 <li>GetDataProcModuleParameter()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a0296bbd696886b643e5403b582974b54">ns_isc_dpl::IscDpl</a></li>
-<li>GetDecodeAverageDisparityData()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a8ab044c7b75fbb9c46fdf870b9f6e1b0">IscFramedecoderInterface</a></li>
-<li>GetDecodeData()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a286a69613536d325b02c03ba62fbe6ed">IscFramedecoderInterface</a></li>
+<li>GetDecodeData()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#aac2705778638657b038bb0c793100f38">IscFramedecoderInterface</a></li>
+<li>GetDecodeDataDoubleShutter()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#aa6ca9c7b58abfc865bba66cfca29c371">IscFramedecoderInterface</a></li>
 <li>getDisparity()&#160;:&#160;<a class="el" href="class_block_matching.html#a767a2d0bfcd7f704a636bcc16bbf618c">BlockMatching</a></li>
-<li>GetDisparity()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad8babe6babb1aa94e45eded5137b5855">IscBlockMatchingInterface</a></li>
+<li>GetDisparity()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad8babe6babb1aa94e45eded5137b5855">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#acc2957d32bdce34aaada8d987c83aa84">IscStereoMatchingInterface</a></li>
+<li>getDisparity()&#160;:&#160;<a class="el" href="class_stereo_matching.html#a360afc896a68caa984085eb8a2474781">StereoMatching</a></li>
+<li>getDisparityData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a48f875e324aa0915f2dfa33e141e3395">ISCFrameDecoder</a></li>
+<li>getDoubleDisparityData()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#af3aaf97e4cc4205ee928bb095c2c22f3">ISCFrameDecoder</a></li>
 <li>GetElapsedTimeAverage()&#160;:&#160;<a class="el" href="class_utility_measure_time.html#ade20f2cdc10619e92b3d1e1e2f1eaa99">UtilityMeasureTime</a></li>
 <li>GetFileInformation()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#ae3cd8d575bb28bf30a622559555a190b">ns_isc_dpl::IscDpl</a></li>
 <li>GetGetBuffer()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a1f023f623995f4a1327ed26d7a994307">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#ab9fc18c6fc74332657a3d2c21645beaa">IscImageInfoRingBuffer</a></li>
 <li>GetGrabMode()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a8770666481d08f82dbb3ce0ef4526566">ns_isc_dpl::IscDpl</a></li>
 <li>GetModuleNameByIndex()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aca9c5430d5f693c70d826f95ef7694ac">ns_isc_dpl::IscDpl</a></li>
-<li>GetParameter()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ada4e8a10745fbac7a3a4506d8412bda1">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a8046ff14701b0f84c7b27e7bc00ed49f">IscFramedecoderInterface</a></li>
-<li>GetParameterFileName()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad23c2e1a884ff161992019ce13b3b957">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#aa6e175f535a03332887dd2da83d61b1f">IscFramedecoderInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#ad3a047c3746b663d25a80290943c81f9">ns_isc_dpl::IscDpl</a></li>
+<li>GetParameter()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ada4e8a10745fbac7a3a4506d8412bda1">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_disparity_filter_interface.html#ac2e84932d69fb630bbf37ec96a2d917d">IscDisparityFilterInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a8046ff14701b0f84c7b27e7bc00ed49f">IscFramedecoderInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#ad63c0b1328fead52117134fd6accf38e">IscStereoMatchingInterface</a></li>
+<li>GetParameterFileName()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad23c2e1a884ff161992019ce13b3b957">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_disparity_filter_interface.html#a2cd5ca6155aec26b6d92f2c962be03a9">IscDisparityFilterInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#aa6e175f535a03332887dd2da83d61b1f">IscFramedecoderInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#abe6a532551490850663d45f44a76dfad">IscStereoMatchingInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#ad3a047c3746b663d25a80290943c81f9">ns_isc_dpl::IscDpl</a></li>
 <li>GetPosition3D()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#ae3e9b37f6771b5039c82e944a03730f9">ns_isc_dpl::IscDpl</a></li>
 <li>GetPositionDepth()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a9a9063634d1022ca48f6232dfc3f60c6">ns_isc_dpl::IscDpl</a></li>
 <li>GetPutBuffer()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a6559fcad038694cb9e5123381093db2c">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a919586062f37d820d0f15a22c5be1a7d">IscImageInfoRingBuffer</a></li>
@@ -162,19 +167,22 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
 <li>Init()&#160;:&#160;<a class="el" href="class_utility_measure_time.html#af9fb21b4d11136dd0d6cd887531b4013">UtilityMeasureTime</a></li>
-<li>initialize()&#160;:&#160;<a class="el" href="class_block_matching.html#ad8607708d70249bccfb78a0f4258d660">BlockMatching</a></li>
-<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a897ebdb759575855c60f7c337812e65a">IscDataprocResultdataRingBuffer</a></li>
+<li>initialize()&#160;:&#160;<a class="el" href="class_block_matching.html#ad8607708d70249bccfb78a0f4258d660">BlockMatching</a>, <a class="el" href="class_disparity_filter.html#a67ab68858eff24a162c8c7d66e20f4f7">DisparityFilter</a></li>
+<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ad225a97a8ed4ba3f5ddbed4cf000a68b">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a897ebdb759575855c60f7c337812e65a">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_disparity_filter_interface.html#ad8108bae4215a1e236f72ef19b87c66d">IscDisparityFilterInterface</a></li>
 <li>initialize()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a65b633c266447de1c0f993c65a75fc66">ISCFrameDecoder</a></li>
-<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a92dd9bfa49a578fa2228008ad7537e74">IscImageInfoRingBuffer</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#abee9405878f1c6c09103dc9499368e58">ns_isc_dpl::IscDpl</a></li>
+<li>Initialize()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a76da8bcf648997a863c62d9e7ea06c4c">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a92dd9bfa49a578fa2228008ad7537e74">IscImageInfoRingBuffer</a>, <a class="el" href="class_isc_stereo_matching_interface.html#a8def697d18ca7794d67765da10a92334">IscStereoMatchingInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#af2ac486f2b93d494af64e8b9a47a27a8">ns_isc_dpl::IscDpl</a></li>
+<li>initialize()&#160;:&#160;<a class="el" href="class_stereo_matching.html#a912c0c74ab41c75384d0d78db3636453">StereoMatching</a></li>
 <li>InitializeIscBlockDisparityData()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a18cf385ce6f9737ded973f5e4f55d7f7">IscBlockMatchingInterface</a></li>
 <li>InitializeIscDataProcResultData()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a01951d2a7d56af97dba5a4a66ce53f51">ns_isc_dpl::IscDpl</a></li>
 <li>InitializeIscIamgeinfo()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a71f1906bec0d61bef56bf572cb660b17">ns_isc_dpl::IscDpl</a></li>
 <li>IscBlockMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a10b0aaea074a7fd7df03c9973094ee10">IscBlockMatchingInterface</a></li>
 <li>IscDataprocResultdataRingBuffer()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a148bf70ba1282b1608ab8db60c160289">IscDataprocResultdataRingBuffer</a></li>
+<li>IscDisparityFilterInterface()&#160;:&#160;<a class="el" href="class_isc_disparity_filter_interface.html#ad3e7f6c17ef24b6e1345ff8e8126ccd6">IscDisparityFilterInterface</a></li>
 <li>IscDpl()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a14af685f0de9b419cccae4b78b134ce3">ns_isc_dpl::IscDpl</a></li>
 <li>IscFramedecoderInterface()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#af9cebaeda230f0131b70497c7f45a59c">IscFramedecoderInterface</a></li>
 <li>IscImageInfoRingBuffer()&#160;:&#160;<a class="el" href="class_isc_image_info_ring_buffer.html#a2969eef24719c7569083c57cdd145e21">IscImageInfoRingBuffer</a></li>
 <li>IscLog()&#160;:&#160;<a class="el" href="class_isc_log.html#a4b4690afd14c65dae4a92e4436fbe207">IscLog</a></li>
+<li>IscStereoMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_stereo_matching_interface.html#aed2f8d2dd5e88656f5dad82062baf107">IscStereoMatchingInterface</a></li>
 </ul>
 
 
@@ -187,7 +195,7 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
-<li>matching()&#160;:&#160;<a class="el" href="class_block_matching.html#a14876a430c24719072e0e70174602b47">BlockMatching</a></li>
+<li>matching()&#160;:&#160;<a class="el" href="class_block_matching.html#a14876a430c24719072e0e70174602b47">BlockMatching</a>, <a class="el" href="class_stereo_matching.html#a886f31f8ead93362b351aea5cf3e2ca6">StereoMatching</a></li>
 </ul>
 
 
@@ -200,30 +208,37 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>ReleaeIscDataProcResultData()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aeb5be268b42ef85fdaf58e28e418a9b0">ns_isc_dpl::IscDpl</a></li>
 <li>ReleaeIscIamgeinfo()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#adf1308a42b05f51a31234fa5635aaf7c">ns_isc_dpl::IscDpl</a></li>
 <li>ReleaeIscIscBlockDisparityData()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ae7dfc0b247c40bb7bcb46749ccdbb89a">IscBlockMatchingInterface</a></li>
-<li>ReloadParameterFromFile()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a28e151ca1e636ad8e45f58555df82b35">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a8442c4f346231b5d93f7df0bfeb0f639">IscFramedecoderInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aea8d3bc820cb254958983d445ebdacbb">ns_isc_dpl::IscDpl</a></li>
+<li>ReloadParameterFromFile()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a28e151ca1e636ad8e45f58555df82b35">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_disparity_filter_interface.html#a18e3b2c7ee620f0f8a54d2d911febab5">IscDisparityFilterInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a8442c4f346231b5d93f7df0bfeb0f639">IscFramedecoderInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#a747c14336d5f7034171b7dd4286331b4">IscStereoMatchingInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#aea8d3bc820cb254958983d445ebdacbb">ns_isc_dpl::IscDpl</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
-<li>saveBlockDisparity()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#aa119ee8367c6016780296ea09727d48b">ISCFrameDecoder</a></li>
-<li>setAveragingBlockWeight()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a16a4ed832ac2a8805c33533fad24a0fc">ISCFrameDecoder</a></li>
-<li>setAveragingParameter()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a29fd586c84ff3a5c589e36f5f25d8e2c">ISCFrameDecoder</a></li>
-<li>setBackMatchingParameter()&#160;:&#160;<a class="el" href="class_block_matching.html#ad05ad91faad9d75dfb62f83e60c9d0f1">BlockMatching</a></li>
-<li>setComplementParameter()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a2b1fa4be23a13e530ec7ddb8015739d7">ISCFrameDecoder</a></li>
+<li>saveBlockDisparity()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a1492bf15ffec3e4f36bcd4b7cee6339b">DisparityFilter</a></li>
+<li>setAveragingBlockWeight()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a89f9e950a9c0605a480b349f76c9c190">DisparityFilter</a></li>
+<li>setAveragingParameter()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a513a008f175fb763206c8903b9c84f21">DisparityFilter</a></li>
+<li>setBackMatchingParameter()&#160;:&#160;<a class="el" href="class_block_matching.html#ad05ad91faad9d75dfb62f83e60c9d0f1">BlockMatching</a>, <a class="el" href="class_stereo_matching.html#aefed2b7838f4cb9249d4c7ac327fa157">StereoMatching</a></li>
+<li>setComplementParameter()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a6dc0bc5c3f7f8b7a8c29746867c7e21b">DisparityFilter</a></li>
 <li>SetDataProcModuleParameter()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a710b125e5989d65f2e9a25f808be57bb">ns_isc_dpl::IscDpl</a></li>
-<li>setDisparityLimitation()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a763dc32cab4107dccbf8a9f6d6a2d818">ISCFrameDecoder</a></li>
-<li>setMatchingParameter()&#160;:&#160;<a class="el" href="class_block_matching.html#a1d41e605ac26e3e327c93ce35a5abba4">BlockMatching</a></li>
+<li>setDisparityLimitation()&#160;:&#160;<a class="el" href="class_disparity_filter.html#a92e8fa1d110297b7a0db974190c25187">DisparityFilter</a>, <a class="el" href="class_i_s_c_frame_decoder.html#a763dc32cab4107dccbf8a9f6d6a2d818">ISCFrameDecoder</a></li>
+<li>setDoubleShutterOutput()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a2fa62bb194cab6a3e7d525644c61b0c9">ISCFrameDecoder</a></li>
+<li>setEdgeComplementParameter()&#160;:&#160;<a class="el" href="class_disparity_filter.html#ad2b46148425b142c15280ff683888ce6">DisparityFilter</a></li>
+<li>setFrameDecoderParameter()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a9ac0692499433db3d48440020520f91e">ISCFrameDecoder</a></li>
+<li>setHoughTransformParameter()&#160;:&#160;<a class="el" href="class_disparity_filter.html#afeaeeb419a6e7576041bc6e59befa1c4">DisparityFilter</a></li>
+<li>setMatchingParameter()&#160;:&#160;<a class="el" href="class_block_matching.html#a1d41e605ac26e3e327c93ce35a5abba4">BlockMatching</a>, <a class="el" href="class_stereo_matching.html#acc1d7b6e9502ddac56170f3c9816eb39">StereoMatching</a></li>
 <li>SetMode()&#160;:&#160;<a class="el" href="class_isc_image_info_ring_buffer.html#aec5bbb7800c8019e698957179aacd535">IscImageInfoRingBuffer</a></li>
-<li>SetParameter()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ae8891f1a0991bddafb012d9594694381">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a83b391b9094133313e92350ce9f4a11b">IscFramedecoderInterface</a></li>
-<li>setUseOpenCLForAveragingDisparity()&#160;:&#160;<a class="el" href="class_i_s_c_frame_decoder.html#a8724c78d005a08afee7e8489484046f6">ISCFrameDecoder</a></li>
+<li>SetParameter()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#ae8891f1a0991bddafb012d9594694381">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_disparity_filter_interface.html#a0134c8a2d2222b9514d60cb08fba6688">IscDisparityFilterInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a83b391b9094133313e92350ce9f4a11b">IscFramedecoderInterface</a>, <a class="el" href="class_isc_stereo_matching_interface.html#a45c4ffae48dbaa76c3a9ce73b6a7441b">IscStereoMatchingInterface</a></li>
+<li>setUseOpenCLForAveragingDisparity()&#160;:&#160;<a class="el" href="class_disparity_filter.html#ab9ad53315520969439a7f0e53d28b50a">DisparityFilter</a></li>
 <li>setUseOpenCLForBlockMatching()&#160;:&#160;<a class="el" href="class_block_matching.html#a05fd42bbee506def14cf95fbf90553b0">BlockMatching</a></li>
+<li>setUseOpenCLForMatching()&#160;:&#160;<a class="el" href="class_stereo_matching.html#acdf2e0be4f65a5d529243fefcdb25a3b">StereoMatching</a></li>
+<li>sharpenLinearEdge()&#160;:&#160;<a class="el" href="class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57">DisparityFilter</a></li>
 <li>Start()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a8fb0109d73fe2950db6a49d0833714c7">ns_isc_dpl::IscDpl</a>, <a class="el" href="class_utility_measure_time.html#aaa412d9719c24938f313615a8e56ea13">UtilityMeasureTime</a></li>
+<li>StereoMatching()&#160;:&#160;<a class="el" href="class_stereo_matching.html#abcdb852dd096314eaae050aea7b52af6">StereoMatching</a></li>
 <li>Stop()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#ad9cc7155c4f85133a9cd9077985d2818">ns_isc_dpl::IscDpl</a>, <a class="el" href="class_utility_measure_time.html#a02f05a0f43442062eba67384ac76077a">UtilityMeasureTime</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
-<li>Terminate()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a2cc8c58efb39ef0aa4c9ce6ac7b0461f">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a824e598d39832c66d985265949ecf51a">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_framedecoder_interface.html#a3dcc05f47587ee30f66d338f40b37be7">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a1ab87e9980c4a0d76b9c4251a1d8b032">IscImageInfoRingBuffer</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a71f7e6eec859cc7662662ad7837cb689">ns_isc_dpl::IscDpl</a></li>
+<li>Terminate()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#a2cc8c58efb39ef0aa4c9ce6ac7b0461f">IscBlockMatchingInterface</a>, <a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a824e598d39832c66d985265949ecf51a">IscDataprocResultdataRingBuffer</a>, <a class="el" href="class_isc_disparity_filter_interface.html#ad8134ca6fc7c657c828196e063e3d75b">IscDisparityFilterInterface</a>, <a class="el" href="class_isc_framedecoder_interface.html#a3dcc05f47587ee30f66d338f40b37be7">IscFramedecoderInterface</a>, <a class="el" href="class_isc_image_info_ring_buffer.html#a1ab87e9980c4a0d76b9c4251a1d8b032">IscImageInfoRingBuffer</a>, <a class="el" href="class_isc_stereo_matching_interface.html#a0f7b3e18f3c52d577a643a45b7fed4a2">IscStereoMatchingInterface</a>, <a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#a71f7e6eec859cc7662662ad7837cb689">ns_isc_dpl::IscDpl</a></li>
 </ul>
 
 
@@ -236,10 +251,13 @@ $(document).ready(function(){initNavTree('functions_func.html',''); initResizabl
 <li>~BlockMatching()&#160;:&#160;<a class="el" href="class_block_matching.html#aa3ed2aed7cce211c8cf64b93178cd214">BlockMatching</a></li>
 <li>~IscBlockMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_block_matching_interface.html#aa571d8c37fa081dc8fc7a7da66ec46d6">IscBlockMatchingInterface</a></li>
 <li>~IscDataprocResultdataRingBuffer()&#160;:&#160;<a class="el" href="class_isc_dataproc_resultdata_ring_buffer.html#a464c2cc9becde04132225c9effa6e8a2">IscDataprocResultdataRingBuffer</a></li>
+<li>~IscDisparityFilterInterface()&#160;:&#160;<a class="el" href="class_isc_disparity_filter_interface.html#a64eda5b78273c10ff2a8a738e665b163">IscDisparityFilterInterface</a></li>
 <li>~IscDpl()&#160;:&#160;<a class="el" href="classns__isc__dpl_1_1_isc_dpl.html#adba832f123c43185ea4dfb6af0213dcd">ns_isc_dpl::IscDpl</a></li>
 <li>~IscFramedecoderInterface()&#160;:&#160;<a class="el" href="class_isc_framedecoder_interface.html#a385efa79d88003fee4976c40d08a2280">IscFramedecoderInterface</a></li>
 <li>~IscImageInfoRingBuffer()&#160;:&#160;<a class="el" href="class_isc_image_info_ring_buffer.html#a01187779095cd691978f31ee8d9f1f5e">IscImageInfoRingBuffer</a></li>
 <li>~IscLog()&#160;:&#160;<a class="el" href="class_isc_log.html#a945a3014ed62d24197152f2968627316">IscLog</a></li>
+<li>~IscStereoMatchingInterface()&#160;:&#160;<a class="el" href="class_isc_stereo_matching_interface.html#ad715f4be862e2e2bb50f2d2bc5e6c9dd">IscStereoMatchingInterface</a></li>
+<li>~StereoMatching()&#160;:&#160;<a class="el" href="class_stereo_matching.html#a50276b7fbb2eb28caa523a3477fa4411">StereoMatching</a></li>
 <li>~UtilityMeasureTime()&#160;:&#160;<a class="el" href="class_utility_measure_time.html#afdb5a0f927ad1ce830286139d2936bc7">UtilityMeasureTime</a></li>
 </ul>
 </div><!-- contents -->

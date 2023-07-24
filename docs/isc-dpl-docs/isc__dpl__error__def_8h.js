@@ -15,6 +15,7 @@ var isc__dpl__error__def_8h =
     [ "CAMCONTROL_E_INVALID_PARAMETER", "group__errorcodes.html#gabdb11c660a3b920930c2d55388fbb726", null ],
     [ "CAMCONTROL_E_INVALID_REQUEST", "group__errorcodes.html#ga89ce409e4d677a5ae1aa6433e44d6b76", null ],
     [ "CAMCONTROL_E_INVALID_SAVE_FOLDER", "group__errorcodes.html#ga265bb709bce30d2fbb0fce69842501fd", null ],
+    [ "CAMCONTROL_E_LOAD_DLL_FAILED", "group__errorcodes.html#ga17e68dfb09e9126168ee9e4d5ed53431", null ],
     [ "CAMCONTROL_E_NO_IMAGE", "group__errorcodes.html#ga69cb9407634a1e0d3a61d25ae112a286", null ],
     [ "CAMCONTROL_E_NOT_ENOUGH_FREE_SPACE", "group__errorcodes.html#ga7c504ec978169f9c630509f9866c7e50", null ],
     [ "CAMCONTROL_E_OPEN_DEVICE_FAILED", "group__errorcodes.html#gac2c7693047fe675ac1f9ddfaa2532c45", null ],

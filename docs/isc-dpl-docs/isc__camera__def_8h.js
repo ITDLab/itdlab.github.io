@@ -10,6 +10,7 @@ var isc__camera__def_8h =
     [ "IscImageInfo", "struct_isc_image_info.html", "struct_isc_image_info" ],
     [ "IscImageInfo::ImageType", "struct_isc_image_info_1_1_image_type.html", "struct_isc_image_info_1_1_image_type" ],
     [ "IscImageInfo::DepthType", "struct_isc_image_info_1_1_depth_type.html", "struct_isc_image_info_1_1_depth_type" ],
+    [ "IscImageInfo::FrameData", "struct_isc_image_info_1_1_frame_data.html", "struct_isc_image_info_1_1_frame_data" ],
     [ "IscRawFileHeader", "struct_isc_raw_file_header.html", "struct_isc_raw_file_header" ],
     [ "IscRawDataHeader", "struct_isc_raw_data_header.html", "struct_isc_raw_data_header" ],
     [ "IscCameraInfo", "isc__camera__def_8h.html#a761c15381d484adfa8b2b92d27e9ff9a", [
@@ -93,5 +94,9 @@ var isc__camera__def_8h =
       [ "kDoubleShutter2", "isc__camera__def_8h.html#a28d15e6cb0edd2cf4f16c04614ae488da6028bffd24f557b6aa062bea5046c433", null ]
     ] ],
     [ "ISC_ROW_DATA_HEADER_VERSION", "isc__camera__def_8h.html#a90a2de71d97a1cdd19cb5ecd44d0f4d0", null ],
-    [ "ISC_ROW_FILE_HEADER_VERSION", "isc__camera__def_8h.html#a38b4a3dadb1ac5c0474c89ffb3a86f85", null ]
+    [ "ISC_ROW_FILE_HEADER_VERSION", "isc__camera__def_8h.html#a38b4a3dadb1ac5c0474c89ffb3a86f85", null ],
+    [ "kISCIMAGEINFO_FRAMEDATA_LATEST", "isc__camera__def_8h.html#a73b2db11c160928e60e8330819101563", null ],
+    [ "kISCIMAGEINFO_FRAMEDATA_MAX_COUNT", "isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e", null ],
+    [ "kISCIMAGEINFO_FRAMEDATA_MERGED", "isc__camera__def_8h.html#a066d312f4e8840340ed91c60d17095e1", null ],
+    [ "kISCIMAGEINFO_FRAMEDATA_PREVIOUS", "isc__camera__def_8h.html#aae626dbd41ed0e904ed5ff8547a06095", null ]
 ];

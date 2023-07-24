@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -104,30 +104,32 @@ $(document).ready(function(){initNavTree('struct_isc_data_proc_start_mode.html',
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:a8afd9dc48d34ba41036082cd49982fca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_data_proc_start_mode.html#a8afd9dc48d34ba41036082cd49982fca">enabled_block_matching</a></td></tr>
-<tr class="separator:a8afd9dc48d34ba41036082cd49982fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e4b9bde874a0d613e8504b7bb8a0fc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_data_proc_start_mode.html#a35e4b9bde874a0d613e8504b7bb8a0fc">enabled_stereo_matching</a></td></tr>
+<tr class="separator:a35e4b9bde874a0d613e8504b7bb8a0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d39f90612926561e1a4530a8120201b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_data_proc_start_mode.html#a8d39f90612926561e1a4530a8120201b">enabled_frame_decoder</a></td></tr>
 <tr class="separator:a8d39f90612926561e1a4530a8120201b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abab28a363a54a7c1b118c651e9133c25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_data_proc_start_mode.html#abab28a363a54a7c1b118c651e9133c25">enabled_disparity_filter</a></td></tr>
+<tr class="separator:abab28a363a54a7c1b118c651e9133c25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>This is the parameter for start process </p>
 
 <p class="definition"> <a class="el" href="isc__dataprocessing__def_8h_source.html">isc_dataprocessing_def.h</a> の <a class="el" href="isc__dataprocessing__def_8h_source.html#l00043">43</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ詳解</h2>
-<a id="a8afd9dc48d34ba41036082cd49982fca" name="a8afd9dc48d34ba41036082cd49982fca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8afd9dc48d34ba41036082cd49982fca">&#9670;&#160;</a></span>enabled_block_matching</h2>
+<a id="abab28a363a54a7c1b118c651e9133c25" name="abab28a363a54a7c1b118c651e9133c25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abab28a363a54a7c1b118c651e9133c25">&#9670;&#160;</a></span>enabled_disparity_filter</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool IscDataProcStartMode::enabled_block_matching</td>
+          <td class="memname">bool IscDataProcStartMode::enabled_disparity_filter</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>whether to use a soft stereo matching </p>
+<p>whether to use a disparity filter </p>
 
-<p class="definition"> <a class="el" href="isc__dataprocessing__def_8h_source.html">isc_dataprocessing_def.h</a> の <a class="el" href="isc__dataprocessing__def_8h_source.html#l00044">44</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__dataprocessing__def_8h_source.html">isc_dataprocessing_def.h</a> の <a class="el" href="isc__dataprocessing__def_8h_source.html#l00046">46</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -145,6 +147,23 @@ $(document).ready(function(){initNavTree('struct_isc_data_proc_start_mode.html',
 <p>whether to use a frame decoder </p>
 
 <p class="definition"> <a class="el" href="isc__dataprocessing__def_8h_source.html">isc_dataprocessing_def.h</a> の <a class="el" href="isc__dataprocessing__def_8h_source.html#l00045">45</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a35e4b9bde874a0d613e8504b7bb8a0fc" name="a35e4b9bde874a0d613e8504b7bb8a0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e4b9bde874a0d613e8504b7bb8a0fc">&#9670;&#160;</a></span>enabled_stereo_matching</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IscDataProcStartMode::enabled_stereo_matching</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>whether to use a soft stereo matching </p>
+
+<p class="definition"> <a class="el" href="isc__dataprocessing__def_8h_source.html">isc_dataprocessing_def.h</a> の <a class="el" href="isc__dataprocessing__def_8h_source.html#l00044">44</a> 行目に定義があります。</p>
 
 </div>
 </div>

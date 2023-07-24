@@ -1,0 +1,5 @@
+<map id="ISCFrameDecoder::getDoubleDisparityData" name="ISCFrameDecoder::getDoubleDisparityData">
+<area shape="rect" id="node1" title="Decodes double&#45;shutter disparity encoded data, performs disparity averaging and completion processing..." alt="" coords="5,5,200,45"/>
+<area shape="rect" id="node2" href="$class_disparity_filter.html#ab64d9c71b9b40aada3953652bea1baa4" title="Parallax averaging." alt="" coords="248,5,403,45"/>
+<area shape="rect" id="node3" href="$class_disparity_filter.html#af32597831f0ac8cbbe82f957f6c0be57" title="Sharpen parallax on straight edges." alt="" coords="451,5,607,45"/>
+</map>

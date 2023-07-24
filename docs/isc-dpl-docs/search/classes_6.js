@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['utilitymeasuretime_0',['UtilityMeasureTime',['../class_utility_measure_time.html',1,'']]]
+  ['statistics_0',['Statistics',['../struct_isc_area_data_statistics_1_1_statistics.html',1,'IscAreaDataStatistics']]],
+  ['stereomatching_1',['StereoMatching',['../class_stereo_matching.html',1,'']]]
 ];

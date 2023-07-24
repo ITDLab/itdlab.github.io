@@ -1,0 +1,4 @@
+<map id="StereoMatching::createMatchingThread" name="StereoMatching::createMatchingThread">
+<area shape="rect" id="node1" title="spawn a block matching thread." alt="" coords="232,5,443,45"/>
+<area shape="rect" id="node2" href="$class_isc_stereo_matching_interface.html#a8def697d18ca7794d67765da10a92334" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,184,45"/>
+</map>

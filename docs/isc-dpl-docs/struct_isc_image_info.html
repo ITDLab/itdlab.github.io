@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.0.1</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -107,11 +107,12 @@ IscImageInfo 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="struct_isc_image_info__coll__graph.png" border="0" usemap="#a_isc_image_info_coll__map" alt="Collaboration graph"/></div>
 <map name="a_isc_image_info_coll__map" id="a_isc_image_info_coll__map">
-<area shape="rect" title="This is the structure to get image" alt="" coords="408,119,503,145"/>
-<area shape="rect" href="struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,10,196,35"/>
-<area shape="rect" href="struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="39,59,162,85"/>
-<area shape="rect" href="struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="18,178,183,203"/>
-<area shape="rect" href="struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="19,227,183,253"/>
+<area shape="rect" title="This is the structure to get image" alt="" coords="151,269,245,295"/>
+<area shape="rect" href="struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,181,196,207"/>
+<area shape="rect" href="struct_isc_image_info_1_1_frame_data.html" title=" " alt="" coords="220,181,387,207"/>
+<area shape="rect" href="struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="74,5,197,31"/>
+<area shape="rect" href="struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="221,5,386,31"/>
+<area shape="rect" href="struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="411,5,575,31"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">凡例</a>]</span></center></div>
 <table class="memberdecls">
@@ -119,81 +120,29 @@ IscImageInfo 連携図</div>
 クラス</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_depth_type.html">DepthType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_frame_data.html">FrameData</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 公開変数類</h2></td></tr>
-<tr class="memitem:a75850d4c528b18c2f8180d83562b7bed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a75850d4c528b18c2f8180d83562b7bed">frameNo</a></td></tr>
-<tr class="separator:a75850d4c528b18c2f8180d83562b7bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a41ec78a465a94934f8422869bf9846f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a41ec78a465a94934f8422869bf9846f7">gain</a></td></tr>
-<tr class="separator:a41ec78a465a94934f8422869bf9846f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef11dbab898caa13f7e3f120c0dd6712"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#aef11dbab898caa13f7e3f120c0dd6712">exposure</a></td></tr>
-<tr class="separator:aef11dbab898caa13f7e3f120c0dd6712"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c3a96fc56e41de190d3e83baa46a51a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_camera_specific_parameter.html">IscCameraSpecificParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a1c3a96fc56e41de190d3e83baa46a51a">camera_specific_parameter</a></td></tr>
+<tr class="separator:a1c3a96fc56e41de190d3e83baa46a51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91114d9c235b2171600d6d1720c6547d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9b">IscGrabMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a91114d9c235b2171600d6d1720c6547d">grab</a></td></tr>
 <tr class="separator:a91114d9c235b2171600d6d1720c6547d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa287542fdce07ac9f88d7610c26f43de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="isc__camera__def_8h.html#ab8dc979bb1cc4f6d6abbb610025d1302">IscGrabColorMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#aa287542fdce07ac9f88d7610c26f43de">color_grab_mode</a></td></tr>
 <tr class="separator:aa287542fdce07ac9f88d7610c26f43de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acdac5f6f3debec126ef63e686d998508"><td class="memItemLeft" align="right" valign="top"><a class="el" href="isc__camera__def_8h.html#a28d15e6cb0edd2cf4f16c04614ae488d">IscShutterMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#acdac5f6f3debec126ef63e686d998508">shutter_mode</a></td></tr>
 <tr class="separator:acdac5f6f3debec126ef63e686d998508"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c3a96fc56e41de190d3e83baa46a51a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_camera_specific_parameter.html">IscCameraSpecificParameter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a1c3a96fc56e41de190d3e83baa46a51a">camera_specific_parameter</a></td></tr>
-<tr class="separator:a1c3a96fc56e41de190d3e83baa46a51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0040b82ec7fcddf13c9e570b28b1aea1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_camera_status.html">IscCameraStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a0040b82ec7fcddf13c9e570b28b1aea1">camera_status</a></td></tr>
-<tr class="separator:a0040b82ec7fcddf13c9e570b28b1aea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa49e1ec43644e5ae636209e39260d943"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#aa49e1ec43644e5ae636209e39260d943">p1</a></td></tr>
-<tr class="separator:aa49e1ec43644e5ae636209e39260d943"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10d4383e0a2bfe48eda981479df3db45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a10d4383e0a2bfe48eda981479df3db45">p2</a></td></tr>
-<tr class="separator:a10d4383e0a2bfe48eda981479df3db45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afee26bf7444df04bec7c883ae4478d00"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#afee26bf7444df04bec7c883ae4478d00">color</a></td></tr>
-<tr class="separator:afee26bf7444df04bec7c883ae4478d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2ef67512a78be543a6c07afca34065b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_depth_type.html">DepthType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#ad2ef67512a78be543a6c07afca34065b">depth</a></td></tr>
-<tr class="separator:ad2ef67512a78be543a6c07afca34065b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a444dcf812d8e497fa56321eed0867f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a444dcf812d8e497fa56321eed0867f94">raw</a></td></tr>
-<tr class="separator:a444dcf812d8e497fa56321eed0867f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79ec7a3cb3ad56fe2ad1c85e678f4dc0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a79ec7a3cb3ad56fe2ad1c85e678f4dc0">bayer_base</a></td></tr>
-<tr class="separator:a79ec7a3cb3ad56fe2ad1c85e678f4dc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b705ad73c536c5fd3e961375c729b4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#a1b705ad73c536c5fd3e961375c729b4e">bayer_compare</a></td></tr>
-<tr class="separator:a1b705ad73c536c5fd3e961375c729b4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01cb0df0473abf6975222c58363cb39"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_isc_image_info_1_1_frame_data.html">FrameData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_isc_image_info.html#ac01cb0df0473abf6975222c58363cb39">frame_data</a> [<a class="el" href="isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e">kISCIMAGEINFO_FRAMEDATA_MAX_COUNT</a>]</td></tr>
+<tr class="separator:ac01cb0df0473abf6975222c58363cb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
 <div class="textblock"><p>This is the structure to get image </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00225">225</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00230">230</a> 行目に定義があります。</p>
 </div><h2 class="groupheader">メンバ詳解</h2>
-<a id="a79ec7a3cb3ad56fe2ad1c85e678f4dc0" name="a79ec7a3cb3ad56fe2ad1c85e678f4dc0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a79ec7a3cb3ad56fe2ad1c85e678f4dc0">&#9670;&#160;</a></span>bayer_base</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::bayer_base</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Bayer </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00255">255</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a1b705ad73c536c5fd3e961375c729b4e" name="a1b705ad73c536c5fd3e961375c729b4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1b705ad73c536c5fd3e961375c729b4e">&#9670;&#160;</a></span>bayer_compare</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::bayer_compare</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Bayer </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00256">256</a> 行目に定義があります。</p>
-
-</div>
-</div>
 <a id="a1c3a96fc56e41de190d3e83baa46a51a" name="a1c3a96fc56e41de190d3e83baa46a51a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c3a96fc56e41de190d3e83baa46a51a">&#9670;&#160;</a></span>camera_specific_parameter</h2>
 
@@ -207,41 +156,7 @@ IscImageInfo 連携図</div>
 </div><div class="memdoc">
 <p>カメラ固有のパラメータ </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00247">247</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a0040b82ec7fcddf13c9e570b28b1aea1" name="a0040b82ec7fcddf13c9e570b28b1aea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0040b82ec7fcddf13c9e570b28b1aea1">&#9670;&#160;</a></span>camera_status</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_camera_status.html">IscCameraStatus</a> IscImageInfo::camera_status</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>カメラの状態 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00248">248</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="afee26bf7444df04bec7c883ae4478d00" name="afee26bf7444df04bec7c883ae4478d00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afee26bf7444df04bec7c883ae4478d00">&#9670;&#160;</a></span>color</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::color</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>カラー基準画像/カラー比較画像 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00252">252</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00264">264</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -258,75 +173,24 @@ IscImageInfo 連携図</div>
 </div><div class="memdoc">
 <p>カラーモード </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00245">245</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00267">267</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="ad2ef67512a78be543a6c07afca34065b" name="ad2ef67512a78be543a6c07afca34065b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2ef67512a78be543a6c07afca34065b">&#9670;&#160;</a></span>depth</h2>
+<a id="ac01cb0df0473abf6975222c58363cb39" name="ac01cb0df0473abf6975222c58363cb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01cb0df0473abf6975222c58363cb39">&#9670;&#160;</a></span>frame_data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_depth_type.html">DepthType</a> IscImageInfo::depth</td>
+          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_frame_data.html">FrameData</a> IscImageInfo::frame_data[<a class="el" href="isc__camera__def_8h.html#ae242fe760e571c85d8b7bb57c2f3930e">kISCIMAGEINFO_FRAMEDATA_MAX_COUNT</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>視差 </p>
+<p>Frameデータ単位 0:Latest 1:Previous 2:Merged for Double-Shutter </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00253">253</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aef11dbab898caa13f7e3f120c0dd6712" name="aef11dbab898caa13f7e3f120c0dd6712"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef11dbab898caa13f7e3f120c0dd6712">&#9670;&#160;</a></span>exposure</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int IscImageInfo::exposure</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>フレームのExposure値 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00243">243</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a75850d4c528b18c2f8180d83562b7bed" name="a75850d4c528b18c2f8180d83562b7bed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75850d4c528b18c2f8180d83562b7bed">&#9670;&#160;</a></span>frameNo</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int IscImageInfo::frameNo</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>フレームの番号 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00241">241</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a41ec78a465a94934f8422869bf9846f7" name="a41ec78a465a94934f8422869bf9846f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41ec78a465a94934f8422869bf9846f7">&#9670;&#160;</a></span>gain</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int IscImageInfo::gain</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>フレームのGain値 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00242">242</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00270">270</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -343,58 +207,7 @@ IscImageInfo 連携図</div>
 </div><div class="memdoc">
 <p>取り込みモード </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00244">244</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="aa49e1ec43644e5ae636209e39260d943" name="aa49e1ec43644e5ae636209e39260d943"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa49e1ec43644e5ae636209e39260d943">&#9670;&#160;</a></span>p1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::p1</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>基準側画像 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00250">250</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a10d4383e0a2bfe48eda981479df3db45" name="a10d4383e0a2bfe48eda981479df3db45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10d4383e0a2bfe48eda981479df3db45">&#9670;&#160;</a></span>p2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::p2</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>補正後比較画像/補正前比較画像 </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00251">251</a> 行目に定義があります。</p>
-
-</div>
-</div>
-<a id="a444dcf812d8e497fa56321eed0867f94" name="a444dcf812d8e497fa56321eed0867f94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a444dcf812d8e497fa56321eed0867f94">&#9670;&#160;</a></span>raw</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="struct_isc_image_info_1_1_image_type.html">ImageType</a> IscImageInfo::raw</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Camera RAW (展開以前のカメラデータ） </p>
-
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00254">254</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00266">266</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -411,7 +224,7 @@ IscImageInfo 連携図</div>
 </div><div class="memdoc">
 <p>露光調整モード </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00246">246</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00268">268</a> 行目に定義があります。</p>
 
 </div>
 </div>
