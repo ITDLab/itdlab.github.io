@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.3.2</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -110,9 +110,9 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
 <tr class="memitem:a7c709980a469f47d2aeba37742582e26"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a7c709980a469f47d2aeba37742582e26">finalize</a> ()</td></tr>
 <tr class="memdesc:a7c709980a469f47d2aeba37742582e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">configure use of OpenCL for parallax averaging.  <br /></td></tr>
 <tr class="separator:a7c709980a469f47d2aeba37742582e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac0692499433db3d48440020520f91e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a9ac0692499433db3d48440020520f91e">setFrameDecoderParameter</a> (int crstthr, int crsthrm)</td></tr>
-<tr class="memdesc:a9ac0692499433db3d48440020520f91e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set decoder parameters.  <br /></td></tr>
-<tr class="separator:a9ac0692499433db3d48440020520f91e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a057b2e0f7bb3119b974fc9942feb4485"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a057b2e0f7bb3119b974fc9942feb4485">setFrameDecoderParameter</a> (int crstthr, int grdcrct)</td></tr>
+<tr class="memdesc:a057b2e0f7bb3119b974fc9942feb4485"><td class="mdescLeft">&#160;</td><td class="mdescRight">set decoder parameters.  <br /></td></tr>
+<tr class="separator:a057b2e0f7bb3119b974fc9942feb4485"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_s_c_frame_decoder.html#a763dc32cab4107dccbf8a9f6d6a2d818">setDisparityLimitation</a> (int limit, double lower, double upper)</td></tr>
 <tr class="memdesc:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="mdescLeft">&#160;</td><td class="mdescRight">set the upper and lower limits of parallax.  <br /></td></tr>
 <tr class="separator:a763dc32cab4107dccbf8a9f6d6a2d818"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,8 +194,8 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
     <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
     <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
     <tr><td class="paramname">pfrmdat</td><td>フレームデータ(IN)</td></tr>
-    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(OUT)</td></tr>
-    <tr><td class="paramname">plftimg</td><td>左（比較）画像データまたは視差エンコードデータ 右下原点(OUT)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ(OUT)</td></tr>
+    <tr><td class="paramname">plftimg</td><td>左（比較）画像データまたは視差エンコードデータ(OUT)</td></tr>
   </table>
   </dd>
 </dl>
@@ -385,7 +385,7 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
   <table class="params">
     <tr><td class="paramname">imghgt</td><td>画像の高さ(IN)</td></tr>
     <tr><td class="paramname">imgwdt</td><td>画像の幅(IN)</td></tr>
-    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ 右下原点(IN)</td></tr>
+    <tr><td class="paramname">prgtimg</td><td>右（基準）画像データ(IN)</td></tr>
     <tr><td class="paramname">pdspenc</td><td>視差エンコードデータ(IN)</td></tr>
     <tr><td class="paramname">pblkhgt</td><td>視差ブロック高さ(OUT)</td></tr>
     <tr><td class="paramname">pblkwdt</td><td>視差ブロック幅(OUT)</td></tr>
@@ -403,24 +403,8 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
   </table>
   </dd>
 </dl>
-<p>&lt; 基準画像幅</p>
-<p>&lt; 基準画像高さ</p>
-<p>&lt; 右（基準）画像データ 右下原点</p>
-<p>&lt; 視差ブロック高さ</p>
-<p>&lt; 視差ブロック幅</p>
-<p>&lt; マッチングブロック高さ</p>
-<p>&lt; マッチングブロック幅</p>
-<p>&lt; 視差ブロック横オフセット</p>
-<p>&lt; 視差ブロック縦オフセット</p>
-<p>&lt; マッチング探索幅</p>
-<p>&lt; 画像遮蔽幅</p>
-<p>&lt; 視差ブロック視差値(1000倍サブピクセル精度の整数)</p>
-<p>&lt; ブロックコントラスト</p>
-<p>&lt; 視差画像 右下原点</p>
-<p>&lt; 視差データ 右下原点</p>
-<p>&lt; ブロック視差データ 右下原点</p>
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00504">504</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00502">502</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -642,7 +626,7 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00679">679</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html">ISCFrameDecoder.cpp</a> の <a class="el" href="_i_s_c_frame_decoder_8cpp_source.html#l00657">657</a> 行目に定義があります。</p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
@@ -828,8 +812,8 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
 
 </div>
 </div>
-<a id="a9ac0692499433db3d48440020520f91e" name="a9ac0692499433db3d48440020520f91e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac0692499433db3d48440020520f91e">&#9670;&#160;</a></span>setFrameDecoderParameter()</h2>
+<a id="a057b2e0f7bb3119b974fc9942feb4485" name="a057b2e0f7bb3119b974fc9942feb4485"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a057b2e0f7bb3119b974fc9942feb4485">&#9670;&#160;</a></span>setFrameDecoderParameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -847,7 +831,7 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>crsthrm</em>&#160;</td>
+          <td class="paramname"><em>grdcrct</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -868,7 +852,7 @@ $(document).ready(function(){initNavTree('class_i_s_c_frame_decoder.html',''); i
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">crstthr</td><td>コントラスト閾値(IN)</td></tr>
-    <tr><td class="paramname">crsthrm</td><td>センサー輝度高解像度モードステータス 0:オフ 1:オン(IN)</td></tr>
+    <tr><td class="paramname">grdcrct</td><td>階調補正モードステータス 0:オフ 1:オン(IN)</td></tr>
   </table>
   </dd>
 </dl>

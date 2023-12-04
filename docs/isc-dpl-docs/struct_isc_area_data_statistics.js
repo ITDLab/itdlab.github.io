@@ -3,6 +3,8 @@ var struct_isc_area_data_statistics =
     [ "Roi3D", "struct_isc_area_data_statistics_1_1_roi3_d.html", "struct_isc_area_data_statistics_1_1_roi3_d" ],
     [ "Statistics", "struct_isc_area_data_statistics_1_1_statistics.html", "struct_isc_area_data_statistics_1_1_statistics" ],
     [ "height", "struct_isc_area_data_statistics.html#a1a18274617b8f3d4bc3573dfc25d7a3c", null ],
+    [ "max_distance", "struct_isc_area_data_statistics.html#adf0f962d182ed1b4177830915addbcca", null ],
+    [ "min_distance", "struct_isc_area_data_statistics.html#a9b2fb397b6f927e510448e09b03d19c1", null ],
     [ "roi_3d", "struct_isc_area_data_statistics.html#af7e4d4ab67e98581de24fcbdc5e39004", null ],
     [ "statistics_depth", "struct_isc_area_data_statistics.html#a0c4b02179d0fb079a604712f9866c21b", null ],
     [ "statistics_distance", "struct_isc_area_data_statistics.html#a413d1bc27b878db150f901220c4a475a", null ],

@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.3.2</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -107,6 +107,7 @@ $(document).ready(function(){initNavTree('isc__dpl_8cpp.html',''); initResizable
 <code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &lt;process.h&gt;</code><br />
 <code>#include &lt;mutex&gt;</code><br />
+<code>#include &lt;functional&gt;</code><br />
 <code>#include &quot;<a class="el" href="isc__dpl__error__def_8h_source.html">isc_dpl_error_def.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__dpl__def_8h_source.html">isc_dpl_def.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__log_8h_source.html">isc_log.h</a>&quot;</code><br />
@@ -114,16 +115,19 @@ $(document).ready(function(){initNavTree('isc__dpl_8cpp.html',''); initResizable
 <code>#include &quot;<a class="el" href="isc__image__info__ring__buffer_8h_source.html">isc_image_info_ring_buffer.h</a>&quot;</code><br />
 <code>#include &quot;vm_sdk_wrapper.h&quot;</code><br />
 <code>#include &quot;xc_sdk_wrapper.h&quot;</code><br />
+<code>#include &quot;k4a_sdk_wrapper.h&quot;</code><br />
 <code>#include &quot;isc_sdk_control.h&quot;</code><br />
 <code>#include &quot;isc_file_write_control_impl.h&quot;</code><br />
 <code>#include &quot;isc_raw_data_decoder.h&quot;</code><br />
 <code>#include &quot;isc_file_read_control_impl.h&quot;</code><br />
+<code>#include &quot;isc_selftcalibration_interface.h&quot;</code><br />
 <code>#include &quot;isc_camera_control.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__dataproc__resultdata__ring__buffer_8h_source.html">isc_dataproc_resultdata_ring_buffer.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__framedecoder__interface_8h_source.html">isc_framedecoder_interface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__stereomatching__interface_8h_source.html">isc_stereomatching_interface.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__disparityfilter__interface_8h_source.html">isc_disparityfilter_interface.h</a>&quot;</code><br />
 <code>#include &quot;isc_data_processing_control.h&quot;</code><br />
+<code>#include &quot;isc_measurement.h&quot;</code><br />
 <code>#include &quot;isc_main_control_impl.h&quot;</code><br />
 <code>#include &quot;isc_main_control.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="isc__dpl_8h_source.html">isc_dpl.h</a>&quot;</code><br />

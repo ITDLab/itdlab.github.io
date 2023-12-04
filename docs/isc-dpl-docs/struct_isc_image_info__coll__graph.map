@@ -1,7 +1,7 @@
 <map id="IscImageInfo" name="IscImageInfo">
-<area shape="rect" id="node1" title="This is the structure to get image" alt="" coords="151,269,245,295"/>
-<area shape="rect" id="node2" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,181,196,207"/>
-<area shape="rect" id="node3" href="$struct_isc_image_info_1_1_frame_data.html" title=" " alt="" coords="220,181,387,207"/>
+<area shape="rect" id="node1" title="This is the structure to get image" alt="" coords="151,240,245,265"/>
+<area shape="rect" id="node2" href="$struct_isc_camera_specific_parameter.html" title=" " alt="" coords="5,152,196,177"/>
+<area shape="rect" id="node3" href="$struct_isc_image_info_1_1_frame_data.html" title=" " alt="" coords="220,152,387,177"/>
 <area shape="rect" id="node4" href="$struct_isc_camera_status.html" title="This represents the state of the camera" alt="" coords="74,5,197,31"/>
 <area shape="rect" id="node5" href="$struct_isc_image_info_1_1_image_type.html" title=" " alt="" coords="221,5,386,31"/>
 <area shape="rect" id="node6" href="$struct_isc_image_info_1_1_depth_type.html" title=" " alt="" coords="411,5,575,31"/>

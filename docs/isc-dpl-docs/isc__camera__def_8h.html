@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.3.2</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -172,8 +172,8 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 <tr class="memdesc:a761c15381d484adfa8b2b92d27e9ff9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a camera dependent parameter  <a href="isc__camera__def_8h.html#a761c15381d484adfa8b2b92d27e9ff9a">[詳解]</a><br /></td></tr>
 <tr class="separator:a761c15381d484adfa8b2b92d27e9ff9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76301874be20551731c3e27192e4a9b3"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3">IscCameraParameter</a> { <br />
-&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a661175dea4ebd78606899ee797ff0dfd">kBaseImage</a>
-, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3af1b67cec176bdeacc4aba61564e8377f">kCompareImage</a>
+&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a82731510858d45a21908c48802a2bf36">kMonoS0Image</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a6e7e82b7cb7f90ca0b8609e60bbc5134">kMonoS1Image</a>
 , <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a20d18c1e9a45a33c72ac8ed71d7cc2ce">kDepthData</a>
 , <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a83f079e456945a3c708a210cf1c068fa">kColorImage</a>
 , <br />
@@ -193,11 +193,14 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 , <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab955c2354be8069aa90563fee549107e">kHrMode</a>
 , <br />
 &#160;&#160;<a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a420b375ca465075c4a40db9be6a53fbb">kHdrMode</a>
-, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a223c9bb88f9885fab85f5c0472077453">kAdjustAuto</a>
-, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a949fe2b37a94b3b7da39b46ce64a1a22">kAdjustForce</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ac4b2be094ab033c8286a6e00182c2852">kAutoCalibration</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a56c34a7b8b6c3046879f272563051d04">kManualCalibration</a>
 , <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab4c38009f2836478a15da2483d65e99b">kOcclusionRemoval</a>
 , <br />
 &#160;&#160;<a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ae537fb72a4c84e3d523064a08cbae7f2">kPeculiarRemoval</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab669fcbaee4dbbaae2000e0efeb6bcab">kSelfCalibration</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab8e170af09a64a7d1aead8737f5ab118">kGenericRead</a>
+, <a class="el" href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a7a9a19e78607e36bcc05545121158f73">kGenericWrite</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a76301874be20551731c3e27192e4a9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a camera control parameter  <a href="isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3">[詳解]</a><br /></td></tr>
@@ -213,9 +216,9 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 &#160;&#160;<a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba4a434bc7994263597b7fa4d3382c8dd8">kParallax</a> = 1
 , <a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba28b4f1d0af21dc5a585fe382265bf112">kCorrect</a>
 , <a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9baab9cc169b187d0ced73d4df219c339d5">kBeforeCorrect</a>
-, <a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9bafdd6949b0bcf378d5cf375e69ba6c1e2">kBayerBase</a>
+, <a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba608b2fc1fd059d5d99e75a3793ab41ea">kBayerS0</a>
 , <br />
-&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba20f54c4134a22dd520c23a8d42cb76c3">kBayerCompare</a>
+&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9badecbf06fa2364e3610fcaa13f969981a">kBayerS1</a>
 <br />
  }</td></tr>
 <tr class="memdesc:a66226347194fa848171ce92afde02c9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a camera grab request mode  <a href="isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9b">[詳解]</a><br /></td></tr>
@@ -225,15 +228,10 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
  }</td></tr>
 <tr class="memdesc:ab8dc979bb1cc4f6d6abbb610025d1302"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is a color mode on/off  <a href="isc__camera__def_8h.html#ab8dc979bb1cc4f6d6abbb610025d1302">[詳解]</a><br /></td></tr>
 <tr class="separator:ab8dc979bb1cc4f6d6abbb610025d1302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4793fdb4c21e136d439ddd3d711b1a0b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0b">IscGetModeColor</a> { <br />
-&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba0114c6facbcd002c424661a5e4164418">kYuv</a>
-, <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba6652b5d8957f63c1674f83741a05f09a">kBayer</a>
-, <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04">kBGR</a>
+<tr class="memitem:a4793fdb4c21e136d439ddd3d711b1a0b"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0b">IscGetModeColor</a> { <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04">kBGR</a>
 , <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba28b4f1d0af21dc5a585fe382265bf112">kCorrect</a>
-, <br />
-&#160;&#160;<a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0badccced1be39ff495bdcdbe01163e0d08">kAwb</a>
+, <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0badccced1be39ff495bdcdbe01163e0d08">kAwb</a>
 , <a class="el" href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0bab498294d6471ce41c89d788db2de0404">kAwbNoCorrect</a>
-<br />
  }</td></tr>
 <tr class="memdesc:a4793fdb4c21e136d439ddd3d711b1a0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the request to get the color image  <a href="isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0b">[詳解]</a><br /></td></tr>
 <tr class="separator:a4793fdb4c21e136d439ddd3d711b1a0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -319,7 +317,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00068">68</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00070">70</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -385,9 +383,9 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 
 <p>This is a camera control parameter </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a661175dea4ebd78606899ee797ff0dfd" name="a76301874be20551731c3e27192e4a9b3a661175dea4ebd78606899ee797ff0dfd"></a>kBaseImage&#160;</td><td class="fielddoc"><p>[for implementation inquiries] Providing base image data </p>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a82731510858d45a21908c48802a2bf36" name="a76301874be20551731c3e27192e4a9b3a82731510858d45a21908c48802a2bf36"></a>kMonoS0Image&#160;</td><td class="fielddoc"><p>[for implementation inquiries] Providing monochrome sensor-0 image data </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3af1b67cec176bdeacc4aba61564e8377f" name="a76301874be20551731c3e27192e4a9b3af1b67cec176bdeacc4aba61564e8377f"></a>kCompareImage&#160;</td><td class="fielddoc"><p>[for implementation inquiries] Providing compare image data </p>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a6e7e82b7cb7f90ca0b8609e60bbc5134" name="a76301874be20551731c3e27192e4a9b3a6e7e82b7cb7f90ca0b8609e60bbc5134"></a>kMonoS1Image&#160;</td><td class="fielddoc"><p>[for implementation inquiries] Providing monochrome sensor-1 image data </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a20d18c1e9a45a33c72ac8ed71d7cc2ce" name="a76301874be20551731c3e27192e4a9b3a20d18c1e9a45a33c72ac8ed71d7cc2ce"></a>kDepthData&#160;</td><td class="fielddoc"><p>[for implementation inquiries] Providing depth data </p>
 </td></tr>
@@ -419,17 +417,23 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 <tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a420b375ca465075c4a40db9be6a53fbb" name="a76301874be20551731c3e27192e4a9b3a420b375ca465075c4a40db9be6a53fbb"></a>kHdrMode&#160;</td><td class="fielddoc"><p>[bool] Sensor HDR mode setting </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a223c9bb88f9885fab85f5c0472077453" name="a76301874be20551731c3e27192e4a9b3a223c9bb88f9885fab85f5c0472077453"></a>kAdjustAuto&#160;</td><td class="fielddoc"><p>[bool] Automatic adjustment valid </p>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3ac4b2be094ab033c8286a6e00182c2852" name="a76301874be20551731c3e27192e4a9b3ac4b2be094ab033c8286a6e00182c2852"></a>kAutoCalibration&#160;</td><td class="fielddoc"><p>[bool] Automatic calibration valid </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a949fe2b37a94b3b7da39b46ce64a1a22" name="a76301874be20551731c3e27192e4a9b3a949fe2b37a94b3b7da39b46ce64a1a22"></a>kAdjustForce&#160;</td><td class="fielddoc"><p>[bool] Automatic adjustment forced execution </p>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a56c34a7b8b6c3046879f272563051d04" name="a76301874be20551731c3e27192e4a9b3a56c34a7b8b6c3046879f272563051d04"></a>kManualCalibration&#160;</td><td class="fielddoc"><p>[bool] Automatic Calibration forced execution </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3ab4c38009f2836478a15da2483d65e99b" name="a76301874be20551731c3e27192e4a9b3ab4c38009f2836478a15da2483d65e99b"></a>kOcclusionRemoval&#160;</td><td class="fielddoc"><p>[int] Sets the occlusion removal value </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3ae537fb72a4c84e3d523064a08cbae7f2" name="a76301874be20551731c3e27192e4a9b3ae537fb72a4c84e3d523064a08cbae7f2"></a>kPeculiarRemoval&#160;</td><td class="fielddoc"><p>[bool] Settings to remove peculiarity </p>
 </td></tr>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3ab669fcbaee4dbbaae2000e0efeb6bcab" name="a76301874be20551731c3e27192e4a9b3ab669fcbaee4dbbaae2000e0efeb6bcab"></a>kSelfCalibration&#160;</td><td class="fielddoc"><p>[bool] Software Calibration(selft calibration) valid </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3ab8e170af09a64a7d1aead8737f5ab118" name="a76301874be20551731c3e27192e4a9b3ab8e170af09a64a7d1aead8737f5ab118"></a>kGenericRead&#160;</td><td class="fielddoc"><p>[uc*, uc*, int,int ] General purpose loading </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a76301874be20551731c3e27192e4a9b3a7a9a19e78607e36bcc05545121158f73" name="a76301874be20551731c3e27192e4a9b3a7a9a19e78607e36bcc05545121158f73"></a>kGenericWrite&#160;</td><td class="fielddoc"><p>[uc*, int ] General purpose writing </p>
+</td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00084">84</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00086">86</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -455,11 +459,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 
 <p>This is the request to get the color image </p>
 <table class="fieldtable">
-<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4793fdb4c21e136d439ddd3d711b1a0ba0114c6facbcd002c424661a5e4164418" name="a4793fdb4c21e136d439ddd3d711b1a0ba0114c6facbcd002c424661a5e4164418"></a>kYuv&#160;</td><td class="fielddoc"><p>output yuv </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4793fdb4c21e136d439ddd3d711b1a0ba6652b5d8957f63c1674f83741a05f09a" name="a4793fdb4c21e136d439ddd3d711b1a0ba6652b5d8957f63c1674f83741a05f09a"></a>kBayer&#160;</td><td class="fielddoc"><p>bayer output </p>
-</td></tr>
-<tr><td class="fieldname"><a id="a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04" name="a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04"></a>kBGR&#160;</td><td class="fielddoc"><p>yuv(bayer) -&gt; bgr </p>
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04" name="a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04"></a>kBGR&#160;</td><td class="fielddoc"><p>yuv(bayer) -&gt; bgr </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a4793fdb4c21e136d439ddd3d711b1a0ba28b4f1d0af21dc5a585fe382265bf112" name="a4793fdb4c21e136d439ddd3d711b1a0ba28b4f1d0af21dc5a585fe382265bf112"></a>kCorrect&#160;</td><td class="fielddoc"><p>yuv(bayer) -&gt; bgr -&gt; correct </p>
 </td></tr>
@@ -469,7 +469,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00157">157</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00162">162</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -501,7 +501,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00169">169</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00172">172</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -533,7 +533,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00142">142</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00147">147</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -565,13 +565,13 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 <tr><td class="fieldname"><a id="a66226347194fa848171ce92afde02c9baab9cc169b187d0ced73d4df219c339d5" name="a66226347194fa848171ce92afde02c9baab9cc169b187d0ced73d4df219c339d5"></a>kBeforeCorrect&#160;</td><td class="fielddoc"><p>補正前画像モード(原画像) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a66226347194fa848171ce92afde02c9bafdd6949b0bcf378d5cf375e69ba6c1e2" name="a66226347194fa848171ce92afde02c9bafdd6949b0bcf378d5cf375e69ba6c1e2"></a>kBayerBase&#160;</td><td class="fielddoc"><p>補正前Bayer画像モード(原画像) </p>
+<tr><td class="fieldname"><a id="a66226347194fa848171ce92afde02c9ba608b2fc1fd059d5d99e75a3793ab41ea" name="a66226347194fa848171ce92afde02c9ba608b2fc1fd059d5d99e75a3793ab41ea"></a>kBayerS0&#160;</td><td class="fielddoc"><p>補正前Bayer画像モード(原画像)(Sensor-0 Camera) </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a66226347194fa848171ce92afde02c9ba20f54c4134a22dd520c23a8d42cb76c3" name="a66226347194fa848171ce92afde02c9ba20f54c4134a22dd520c23a8d42cb76c3"></a>kBayerCompare&#160;</td><td class="fielddoc"><p>補正前Bayer画像モード(原画像)(Compare Camera) </p>
+<tr><td class="fieldname"><a id="a66226347194fa848171ce92afde02c9badecbf06fa2364e3610fcaa13f969981a" name="a66226347194fa848171ce92afde02c9badecbf06fa2364e3610fcaa13f969981a"></a>kBayerS1&#160;</td><td class="fielddoc"><p>補正前Bayer画像モード(原画像)(Sensor-1 Camera) </p>
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00131">131</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00136">136</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -603,7 +603,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00185">185</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00188">188</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -635,7 +635,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00177">177</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00180">180</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -671,7 +671,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </td></tr>
 </table>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00121">121</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00126">126</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -697,7 +697,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>Header Version 2.0.0 </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00358">358</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00359">359</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -722,7 +722,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>Header Version 2.0.0 </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00316">316</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00317">317</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -771,7 +771,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>latest FrameData </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00223">223</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00226">226</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -796,7 +796,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>max FrameData count </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00222">222</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00225">225</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -821,7 +821,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>merge for double shutter FrameData </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00225">225</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00228">228</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -846,7 +846,7 @@ $(document).ready(function(){initNavTree('isc__camera__def_8h.html',''); initRes
 </div><div class="memdoc">
 <p>previous FrameData </p>
 
-<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00224">224</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="isc__camera__def_8h_source.html">isc_camera_def.h</a> の <a class="el" href="isc__camera__def_8h_source.html#l00227">227</a> 行目に定義があります。</p>
 
 </div>
 </div>

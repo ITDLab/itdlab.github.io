@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IscDpl: &lt;strong&gt;ISCステレオカメラ　データ処理ライブラリ　プロジェクト&lt;/strong&gt;</title>
+<title>IscDpl: &lt;strong&gt;ISCステレオカメラ　データ処理ライブラリ&lt;/strong&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.3.2</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -90,41 +90,47 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title"><b>ISCステレオカメラ　データ処理ライブラリ　プロジェクト</b> </div></div>
+  <div class="headertitle"><div class="title"><b>ISCステレオカメラ　データ処理ライブラリ</b> </div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p><a class="anchor" id="md_source_mainpage"></a> </p><hr  />
  <h1><a class="anchor" id="autotoc_md1"></a>
 概要</h1>
 <hr  />
-<p> isc-dplは、ISCシリーズのステレオカメラに対応したデータ処理ライブラリと、ライブラリを使用したサンプルプログラムを提供するプロジェクトです。 <br  />
- データ処理ライブラリには、現在は２つのライブラリと１つのサポートライブラリが含まれています。 <br  />
+<p> isc-dplは、ISCシリーズのステレオカメラに対応したデータ処理ライブラリと、サンプルプログラムを提供するものです。 <br  />
+ データ処理ライブラリには、現在は3つのライブラリと１つのサポートライブラリが含まれています。 <br  />
 </p>
 <ul>
-<li>Soft Stereo Matching <br  />
+<li>Software Stereo Matching <br  />
  ステレオマッチングを行います <br  />
 </li>
 <li>Disparity Filter <br  />
- カメラ本体又はSoft Stereo Matching出力の視差に対して平均化、補間処理を行います <br  />
+ カメラ本体、又はSoftware Stereo Matchingの出力する視差に対して平均化、補間処理を行います <br  />
+</li>
+<li>Self Calibration <br  />
+ ソフトウェアによるステレオ平行化を行います <br  />
 </li>
 <li>Frame Decoder <br  />
- カメラから取得するデータの展開などを行います</li>
+ カメラから取得するデータの展開などを行います（サポートライブラリ） <br  />
+</li>
 </ul>
-<p>本サンプルプログラムを実際のステレオカメラと接続して使用することで、動作の検証が可能となります。 <br  />
+<p>サンプルプログラムを実際のステレオカメラと接続して使用することで、データ処理ライブラリの動作検証が可能となります。 <br  />
 </p>
-<p>なお、本プロジェクトにおいてデータ処理ライブラリは、それぞれ以下の名称です。</p>
+<p>なお、データ処理ライブラリは、それぞれ以下の名称です。</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadLeft">Library   </th><th class="markdownTableHeadLeft">module(class)   </th><th class="markdownTableHeadLeft">DLL    </th></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft">Soft Stereo Matching   </td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll    </td></tr>
+<td class="markdownTableBodyLeft">Software Stereo Matching   </td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Disparity Filter   </td><td class="markdownTableBodyLeft">IscDisparityFilter   </td><td class="markdownTableBodyLeft">IscDisparityFilter.dll    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">Self Calibration   </td><td class="markdownTableBodyLeft">IscSelfCalibration   </td><td class="markdownTableBodyLeft">IscSelfCalibration.dll    </td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft">Frame Decoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder.dll   </td></tr>
 </table>
 <p>注意 <br  />
- <em>Soft Stereo Matchingのアルゴリズムは、ISCシリーズのステレオカメラ本体実装と同一のものではありません</em> <br  />
+ <em>Software Stereo Matchingのアルゴリズムは、ISCシリーズのステレオカメラ本体実装と同一のものではありません</em> <br  />
 </p>
 <hr  />
  <h1><a class="anchor" id="autotoc_md2"></a>
@@ -165,14 +171,16 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDataProcessingControl   </td><td class="markdownTableBodyLeft">IscDataProcessingControl.dll   </td><td class="markdownTableBodyLeft">データ処理ライブラリの呼び出しを行います    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll   </td><td class="markdownTableBodyLeft">ステレオマッチングを行います    </td></tr>
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscStereoMatching   </td><td class="markdownTableBodyLeft">IscStereoMatching.dll   </td><td class="markdownTableBodyLeft">ソフトウェアによるステレオマッチングを行います    </td></tr>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscFrameDecoder   </td><td class="markdownTableBodyLeft">IscFrameDecoder.dll   </td><td class="markdownTableBodyLeft">カメラデータの展開を行います    </td></tr>
 <tr class="markdownTableRowOdd">
-<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDisparityFilter   </td><td class="markdownTableBodyLeft">IscDisparityFilter.dll   </td><td class="markdownTableBodyLeft">視差の平均化、補間処理を行います    </td></tr>
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscDataProcessingControl   </td><td class="markdownTableBodyLeft">IscDataProcessingControl.dll   </td><td class="markdownTableBodyLeft">データ処理ライブラリの呼び出しを行います    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyLeft">SDK   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">IscSelfCalibration   </td><td class="markdownTableBodyLeft">IscSelfCalibration.dll   </td><td class="markdownTableBodyLeft">ソフトウェアによるステレオ平行化を行います    </td></tr>
 <tr class="markdownTableRowOdd">
+<td class="markdownTableBodyLeft">SDK   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft"></td></tr>
+<tr class="markdownTableRowEven">
 <td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">ISC SDK(VM/XC)   </td><td class="markdownTableBodyLeft"></td><td class="markdownTableBodyLeft">それぞれのカメラに対応したSDKです   </td></tr>
 </table>
 <hr  />
@@ -197,11 +205,21 @@ licence</h1>
  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. <br  />
  See the License for the specific language governing permissions and <br  />
  limitations under the License. <br  />
-</p>
-<p></p>
+ </p>
 </blockquote>
-<p>**** <br  />
- <em>end of document.</em> <br  />
+<hr  />
+ <h1><a class="anchor" id="autotoc_md5"></a>
+Other Libraries</h1>
+<hr  />
+<ul>
+<li>OpenCV <br  />
+ OpenCV 4.5.0 and higher versions are licensed under the Apache 2 License. <br  />
+ <a href="https://opencv.org/license/">https://opencv.org/license/</a></li>
+<li>FTDI <br  />
+ <a href="https://ftdichip.com/">Future Technology Devices International Limited</a></li>
+</ul>
+<hr  />
+<p> <em>end of document.</em> <br  />
  </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->

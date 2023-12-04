@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.2.0</span>
+   <div id="projectname">IscDpl<span id="projectnumber">&#160;0.3.2</span>
    </div>
    <div id="projectbrief">ISCステレオカメラ対応　データ処理ライブラリと評価用サンプルプログラム</div>
   </td>
@@ -120,12 +120,12 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 <tr class="memitem:af1d5a7ace525ff77927d626b3da6877e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#af1d5a7ace525ff77927d626b3da6877e">finalize</a> ()</td></tr>
 <tr class="memdesc:af1d5a7ace525ff77927d626b3da6877e"><td class="mdescLeft">&#160;</td><td class="mdescRight">end block matching.  <br /></td></tr>
 <tr class="separator:af1d5a7ace525ff77927d626b3da6877e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdf2e0be4f65a5d529243fefcdb25a3b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#acdf2e0be4f65a5d529243fefcdb25a3b">setUseOpenCLForMatching</a> (int usecl)</td></tr>
-<tr class="memdesc:acdf2e0be4f65a5d529243fefcdb25a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">configure use of OpenCL for stereo matching.  <br /></td></tr>
-<tr class="separator:acdf2e0be4f65a5d529243fefcdb25a3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc1d7b6e9502ddac56170f3c9816eb39"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#acc1d7b6e9502ddac56170f3c9816eb39">setMatchingParameter</a> (int imghgt, int imgwdt, int depth, int blkhgt, int blkwdt, int mtchgt, int mtcwdt, int blkofsx, int blkofsy, int crstthr, int crsthrm)</td></tr>
-<tr class="memdesc:acc1d7b6e9502ddac56170f3c9816eb39"><td class="mdescLeft">&#160;</td><td class="mdescRight">set stereo matching parameters.  <br /></td></tr>
-<tr class="separator:acc1d7b6e9502ddac56170f3c9816eb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad6e59b16d91e24065894ef91ae19625"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#aad6e59b16d91e24065894ef91ae19625">setUseOpenCLForMatching</a> (int usecl, int runsgcr=0)</td></tr>
+<tr class="memdesc:aad6e59b16d91e24065894ef91ae19625"><td class="mdescLeft">&#160;</td><td class="mdescRight">configure use of OpenCL for stereo matching.  <br /></td></tr>
+<tr class="separator:aad6e59b16d91e24065894ef91ae19625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6c41b8bae58c45ae881ef5326c3a329"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#af6c41b8bae58c45ae881ef5326c3a329">setMatchingParameter</a> (int imghgt, int imgwdt, int depth, int blkhgt, int blkwdt, int mtchgt, int mtcwdt, int blkofsx, int blkofsy, int crstthr, int grdcrct)</td></tr>
+<tr class="memdesc:af6c41b8bae58c45ae881ef5326c3a329"><td class="mdescLeft">&#160;</td><td class="mdescRight">set stereo matching parameters.  <br /></td></tr>
+<tr class="separator:af6c41b8bae58c45ae881ef5326c3a329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefed2b7838f4cb9249d4c7ac327fa157"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_stereo_matching.html#aefed2b7838f4cb9249d4c7ac327fa157">setBackMatchingParameter</a> (int enb, int bkevlwdt, int bkevlrng, int bkvldrt, int bkzrrt)</td></tr>
 <tr class="memdesc:aefed2b7838f4cb9249d4c7ac327fa157"><td class="mdescLeft">&#160;</td><td class="mdescRight">set back matching parameters.  <br /></td></tr>
 <tr class="separator:aefed2b7838f4cb9249d4c7ac327fa157"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,7 +167,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 
 <p>オブジェクトを生成する </p>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00243">243</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00251">251</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -188,7 +188,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 
 <p>オブジェクトを破棄する </p>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00251">251</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00259">259</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -220,7 +220,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 <p>ステレオマッチングスレッドを生成する</p>
 <dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l02032">2032</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l02052">2052</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -260,7 +260,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 <p>マッチングスレッドを破棄する</p>
 <dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l02055">2055</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l02075">2075</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -300,7 +300,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 <p>ステレオマッチングを終了する</p>
 <dl class="section return"><dt>戻り値</dt><dd>none. </dd></dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00282">282</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00290">290</a> 行目に定義があります。</p>
 
 </div>
 </div>
@@ -412,7 +412,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00394">394</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00405">405</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -484,7 +484,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00434">434</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00445">445</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -542,7 +542,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00261">261</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00269">269</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -600,7 +600,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00364">364</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00375">375</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
@@ -680,12 +680,12 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00347">347</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00358">358</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acc1d7b6e9502ddac56170f3c9816eb39" name="acc1d7b6e9502ddac56170f3c9816eb39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc1d7b6e9502ddac56170f3c9816eb39">&#9670;&#160;</a></span>setMatchingParameter()</h2>
+<a id="af6c41b8bae58c45ae881ef5326c3a329" name="af6c41b8bae58c45ae881ef5326c3a329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c41b8bae58c45ae881ef5326c3a329">&#9670;&#160;</a></span>setMatchingParameter()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -757,7 +757,7 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>crsthrm</em>&#160;</td>
+          <td class="paramname"><em>grdcrct</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -787,17 +787,17 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
     <tr><td class="paramname">blkofsx</td><td>視差ブロック横オフセット(IN)</td></tr>
     <tr><td class="paramname">blkofsy</td><td>視差ブロック縦オフセット(IN)</td></tr>
     <tr><td class="paramname">crstthr</td><td>コントラスト閾値(IN)</td></tr>
-    <tr><td class="paramname">crsthrm</td><td>センサー輝度高解像度モードステータス 0:オフ 1:オン(IN)</td></tr>
+    <tr><td class="paramname">grdcrct</td><td>階調補正モードステータス 0:オフ 1:オン(IN)</td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00316">316</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00327">327</a> 行目に定義があります。</p>
 
 </div>
 </div>
-<a id="acdf2e0be4f65a5d529243fefcdb25a3b" name="acdf2e0be4f65a5d529243fefcdb25a3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdf2e0be4f65a5d529243fefcdb25a3b">&#9670;&#160;</a></span>setUseOpenCLForMatching()</h2>
+<a id="aad6e59b16d91e24065894ef91ae19625" name="aad6e59b16d91e24065894ef91ae19625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad6e59b16d91e24065894ef91ae19625">&#9670;&#160;</a></span>setUseOpenCLForMatching()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -809,8 +809,18 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
           <td class="memname">void StereoMatching::setUseOpenCLForMatching </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>usecl</em></td><td>)</td>
+          <td class="paramname"><em>usecl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>runsgcr</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -826,16 +836,17 @@ $(document).ready(function(){initNavTree('class_stereo_matching.html',''); initR
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramname">usecl</td><td>OpenCLを使用 0:しない1:する(IN)</td></tr>
+    <tr><td class="paramname">runsgcr</td><td>シングルスレッドで実行 0:しない1:する(IN)</td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00296">296</a> 行目に定義があります。</p>
+<p class="definition"> <a class="el" href="_stereo_matching_8cpp_source.html">StereoMatching.cpp</a> の <a class="el" href="_stereo_matching_8cpp_source.html#l00305">305</a> 行目に定義があります。</p>
 <div class="dynheader">
 被呼び出し関係図:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_stereo_matching_acdf2e0be4f65a5d529243fefcdb25a3b_icgraph.png" border="0" usemap="#aclass_stereo_matching_acdf2e0be4f65a5d529243fefcdb25a3b_icgraph" alt=""/></div>
-<map name="aclass_stereo_matching_acdf2e0be4f65a5d529243fefcdb25a3b_icgraph" id="aclass_stereo_matching_acdf2e0be4f65a5d529243fefcdb25a3b_icgraph">
+<div class="center"><img src="class_stereo_matching_aad6e59b16d91e24065894ef91ae19625_icgraph.png" border="0" usemap="#aclass_stereo_matching_aad6e59b16d91e24065894ef91ae19625_icgraph" alt=""/></div>
+<map name="aclass_stereo_matching_aad6e59b16d91e24065894ef91ae19625_icgraph" id="aclass_stereo_matching_aad6e59b16d91e24065894ef91ae19625_icgraph">
 <area shape="rect" title="configure use of OpenCL for stereo matching." alt="" coords="232,5,425,45"/>
 <area shape="rect" href="class_isc_stereo_matching_interface.html#a8def697d18ca7794d67765da10a92334" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,5,184,45"/>
 </map>

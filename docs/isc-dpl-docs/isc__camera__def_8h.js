@@ -34,8 +34,8 @@ var isc__camera__def_8h =
       [ "kUnknown", "isc__camera__def_8h.html#a90306c36bebad80c452ab6113c2b9d0aa25c2dc47991b3df171ed5192bcf70390", null ]
     ] ],
     [ "IscCameraParameter", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3", [
-      [ "kBaseImage", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a661175dea4ebd78606899ee797ff0dfd", null ],
-      [ "kCompareImage", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3af1b67cec176bdeacc4aba61564e8377f", null ],
+      [ "kMonoS0Image", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a82731510858d45a21908c48802a2bf36", null ],
+      [ "kMonoS1Image", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a6e7e82b7cb7f90ca0b8609e60bbc5134", null ],
       [ "kDepthData", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a20d18c1e9a45a33c72ac8ed71d7cc2ce", null ],
       [ "kColorImage", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a83f079e456945a3c708a210cf1c068fa", null ],
       [ "kColorImageCorrect", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a6fd972998811b9284d87fa2ab5e8e91f", null ],
@@ -51,14 +51,15 @@ var isc__camera__def_8h =
       [ "kGain", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3aa498f5146458899fb1e01dd3675fcedc", null ],
       [ "kHrMode", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab955c2354be8069aa90563fee549107e", null ],
       [ "kHdrMode", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a420b375ca465075c4a40db9be6a53fbb", null ],
-      [ "kAdjustAuto", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a223c9bb88f9885fab85f5c0472077453", null ],
-      [ "kAdjustForce", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a949fe2b37a94b3b7da39b46ce64a1a22", null ],
+      [ "kAutoCalibration", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ac4b2be094ab033c8286a6e00182c2852", null ],
+      [ "kManualCalibration", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a56c34a7b8b6c3046879f272563051d04", null ],
       [ "kOcclusionRemoval", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab4c38009f2836478a15da2483d65e99b", null ],
-      [ "kPeculiarRemoval", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ae537fb72a4c84e3d523064a08cbae7f2", null ]
+      [ "kPeculiarRemoval", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ae537fb72a4c84e3d523064a08cbae7f2", null ],
+      [ "kSelfCalibration", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab669fcbaee4dbbaae2000e0efeb6bcab", null ],
+      [ "kGenericRead", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3ab8e170af09a64a7d1aead8737f5ab118", null ],
+      [ "kGenericWrite", "isc__camera__def_8h.html#a76301874be20551731c3e27192e4a9b3a7a9a19e78607e36bcc05545121158f73", null ]
     ] ],
     [ "IscGetModeColor", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0b", [
-      [ "kYuv", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba0114c6facbcd002c424661a5e4164418", null ],
-      [ "kBayer", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba6652b5d8957f63c1674f83741a05f09a", null ],
       [ "kBGR", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0babf1bf48de24838aef88bb42a6aa76f04", null ],
       [ "kCorrect", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0ba28b4f1d0af21dc5a585fe382265bf112", null ],
       [ "kAwb", "isc__camera__def_8h.html#a4793fdb4c21e136d439ddd3d711b1a0badccced1be39ff495bdcdbe01163e0d08", null ],
@@ -76,8 +77,8 @@ var isc__camera__def_8h =
       [ "kParallax", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba4a434bc7994263597b7fa4d3382c8dd8", null ],
       [ "kCorrect", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba28b4f1d0af21dc5a585fe382265bf112", null ],
       [ "kBeforeCorrect", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9baab9cc169b187d0ced73d4df219c339d5", null ],
-      [ "kBayerBase", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9bafdd6949b0bcf378d5cf375e69ba6c1e2", null ],
-      [ "kBayerCompare", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba20f54c4134a22dd520c23a8d42cb76c3", null ]
+      [ "kBayerS0", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9ba608b2fc1fd059d5d99e75a3793ab41ea", null ],
+      [ "kBayerS1", "isc__camera__def_8h.html#a66226347194fa848171ce92afde02c9badecbf06fa2364e3610fcaa13f969981a", null ]
     ] ],
     [ "IscPlayMode", "isc__camera__def_8h.html#a6995b81823c380d8776661a4707a4142", [
       [ "kPlayOff", "isc__camera__def_8h.html#a6995b81823c380d8776661a4707a4142a187f19be710f2f24c454e765525d9953", null ],

@@ -2,5 +2,5 @@
 <area shape="rect" id="node1" title="Initializes the CaptureSession and prepares it to start streaming data. Must be called at least once ..." alt="" coords="5,63,184,103"/>
 <area shape="rect" id="node2" href="$class_stereo_matching.html#a4dcc2d77651f72a3580b31ff563c04e8" title="spawn a block matching thread." alt="" coords="232,5,443,45"/>
 <area shape="rect" id="node3" href="$class_stereo_matching.html#a912c0c74ab41c75384d0d78db3636453" title="initialize stereo matching." alt="" coords="253,70,421,95"/>
-<area shape="rect" id="node4" href="$class_stereo_matching.html#acdf2e0be4f65a5d529243fefcdb25a3b" title="configure use of OpenCL for stereo matching." alt="" coords="241,120,434,160"/>
+<area shape="rect" id="node4" href="$class_stereo_matching.html#aad6e59b16d91e24065894ef91ae19625" title="configure use of OpenCL for stereo matching." alt="" coords="241,120,434,160"/>
 </map>

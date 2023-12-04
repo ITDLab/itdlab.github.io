@@ -25,7 +25,7 @@
 var NAVTREE =
 [
   [ "IscDpl", "index.html", [
-    [ "<strong>ISCステレオカメラ　データ処理ライブラリ　プロジェクト</strong>", "index.html", "index" ],
+    [ "<strong>ISCステレオカメラ　データ処理ライブラリ</strong>", "index.html", "index" ],
     [ "モジュール", "modules.html", "modules" ],
     [ "名前空間", "namespaces.html", [
       [ "名前空間一覧", "namespaces.html", "namespaces_dup" ]
@@ -56,7 +56,7 @@ var NAVTREEINDEX =
 [
 "_block_matching_8cpp.html",
 "classns__isc__dpl_1_1_isc_dpl.html#aeb5be268b42ef85fdaf58e28e418a9b0",
-"struct_isc_area_data_statistics_1_1_statistics.html#a1df07bfffbe6a676f10e5f94337f3fca"
+"struct_isc_area_data_statistics_1_1_roi3_d.html#a5ab9a836b9cc0b47b6542bceee3dd2cb"
 ];
 
 var SYNCONMSG = 'クリックで同期表示が無効になります';
